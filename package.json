@@ -1,0 +1,23 @@
+{
+  "name": "neighborhood-map",
+  "version": "1.0.0",
+  "description": "neighborhood map",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronpflower/neighborhood-map.git"
+  },
+  "keywords": [
+    "mithril",
+    "udacity"
+  ],
+  "author": "Aaron Flower",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronpflower/neighborhood-map/issues"
+  },
+  "homepage": "https://github.com/aaronpflower/neighborhood-map#readme"
+}
