@@ -19,5 +19,19 @@
   "bugs": {
     "url": "https://github.com/aaronpflower/neighborhood-map/issues"
   },
-  "homepage": "https://github.com/aaronpflower/neighborhood-map#readme"
+  "homepage": "https://github.com/aaronpflower/neighborhood-map#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-stylus": "^2.1.0",
+    "gulp-util": "^3.0.6",
+    "jade": "^1.11.0",
+    "jshint": "^2.8.0",
+    "run-sequence": "^1.1.4"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  }
 }
