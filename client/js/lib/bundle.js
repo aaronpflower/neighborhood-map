@@ -33,63 +33,95 @@ var Event = {
 }
 
 module.exports = Event;
-},{"./footer.js":2,"./menu.js":4,"google-maps":9,"mithril":10}],2:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"google-maps":10,"mithril":11}],2:[function(require,module,exports){
 var m = require("mithril");
 
 var footer = function() {
-	return m("footer", {class: "container footer"}, [
-		m("div", {class: "footer-item"}, "Hallelujah! For the Lord our God the Almighty reigns. Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready; it was granted her to clothe herself with fine linen, bright and pure for the fine linen is the righteous deeds of the saints. Revelation 19:6-8"),
-		m("div", {class: "footer-item"}, "Site Designed by Brittney Flower & Developed by Aaron Flower")
-		]);
+	return m("footer", {class: "footer"}, [
+		m("div", {class: "footer-col-1"}, [
+			m("div", {class: "col-1-left"}, "Hallelujah! For the Lord our God the Almighty reigns. Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready; it was granted her to clothe herself with fine linen, bright and pure for the fine linen is the righteous deeds of the saints. Revelation 19:6-8"),
+			m("div", {class: "col-2-right"}, "Site Designed by Brittney Flower & Developed by Aaron Flower")
+		]),
+		m("div", {class: "footer-col-2"}, [
+			m("div", {class: "col-2-left"}, "Left"),
+			m("div", {class: "col-2-middle"}, "Middle"),
+			m("div", {class: "col-2-right"}, "right")
+		]),
+		m("div", {class: "footer-col-3"}, [
+			m("div", {class: "col-3-left"}, "left"),
+			m("div", {class: "col-3-right"}, "right")
+		])
+	]) 
 }
 
 module.exports = footer;
-},{"mithril":10}],3:[function(require,module,exports){
+},{"mithril":11}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
-	footer = require("./footer.js");
-	// countDownTimer = require('./../timer.js');
+	footer = require("./footer.js"),
+	countDownTimer = require('./widgets/timer.js');
 
 var Home = {
     controller: function() {},
     view: function() {
         return m("div", [
             menu(),
-            m("h1", "About Us"),
-            footer()
+            m("main", [
+            	m("div", {class: "count-down hero-section drop-shadow"}, [
+            		m("div", [
+            			m("div", {class: "timer"}, [
+            				m("h1", countDownTimer),
+            			]),
+            		]),
+            	]),
+            	m("div", {class: "second-section"}, [
+            		m("div", {class: "text-row"}, [
+            			m("h1", "About Us")
+           			]),
+            		m("div", {class: "about-us"}, [
+            			m("img", {src: "../../../client/img/brittney-home.jpg"}, {class: "left-section"}),
+            			m("div", {class: "right-section"}, "About Brittney, she is cool.")
+            		]),
+            		m("div", {class: "about-us"}, [
+            			m("div", {class: "right-section"}, "About Aaron, he is cool."),
+            			m("img", {src: "../../../client/img/aaron-home.jpg"}, {class: "left-section"})
+            		]),
+            		m("div", {class: "text-row"}, [
+            			m("h1", "How We Met")
+           			]),
+           			m("div", {class: "how-we-met"}, [
+           				m("img", {src: "../../../client/img/ba-home.jpg"}),
+            			m("p", "Eleven months ago I sat at Ozo with my back to the door and acted busy on my computer.  It was a noble attempt to calm my nerves but my attention quickly shifted up as I saw your beautiful smile. You said “Hi,” and I said, “Hi.”  If I had some sense to what I was doing I would have offered to buy your pint glass of green tea but the minions in my head were running in circles and into one another, shouting, how did we get here?!")
+            		]),
+            	]),
+            	footer()
+            ])
         ])
     }
 };
 
 module.exports = Home;
-},{"./footer.js":2,"./menu.js":4,"mithril":10}],4:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./widgets/timer.js":9,"mithril":11}],4:[function(require,module,exports){
 var m = require("mithril");
 
 var menu = function() {
-	return m("header", {class: "container header"}, [
-		m("a[href='/']", {config: m.route, persistent}, [
-			m("div", {class: "header-item"}, "A Flower Wedding")
+	return m("header", {class: "header"}, [
+		m("a[href='/wedding-party']", {config: m.route, persistent}, [
+			m("div", {class: "header-item"}, "Party")
+		]),
+		m("a[href='/event-info']", {config: m.route, persistent}, [
+			m("div", {class: "header-item"}, "Event")
 		]),
 		m("a[href='/']", {config: m.route, persistent}, [
-			m("div", {class: "header-item"}, "Open")
-		])
+			m("div", {class: "header-item"}, "Flower Wedding")
+		]),
+		m("a[href='/registry']", {config: m.route, persistent}, [
+			m("div", {class: "header-item"}, "Registry")
+		]),
+		m("a[href='/rsvp']", {config: m.route, persistent}, [
+			m("div", {class: "header-item"}, "RSPV")
+		]),
 	]);
-			
-	// return m("div", {class: "mobileMenu"}, {id: "mobileMenu"}, [
-	// 	m("a[href='/wedding-party']", {config: m.route, persistent}, [
-	// 		m("div", {class: "header-item"}, "Wedding Party")
-	// 	]),
-	// 	m("a[href='/event-info']", {config: m.route, persistent}, [
-	// 		m("div", {class: "header-item"}, "Event Info")
-	// 		]),
-
-	// 	m("a[href='/registry']", {config: m.route, persistent}, [
-	// 		m("div", {class: "header-item"}, "Gift Registry")
-	// 		]),
-	// 	m("a[href='/rsvp']", {config: m.route, persistent}, [
-	// 		m("div", {class: "header-item"}, "RSPV Info")
-	// 	])
-	// ]);
 }
 
 function persistent(context) {
@@ -97,7 +129,58 @@ function persistent(context) {
 }
 
 module.exports = menu;
-},{"mithril":10}],5:[function(require,module,exports){
+
+// 	open = function() {
+// 		var mobileMenu = document.getElementById("mobileMenu");
+// 	};
+// // offCanvas = function() {
+// 			return m("div", {class: "mobileMenu"}, {id: "mobileMenu"}, [
+// 			 	m("ul", [
+// 			 		m("a[href='/wedding-party']", {config: m.route, persistent}, [
+// 						m("li", {class: "mobile-item"}, "Wedding Party")
+// 					]),
+// 					m("a[href='/event-info']", {config: m.route, persistent}, [
+// 						m("li", {class: "mobile-item"}, "Event Info")
+// 					]),
+// 					m("a[href='/registry']", {config: m.route, persistent}, [
+// 						m("li", {class: "mobile-item"}, "Gift Registry")
+// 					]),
+// 					m("a[href='/rsvp']", {config: m.route, persistent}, [
+// 						m("div", {class: "mobile-item"}, "RSPV Info")
+// 					])
+//  				])
+// 			])
+// 		}		
+
+// $(document).ready(function() {
+    
+//     //get collection for mobile nav funcs
+//     var $mobileNavCollection = $('#mobileNavigation .collection');
+
+//     // create menu variables
+//     var $sidecarNav = $('#sidecarNav');
+//     var sidecarNavHeight = $('#sidecarNav').height();
+
+//     $("#mobileNavOpen").on("click", function() {
+//         event.preventDefault();
+
+//         //toggle open class
+//         $sidecarNav.toggleClass("open");
+
+//         //slide menu
+//         if ($sidecarNav.hasClass("open")) {
+//             $sidecarNav.animate({
+//                 top: "105px"
+//             });
+//         } else {
+//             $mobileNavCollection.removeClass('mobile-collection-hover');
+//             $mobileNavCollection.css({"height": "14.4%", "padding": "8% 5%"});
+//             $sidecarNav.animate({
+//                 top: -sidecarNavHeight
+//             }, 250);
+//         }
+//     });
+},{"mithril":11}],5:[function(require,module,exports){
 var m = require('mithril'),
 	Home = require('./home.js'),
 	Party = require('./party.js'),
@@ -116,7 +199,7 @@ m.route(document.body, "/", {
     "/registry": Registry,
     "/event-info": Event
 })
-},{"./event.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./party.js":6,"./registry":7,"./rsvp":8,"mithril":10}],6:[function(require,module,exports){
+},{"./event.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./party.js":6,"./registry":7,"./rsvp":8,"mithril":11}],6:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
 	footer = require('./footer.js');
@@ -133,7 +216,7 @@ var Party = {
 }
 
 module.exports = Party;
-},{"./footer.js":2,"./menu.js":4,"mithril":10}],7:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"mithril":11}],7:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
 	footer = require('./footer.js');
@@ -150,7 +233,7 @@ var Registry = {
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":4,"mithril":10}],8:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"mithril":11}],8:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
 	footer = require('./footer.js');
@@ -167,7 +250,38 @@ var Rsvp = {
 }
 
 module.exports = Rsvp;
-},{"./footer.js":2,"./menu.js":4,"mithril":10}],9:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"mithril":11}],9:[function(require,module,exports){
+var m = require('mithril');
+
+var countDownTimer = {
+	controller: function() {
+		var deadline = "2016/6/12 23:59:59 GMT+02:00";
+
+		getTimeRemaining = function(endtime) {
+			var t = Date.parse(endtime) - Date.parse(new Date());
+			var seconds = Math.floor( (t/1000) % 60 );
+			var minutes = Math.floor( (t/1000/60) % 60 );
+			var hours = Math.floor( (t/(1000*60*60)) % 24 );
+			var days = Math.floor( t/(1000*60*60*24) );
+			return {
+				'total': t,
+				'days': days,
+				'hours': hours,
+				'minutes': minutes,
+				'seconds': seconds
+			};
+		}
+	},
+	view: function() {
+		return m("div", {id: "clockdiv"}, "Count Down", [
+			m("div", {controller: getTimeRemaining.days})
+		])
+	}
+};
+
+ 
+module.exports = countDownTimer;
+},{"mithril":11}],10:[function(require,module,exports){
 (function(root, factory) {
 
 	if (root === null) {
@@ -394,7 +508,7 @@ module.exports = Rsvp;
 
 });
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;

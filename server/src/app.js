@@ -16,3 +16,4 @@ var server = app.listen(port, function() {
 app.set('views', __dirname + '../../views');
 app.set('view engine', 'jade');
 app.use('/client', express.static(__dirname + '/../../client'))
+app.use('/client', express.static(__dirname + '/../../client/img'))
