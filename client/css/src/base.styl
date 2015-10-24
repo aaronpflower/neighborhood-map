@@ -1,0 +1,61 @@
+a
+	text-decoration: none
+
+html, body
+	height: 100%
+	margin: 0
+	padding: 0
+	
+// Colors
+mustardYellow = #CDA124
+darkNavy = #1F2845
+teal = #029DA1
+lightMustard = #FDD43E
+gray = #AAABAD
+offWhite = #DDD6C6
+
+.container
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: row wrap
+	-webkit-flex-flow: row wrap
+	-ms-flex-flow: row wrap
+	justify-content: space-around
+	-webkit-justify-content: space-around
+	-ms-justify-content: space-around
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: stretch
+	-webkit-align-items: stretch
+	-ms-align-items: stretch
+
+.map
+	height: 400px
+	width: 100%
+
+.location-list
+	background-color: #832C62
+	width: 100%
+
+.location-list-items
+	color: #fafafafa
+	font-family: serif
+	flex-grow: 1
+	-webkit-flex-grow: 1
+	-ms-flex-flow: 1
+	flex-shrink: 0
+	-webkit-flex-shrink: 0
+	-ms-flex-shrink: 0
+	flex-basis: 0
+	-webkit-flex-basis: 0
+	-ms-flex-basis: 0
+	
+@media only screen and (min-width: 769px)
+	body, html
+		max-width 1280px
+		margin 0 auto
+		background-color: #fafafafa
+		border-left: 1px solid gray
+		border-right: 1px solid gray

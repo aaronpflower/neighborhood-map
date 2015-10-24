@@ -1,22 +1,13 @@
 doctype html
 html
 	head
-		title Neighborhood Map
+		title Aaron and Brittney
 		link(rel="stylesheet" type="text/css" href="/client/css/lib/styles.css")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 
 	body
-		header.container.header
-			div.header-item Welcome to the map
-			div.header-item Search Bar
-		div#map.map
-		div.location-list Location List
-			div.location-list-item Item 1
-			div.location-list-item Item 2
-			div.location-list-item Item 3
-			div.location-list-item Item 4
 
-		script(src="/client/js/map.js")
-		script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpRRMEy9sBC95vWunMUBju38m-2XwwEco&callback=initMap")
+		script(src="/client/js/lib/bundle.js")
 		
+		div#map

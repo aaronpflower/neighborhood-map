@@ -4,7 +4,9 @@ var gulp = require('gulp'),
 	gutil = require('gulp-util'),
 	// jshint = require('gulp-jshint'),
 	stylus = require('gulp-stylus'),
-	nodemon = require('gulp-nodemon');
+	nodemon = require('gulp-nodemon'),
+	browserify = require('browserify'),
+	source = require('vinyl-source-stream');
 
 // Configure the gulp task
 gulp.task('jshint', function() {
@@ -22,6 +24,13 @@ gulp.task('css', function() {
 	return gulp.src('client/css/src/styles.styl')
 	.pipe(stylus())
 	.pipe(gulp.dest('client/css/lib'));
+});
+
+//browserfiy
+gulp.task('browserfiy', function() {
+	return browserify('client/js/src/mithril-routes.js').bundle()
+	.pipe(source('bundle.js'))
+	.pipe(gulp.dest('client/js/lib'));
 });
 
 // Nodemon to start server

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/aaronpflower/neighborhood-map#readme",
   "devDependencies": {
+    "browserify": "^11.2.0",
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
     "gulp-nodemon": "^2.0.4",
@@ -28,11 +29,15 @@
     "gulp-util": "^3.0.6",
     "jade": "^1.11.0",
     "jshint": "^2.8.0",
-    "run-sequence": "^1.1.4"
+    "run-sequence": "^1.1.4",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "express": "^4.13.3",
+    "google-maps": "^3.1.0",
     "jade": "^1.11.0",
+    "leaflet": "^0.7.5",
+    "mapbox": "^0.9.0",
     "mithril": "^0.2.0"
   }
 }
