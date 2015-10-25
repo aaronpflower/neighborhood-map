@@ -7,8 +7,12 @@ var Party = {
     view: function() {
         return m("div", [
             menu(),
-            m("h1", "Wedding Party"),
-            footer()
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "Wedding Party")
+                ]),
+                footer()
+            ])
         ])
     }
 }

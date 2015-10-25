@@ -7,8 +7,12 @@ var Registry = {
     view: function() {
         return m("div", [
             menu(),
-            m("h1", "Registry"),
-            footer()
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "Registry Info")
+                ]),
+                footer()
+            ])
         ])
     }
 }

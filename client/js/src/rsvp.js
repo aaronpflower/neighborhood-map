@@ -7,8 +7,12 @@ var Rsvp = {
     view: function() {
         return m("div", [
             menu(),
-            m("h1", "Rsvpwidget"),
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "form to RSVP")
+                ]),
             footer()
+            ])
         ])
     }
 }

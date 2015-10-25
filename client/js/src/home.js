@@ -21,7 +21,9 @@ var Home = {
             			m("h1", "About Us")
            			]),
             		m("div", {class: "about-us"}, [
-            			m("img", {src: "../../../client/img/brittney-home.jpg"}, {class: "left-section"}),
+            			m("div", {class: "left-section"}, [
+            				m("img", {src: "../../../client/img/brittney-home.jpg"}),
+            			]),
             			m("div", {class: "right-section"}, [
             				m("h1", "Brittney"),
             				m("p", "She is Cool. From Mount Vernon, WW Grad, BJS Grad, and a Master in Child Development.")
@@ -31,8 +33,10 @@ var Home = {
             			m("div", {class: "right-section"}, [
             				m("h1", "Aaron"),
             				m("p", "He is cool. From South Haven, WSC Grad, degree in Exercise, some church leadership training working as a Web Devloper")
-            			]), 
-            			m("img", {src: "../../../client/img/aaron-home.jpg"}, {class: "left-section"})
+            			]),
+            			m("div", {class: "left-section"}, [
+            				m("img", {src: "../../../client/img/aaron-home.jpg"}),
+            			]),
             		]),
             		m("div", {class: "text-row"}, [
             			m("h1", "How We Met")

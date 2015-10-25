@@ -24,9 +24,13 @@ var Event = {
     	});
         return m("div", [
             menu(),
-            m("h1", "Event Info"),
-            m("div", {id: "#map"}, {class: "map"}),
-            footer()
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "Event Info")
+                ]),
+                m("div", {id: "#map"}, {class: "map"}),
+                footer()
+            ])
         ])
     }
 }

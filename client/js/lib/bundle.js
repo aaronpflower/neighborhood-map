@@ -25,9 +25,13 @@ var Event = {
     	});
         return m("div", [
             menu(),
-            m("h1", "Event Info"),
-            m("div", {id: "#map"}, {class: "map"}),
-            footer()
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "Event Info")
+                ]),
+                m("div", {id: "#map"}, {class: "map"}),
+                footer()
+            ])
         ])
     }
 }
@@ -37,7 +41,7 @@ module.exports = Event;
 var m = require("mithril");
 
 var footer = function() {
-	return m("footer", {class: "footer"}, [
+	return m("footer", [
 		m("div", {class: "footer-col-1"}, [
 			m("div", {class: "col-1-left"}, [
 				m("p", "Hallelujah! For the Lord our God the Almighty reigns. Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready; it was granted her to clothe herself with fine linen, bright and pure for the fine linen is the righteous deeds of the saints. Revelation 19:6-8"),
@@ -47,18 +51,18 @@ var footer = function() {
 			])
 		]),
 		m("div", {class: "footer-col-2"}, [
-			m("div", {class: "col-2-left"}, [
+			m("div", {class: "col-2-item"}, [
 				m("button", {class: "button"}, "Party")
 			]),
-			m("div", {class: "col-2-middle"}, [
+			m("div", {class: "col-2-item"}, [
 				m("button", {class: "button"}, "Event")
 			]),
-			m("div", {class: "col-2-right"}, [
+			m("div", {class: "col-2-item"}, [
 				m("button", {class: "button"}, "Registry")
 			])
 		]),
 		m("div", {class: "footer-col-3"}, [
-			m("div", {class: "col-3-right"}, [
+			m("div", {class: "col-3-item"}, [
 				m("p", "Site Designed by Brittney Flower & Developed by Aaron Flower")
 			])
 		])
@@ -90,7 +94,9 @@ var Home = {
             			m("h1", "About Us")
            			]),
             		m("div", {class: "about-us"}, [
-            			m("img", {src: "../../../client/img/brittney-home.jpg"}, {class: "left-section"}),
+            			m("div", {class: "left-section"}, [
+            				m("img", {src: "../../../client/img/brittney-home.jpg"}),
+            			]),
             			m("div", {class: "right-section"}, [
             				m("h1", "Brittney"),
             				m("p", "She is Cool. From Mount Vernon, WW Grad, BJS Grad, and a Master in Child Development.")
@@ -100,8 +106,10 @@ var Home = {
             			m("div", {class: "right-section"}, [
             				m("h1", "Aaron"),
             				m("p", "He is cool. From South Haven, WSC Grad, degree in Exercise, some church leadership training working as a Web Devloper")
-            			]), 
-            			m("img", {src: "../../../client/img/aaron-home.jpg"}, {class: "left-section"})
+            			]),
+            			m("div", {class: "left-section"}, [
+            				m("img", {src: "../../../client/img/aaron-home.jpg"}),
+            			]),
             		]),
             		m("div", {class: "text-row"}, [
             			m("h1", "How We Met")
@@ -227,8 +235,12 @@ var Party = {
     view: function() {
         return m("div", [
             menu(),
-            m("h1", "Wedding Party"),
-            footer()
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "Wedding Party")
+                ]),
+                footer()
+            ])
         ])
     }
 }
@@ -244,8 +256,12 @@ var Registry = {
     view: function() {
         return m("div", [
             menu(),
-            m("h1", "Registry"),
-            footer()
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "Registry Info")
+                ]),
+                footer()
+            ])
         ])
     }
 }
@@ -261,8 +277,12 @@ var Rsvp = {
     view: function() {
         return m("div", [
             menu(),
-            m("h1", "Rsvpwidget"),
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "form to RSVP")
+                ]),
             footer()
+            ])
         ])
     }
 }
