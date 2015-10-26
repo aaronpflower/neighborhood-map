@@ -99,7 +99,7 @@ var Home = {
             			]),
             			m("div", {class: "right-section"}, [
             				m("h1", "Brittney"),
-            				m("p", "She is Cool. From Mount Vernon, WW Grad, BJS Grad, and a Master in Child Development.")
+            				m("p", "She is Cool. From Mount Vernon, WWU Grad, CU DENVER Grad, and a Masters in Child Development.")
             			])
             		]),
             		m("div", {class: "about-us"}, [
