@@ -10,7 +10,7 @@ var server = app.listen(port, function() {
 	var host = server.address().address;
 	var x = server.address().port;
 
-	console.log('Neighborhood map is running on localhost:', host, x);
+	console.log('Wedding Site is running on localhost', host, x);
 });
 
 app.set('views', __dirname + '../../views');

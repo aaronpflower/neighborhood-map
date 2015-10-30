@@ -1,30 +1,22 @@
 var m = require('mithril');
 
 var countDownTimer = {
-	controller: function() {
-		var deadline = "2016/6/12 23:59:59 GMT+02:00";
+    controller: function() {
+        setInterval(function(){
+            var deadline = "2016/6/19 15:59:59";
+            this.t = Date.parse(deadline) - Date.parse(new Date());
+            this.seconds = Math.floor( (this.t/1000) % 60 );
+            this.minutes = Math.floor( (this.t/1000/60) % 60 );
+            this.hours = Math.floor( (this.t/(1000*60*60)) % 24 );
+            this.days = Math.floor( this.t/(1000*60*60*24) );
+            m.redraw();
+        }.bind(this), 1000)
 
-		getTimeRemaining = function(endtime) {
-			var t = Date.parse(endtime) - Date.parse(new Date());
-			var seconds = Math.floor( (t/1000) % 60 );
-			var minutes = Math.floor( (t/1000/60) % 60 );
-			var hours = Math.floor( (t/(1000*60*60)) % 24 );
-			var days = Math.floor( t/(1000*60*60*24) );
-			return {
-				'total': t,
-				'days': days,
-				'hours': hours,
-				'minutes': minutes,
-				'seconds': seconds
-			};
-		}
-	},
-	view: function() {
-		return m("div", {id: "clockdiv"}, "Count Down", [
-			m("div", {controller: getTimeRemaining.days})
-		])
-	}
-};
+    },
 
- 
+    view: function(ctrl) {
+        return m("h1", "Days: ", ctrl.days, " ", "Hours: ", ctrl.hours, " ", "Minutes: ", ctrl.minutes, " ", "Seconds: ", ctrl.seconds)
+    }
+}
+
 module.exports = countDownTimer;

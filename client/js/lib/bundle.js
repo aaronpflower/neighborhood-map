@@ -4,7 +4,7 @@ var m = require("mithril"),
 	footer = require("./footer.js"),
     GoogleMapsLoader = require('google-maps');
 
-var Event = {
+var boulderInfo = {
     controller: function() {
     	
     },
@@ -27,16 +27,16 @@ var Event = {
             menu(),
             m("main", [
                 m("div", {class: "hero-section"}, [
-                    m("h1", "Event Info")
+                    m("h1", "Boulder Info")
                 ]),
                 m("div", {id: "#map"}, {class: "map"}),
-                footer()
-            ])
+            ]),
+            footer()
         ])
     }
 }
 
-module.exports = Event;
+module.exports = boulderInfo;
 },{"./footer.js":2,"./menu.js":4,"google-maps":10,"mithril":11}],2:[function(require,module,exports){
 var m = require("mithril");
 
@@ -46,19 +46,28 @@ var footer = function() {
 			m("div", {class: "col-1-left"}, [
 				m("p", "Hallelujah! For the Lord our God the Almighty reigns. Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready; it was granted her to clothe herself with fine linen, bright and pure for the fine linen is the righteous deeds of the saints. Revelation 19:6-8"),
 			]),
-			m("div", {class: "col-2-right"}, [
-				m("button", {class: "button"}, "RSVP")
+			m("div", {class: "col-1-right"}, [
+				m("a[href='/rsvp']", {config: m.route}, [
+					m("button", {class: "button"}, "RSVP")
+				]),
 			])
+
 		]),
 		m("div", {class: "footer-col-2"}, [
 			m("div", {class: "col-2-item"}, [
-				m("button", {class: "button"}, "Party")
+				m("a[href='/wedding-day']", {config: m.route}, [
+					m("button", {class: "button"}, "Wedding")
+				])
 			]),
 			m("div", {class: "col-2-item"}, [
-				m("button", {class: "button"}, "Event")
+				m("a[href='/boulder-info']", {config: m.route}, [
+					m("button", {class: "button"}, "Boulder")
+				])
 			]),
 			m("div", {class: "col-2-item"}, [
-				m("button", {class: "button"}, "Registry")
+				m("a[href='/registry']", {config: m.route}, [
+					m("button", {class: "button"}, "Registry")
+				])
 			])
 		]),
 		m("div", {class: "footer-col-3"}, [
@@ -70,6 +79,10 @@ var footer = function() {
 }
 
 module.exports = footer;
+
+
+
+
 },{"mithril":11}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
@@ -82,11 +95,10 @@ var Home = {
         return m("div", [
             menu(),
             m("main", [
-            	m("div", {class: "count-down hero-section drop-shadow"}, [
-            		m("div", [
-            			m("div", {class: "timer"}, [
-            				m("h1", countDownTimer),
-            			]),
+            	m("div", {class: "hero-section drop-shadow"}, [
+        			m("div", {class: "timer"}, [
+        				m("h1"),
+                        countDownTimer,
             		]),
             	]),
             	m("div", {class: "second-section"}, [
@@ -120,8 +132,8 @@ var Home = {
             			m("p", "Eleven months ago I sat at Ozo with my back to the door and acted busy on my computer.  It was a noble attempt to calm my nerves but my attention quickly shifted up as I saw your beautiful smile. You said “Hi,” and I said, “Hi.”  If I had some sense to what I was doing I would have offered to buy your pint glass of green tea but the minions in my head were running in circles and into one another, shouting, how did we get here?! We first met at the Hathron’s for Missional Community.  It was my first week there, and it was your last attempt at The Well.  That night we had a deep conversation that went like this:  “Hi I’m Aaron.”  “Hi, I’m Brittney.”  After this exchange, you went home and I did what any wise man would do, I added you on facebook.  Over the next week and a half I stated my intentions in a very clear and forward manner, that was, I liked a couple of your facebook posts, which lead to the natural next step, I personal facebook message.  Many message exchanges quickly followed but we made sure to give it at least 5 minutes in-between replies that way the other person didn’t know we were too interested.  We ended the initial back and forth with “see you at church tomorrow.”   This technically did happen but apparently you want to showed off your speed by running (maybe to impress me because I was a runner?) out the door before I could even say “Hi.”  But you couldn’t get rid of me, we had several, ok we talked pretty much nonstop for the next day on facebook, which felt like forever for you since the one thing you wanted me to ask you for I didn’t.  Eventually, a day later, I asked for your number and we found ourselves at Ozo. In the weeks that followed we would watch hours on hours of netflix and youtube while stuffing our faces with cereal.  I learned about artisanal ice, you got to see the murder house, I ate 1 slider and you grabbed my hand.  I had the best kiss I had ever had, you possibly had your worse.  We made our dating relationship official at Chipotle, and for the first time you were speechless.")
             		]),
             	]),
-            	footer()
-            ])
+            ]),
+            footer()
         ])
     }
 };
@@ -132,20 +144,20 @@ var m = require("mithril");
 
 var menu = function() {
 	return m("header", {class: "header"}, [
-		m("a[href='/wedding-party']", {config: m.route}, [
-			m("div", {class: "header-item"}, "Party")
+		m("a[href='/wedding-details']", {config: m.route}, [
+			m("div", {class: "header-item"}, "Wedding")
 		]),
-		m("a[href='/event-info']", {config: m.route}, [
-			m("div", {class: "header-item"}, "Event")
+		m("a[href='/boulder-info']", {config: m.route}, [
+			m("div", {class: "header-item"}, "Boulder")
 		]),
 		m("a[href='/']", {config: m.route}, [
-			m("div", {class: "header-item"}, "A Flower Wedding")
+			m("div", {class: "header-item"}, "Flower Wedding")
 		]),
 		m("a[href='/registry']", {config: m.route}, [
 			m("div", {class: "header-item"}, "Registry")
 		]),
 		m("a[href='/rsvp']", {config: m.route}, [
-			m("div", {class: "header-item"}, "RSPV")
+			m("div", {class: "header-item"}, "RSVP")
 		]),
 	]);
 }
@@ -207,12 +219,12 @@ module.exports = menu;
 //         }
 //     });
 },{"mithril":11}],5:[function(require,module,exports){
-var m = require('mithril'),
+var m = require('mithril');
 	Home = require('./home.js'),
-	Party = require('./party.js'),
+	WeddingDetails = require('./wedding-details.js'),
 	Rsvp = require('./rsvp'),
 	Registry = require('./registry'),
-	Event = require('./event.js'),
+	BoulderInfo = require('./boulder-info.js'),
 	menu = require('./menu.js'),
 	footer = require('./footer.js');
 
@@ -220,33 +232,17 @@ m.route.mode = "hash"
 
 m.route(document.body, "/", {
     "/": Home,
-    "/wedding-party": Party,
+    "/wedding-details": WeddingDetails,
     "/rsvp": Rsvp,
     "/registry": Registry,
-    "/event-info": Event
+    "/boulder-info": BoulderInfo
 })
-},{"./event.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./party.js":6,"./registry":7,"./rsvp":8,"mithril":11}],6:[function(require,module,exports){
-var m = require('mithril'),
-	menu = require('./menu.js'),
-	footer = require('./footer.js');
 
-var Party = {
-    controller: function() {},
-    view: function() {
-        return m("div", [
-            menu(),
-            m("main", [
-                m("div", {class: "hero-section"}, [
-                    m("h1", "Wedding Party")
-                ]),
-                footer()
-            ])
-        ])
-    }
-}
 
-module.exports = Party;
-},{"./footer.js":2,"./menu.js":4,"mithril":11}],7:[function(require,module,exports){
+
+// Seinfield App Practice
+
+},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":6,"./rsvp":7,"./wedding-details.js":8,"mithril":11}],6:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
 	footer = require('./footer.js');
@@ -260,14 +256,14 @@ var Registry = {
                 m("div", {class: "hero-section"}, [
                     m("h1", "Registry Info")
                 ]),
-                footer()
-            ])
+            ]),
+            footer()
         ])
     }
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":4,"mithril":11}],8:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"mithril":11}],7:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
 	footer = require('./footer.js');
@@ -281,43 +277,56 @@ var Rsvp = {
                 m("div", {class: "hero-section"}, [
                     m("h1", "form to RSVP")
                 ]),
+            ]),
             footer()
-            ])
         ])
     }
 }
 
 module.exports = Rsvp;
+},{"./footer.js":2,"./menu.js":4,"mithril":11}],8:[function(require,module,exports){
+var m = require('mithril'),
+	menu = require('./menu.js'),
+	footer = require('./footer.js');
+
+var weddingDetails = {
+    controller: function() {},
+    view: function() {
+        return m("div", [
+            menu(),
+            m("main", [
+                m("div", {class: "hero-section"}, [
+                    m("h1", "Wedding Details")
+                ]),
+            ]),
+            footer()
+        ])
+    }
+}
+
+module.exports = weddingDetails;
 },{"./footer.js":2,"./menu.js":4,"mithril":11}],9:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
-	controller: function() {
-		var deadline = "2016/6/12 23:59:59 GMT+02:00";
+    controller: function() {
+        setInterval(function(){
+            var deadline = "2016/6/19 15:59:59";
+            this.t = Date.parse(deadline) - Date.parse(new Date());
+            this.seconds = Math.floor( (this.t/1000) % 60 );
+            this.minutes = Math.floor( (this.t/1000/60) % 60 );
+            this.hours = Math.floor( (this.t/(1000*60*60)) % 24 );
+            this.days = Math.floor( this.t/(1000*60*60*24) );
+            m.redraw();
+        }.bind(this), 1000)
 
-		getTimeRemaining = function(endtime) {
-			var t = Date.parse(endtime) - Date.parse(new Date());
-			var seconds = Math.floor( (t/1000) % 60 );
-			var minutes = Math.floor( (t/1000/60) % 60 );
-			var hours = Math.floor( (t/(1000*60*60)) % 24 );
-			var days = Math.floor( t/(1000*60*60*24) );
-			return {
-				'total': t,
-				'days': days,
-				'hours': hours,
-				'minutes': minutes,
-				'seconds': seconds
-			};
-		}
-	},
-	view: function() {
-		return m("div", {id: "clockdiv"}, "Count Down", [
-			m("div", {controller: getTimeRemaining.days})
-		])
-	}
-};
+    },
 
- 
+    view: function(ctrl) {
+        return m("h1", "Days: ", ctrl.days, " ", "Hours: ", ctrl.hours, " ", "Minutes: ", ctrl.minutes, " ", "Seconds: ", ctrl.seconds)
+    }
+}
+
 module.exports = countDownTimer;
 },{"mithril":11}],10:[function(require,module,exports){
 (function(root, factory) {

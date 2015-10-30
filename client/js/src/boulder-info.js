@@ -3,7 +3,7 @@ var m = require("mithril"),
 	footer = require("./footer.js"),
     GoogleMapsLoader = require('google-maps');
 
-var Event = {
+var boulderInfo = {
     controller: function() {
     	
     },
@@ -26,13 +26,13 @@ var Event = {
             menu(),
             m("main", [
                 m("div", {class: "hero-section"}, [
-                    m("h1", "Event Info")
+                    m("h1", "Boulder Info")
                 ]),
                 m("div", {id: "#map"}, {class: "map"}),
-                footer()
-            ])
+            ]),
+            footer()
         ])
     }
 }
 
-module.exports = Event;
+module.exports = boulderInfo;

@@ -11,8 +11,8 @@ var Rsvp = {
                 m("div", {class: "hero-section"}, [
                     m("h1", "form to RSVP")
                 ]),
+            ]),
             footer()
-            ])
         ])
     }
 }

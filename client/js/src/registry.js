@@ -11,8 +11,8 @@ var Registry = {
                 m("div", {class: "hero-section"}, [
                     m("h1", "Registry Info")
                 ]),
-                footer()
-            ])
+            ]),
+            footer()
         ])
     }
 }

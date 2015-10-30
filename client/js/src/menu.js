@@ -2,20 +2,20 @@ var m = require("mithril");
 
 var menu = function() {
 	return m("header", {class: "header"}, [
-		m("a[href='/wedding-party']", {config: m.route}, [
-			m("div", {class: "header-item"}, "Party")
+		m("a[href='/wedding-details']", {config: m.route}, [
+			m("div", {class: "header-item"}, "Wedding")
 		]),
-		m("a[href='/event-info']", {config: m.route}, [
-			m("div", {class: "header-item"}, "Event")
+		m("a[href='/boulder-info']", {config: m.route}, [
+			m("div", {class: "header-item"}, "Boulder")
 		]),
 		m("a[href='/']", {config: m.route}, [
-			m("div", {class: "header-item"}, "A Flower Wedding")
+			m("div", {class: "header-item"}, "Flower Wedding")
 		]),
 		m("a[href='/registry']", {config: m.route}, [
 			m("div", {class: "header-item"}, "Registry")
 		]),
 		m("a[href='/rsvp']", {config: m.route}, [
-			m("div", {class: "header-item"}, "RSPV")
+			m("div", {class: "header-item"}, "RSVP")
 		]),
 	]);
 }
