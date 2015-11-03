@@ -1,5 +1,6 @@
 var m = require("mithril"),
 	menu = require("./menu.js"),
+    mobileMenu = require("./mobile-menu.js"),
 	footer = require("./footer.js"),
     GoogleMapsLoader = require('google-maps');
 
@@ -24,6 +25,7 @@ var boulderInfo = {
     	});
         return m("div", [
             menu(),
+            mobileMenu(),
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Boulder Info")

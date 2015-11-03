@@ -1,5 +1,6 @@
 var m = require("mithril"),
 	menu = require("./menu.js"),
+    mobileMenu = require("./mobile-menu.js"),
 	footer = require("./footer.js"),
 	countDownTimer = require('./widgets/timer.js');
 
@@ -8,6 +9,7 @@ var Home = {
     view: function() {
         return m("div", [
             menu(),
+            mobileMenu(),
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
     				m("h1", "Not that we are counting..."),

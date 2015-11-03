@@ -1,6 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
+    mobileMenu = require("./mobile-menu.js"),
 	footer = require("./footer.js"),
     GoogleMapsLoader = require('google-maps');
 
@@ -25,6 +26,7 @@ var boulderInfo = {
     	});
         return m("div", [
             menu(),
+            mobileMenu(),
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Boulder Info")
@@ -37,7 +39,7 @@ var boulderInfo = {
 }
 
 module.exports = boulderInfo;
-},{"./footer.js":2,"./menu.js":4,"google-maps":10,"mithril":11}],2:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"google-maps":11,"mithril":12}],2:[function(require,module,exports){
 var m = require("mithril");
 
 var footer = function() {
@@ -83,9 +85,10 @@ module.exports = footer;
 
 
 
-},{"mithril":11}],3:[function(require,module,exports){
+},{"mithril":12}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
+    mobileMenu = require("./mobile-menu.js"),
 	footer = require("./footer.js"),
 	countDownTimer = require('./widgets/timer.js');
 
@@ -94,6 +97,7 @@ var Home = {
     view: function() {
         return m("div", [
             menu(),
+            mobileMenu(),
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
     				m("h1", "Not that we are counting..."),
@@ -137,11 +141,11 @@ var Home = {
 };
 
 module.exports = Home;
-},{"./footer.js":2,"./menu.js":4,"./widgets/timer.js":9,"mithril":11}],4:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/timer.js":10,"mithril":12}],4:[function(require,module,exports){
 var m = require("mithril");
 
 var menu = function() {
-	return m("header", {class: "header"}, [
+	return m("header", {class: "desktop-nav"}, [
 		m("a[href='/wedding-details']", {config: m.route}, [
 			m("div", {class: "header-item"}, "Wedding")
 		]),
@@ -165,58 +169,7 @@ function persistent(context) {
 }
 
 module.exports = menu;
-
-// 	open = function() {
-// 		var mobileMenu = document.getElementById("mobileMenu");
-// 	};
-// // offCanvas = function() {
-// 			return m("div", {class: "mobileMenu"}, {id: "mobileMenu"}, [
-// 			 	m("ul", [
-// 			 		m("a[href='/wedding-party']", {config: m.route, persistent}, [
-// 						m("li", {class: "mobile-item"}, "Wedding Party")
-// 					]),
-// 					m("a[href='/event-info']", {config: m.route, persistent}, [
-// 						m("li", {class: "mobile-item"}, "Event Info")
-// 					]),
-// 					m("a[href='/registry']", {config: m.route, persistent}, [
-// 						m("li", {class: "mobile-item"}, "Gift Registry")
-// 					]),
-// 					m("a[href='/rsvp']", {config: m.route, persistent}, [
-// 						m("div", {class: "mobile-item"}, "RSPV Info")
-// 					])
-//  				])
-// 			])
-// 		}		
-
-// $(document).ready(function() {
-    
-//     //get collection for mobile nav funcs
-//     var $mobileNavCollection = $('#mobileNavigation .collection');
-
-//     // create menu variables
-//     var $sidecarNav = $('#sidecarNav');
-//     var sidecarNavHeight = $('#sidecarNav').height();
-
-//     $("#mobileNavOpen").on("click", function() {
-//         event.preventDefault();
-
-//         //toggle open class
-//         $sidecarNav.toggleClass("open");
-
-//         //slide menu
-//         if ($sidecarNav.hasClass("open")) {
-//             $sidecarNav.animate({
-//                 top: "105px"
-//             });
-//         } else {
-//             $mobileNavCollection.removeClass('mobile-collection-hover');
-//             $mobileNavCollection.css({"height": "14.4%", "padding": "8% 5%"});
-//             $sidecarNav.animate({
-//                 top: -sidecarNavHeight
-//             }, 250);
-//         }
-//     });
-},{"mithril":11}],5:[function(require,module,exports){
+},{"mithril":12}],5:[function(require,module,exports){
 var m = require('mithril');
 	Home = require('./home.js'),
 	WeddingDetails = require('./wedding-details.js'),
@@ -240,9 +193,40 @@ m.route(document.body, "/", {
 
 // Seinfield App Practice
 
-},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":6,"./rsvp":7,"./wedding-details.js":8,"mithril":11}],6:[function(require,module,exports){
+},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":12}],6:[function(require,module,exports){
+var m = require('mithril');
+
+var mobileMenu = function () {
+	return m("header", {class: "mobile-menu"}, [
+		m("a[href='/']", {config: m.route}, [
+			m("div", {class: "main-item"}, "Flower Wedding")
+		]),
+		m("div", {class: "slide-out"}, [
+			m("a[href='/wedding-details']", {config: m.route}, [
+				m("div", {class: "slide-out-item"}, "Wedding")
+			]),
+			m("a[href='/boulder-info']", {config: m.route}, [
+				m("div", {class: "slide-out-item"}, "Boulder")
+			]),
+			m("a[href='/registry']", {config: m.route}, [
+				m("div", {class: "slide-out-item"}, "Registry")
+			]),
+			m("a[href='/rsvp']", {config: m.route}, [
+				m("div", {class: "slide-out-item"}, "RSVP")
+			])
+		])
+	]);
+}
+
+function persistent(context) {
+    context.retain = true
+}
+
+module.exports = mobileMenu;
+},{"mithril":12}],7:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
+    mobileMenu = require("./mobile-menu.js"),
 	footer = require('./footer.js');
 
 var Registry = {
@@ -250,6 +234,7 @@ var Registry = {
     view: function() {
         return m("div", [
             menu(),
+            mobileMenu(),
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Registry Info")
@@ -261,9 +246,10 @@ var Registry = {
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":4,"mithril":11}],7:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],8:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
+    mobileMenu = require("./mobile-menu.js"),
 	footer = require('./footer.js');
 
 var Rsvp = {
@@ -271,6 +257,7 @@ var Rsvp = {
     view: function() {
         return m("div", [
             menu(),
+            mobileMenu(),
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "form to RSVP")
@@ -282,9 +269,10 @@ var Rsvp = {
 }
 
 module.exports = Rsvp;
-},{"./footer.js":2,"./menu.js":4,"mithril":11}],8:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],9:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
+    mobileMenu = require("./mobile-menu.js"),
 	footer = require('./footer.js');
 
 var weddingDetails = {
@@ -292,6 +280,7 @@ var weddingDetails = {
     view: function() {
         return m("div", [
             menu(),
+            mobileMenu(),
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Wedding Details")
@@ -303,7 +292,7 @@ var weddingDetails = {
 }
 
 module.exports = weddingDetails;
-},{"./footer.js":2,"./menu.js":4,"mithril":11}],9:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],10:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
@@ -351,7 +340,7 @@ var countDownTimer = {
 }
 
 module.exports = countDownTimer;
-},{"mithril":11}],10:[function(require,module,exports){
+},{"mithril":12}],11:[function(require,module,exports){
 (function(root, factory) {
 
 	if (root === null) {
@@ -578,7 +567,7 @@ module.exports = countDownTimer;
 
 });
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;
