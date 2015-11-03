@@ -10,10 +10,8 @@ var Home = {
             menu(),
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
-        			m("div", {class: "timer"}, [
-        				m("h1"),
-                        countDownTimer,
-            		]),
+    				m("h1", "Not that we are counting..."),
+                    countDownTimer
             	]),
             	m("div", {class: "second-section"}, [
             		m("div", {class: "text-row"}, [

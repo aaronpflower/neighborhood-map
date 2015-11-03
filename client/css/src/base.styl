@@ -23,6 +23,9 @@ gray = #AAABAD
 	border-bottom: 1px solid gray
 	border-top: 1px solid gray
 
+.text-row h1
+	padding: 25px
+
 .map
 	height: 400px
 	width: 100%
@@ -51,3 +54,49 @@ gray = #AAABAD
 	inset 0 -8px 8px -8px #000000
 	box-shadow: inset 0 8px 8px -8px #000000,
 	inset 0 -8px 8px -8px #000000
+	
+.timer-wrapper
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: row nowrap
+	-webkit-flex-flow: row nowrap
+	-ms-flex-flow: row nowrap
+	justify-content: space-around
+	-webkit-justify-content: space-around
+	-ms-justify-content: space-around
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
+	align-self: center
+	-webkit-align-self: center
+	-ms-align-self: center
+	width: 366px
+
+.timer
+	flex-grow: 1
+	-webkit-flex-grow: 1
+	-ms-flex-flow: 1
+	flex-shrink: 0
+	-webkit-flex-shrink: 0
+	-ms-flex-shrink: 0
+	flex-basis: 95px
+	-webkit-flex-basis: 95px
+	-ms-flex-basis: 95px
+	
+.timer-item
+	// width: 90px
+	height: 95px
+	margin: 1px
+	background-color: darkNavy
+	color: #fff
+	border-radius: 5%
+
+.timer-item h2
+	padding: 15px 10px
+
+.timer-item p
+	padding: 0px 10px
