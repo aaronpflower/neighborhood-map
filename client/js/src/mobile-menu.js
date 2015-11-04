@@ -2,8 +2,13 @@ var m = require('mithril');
 
 var mobileMenu = function () {
 	return m("header", {class: "mobile-menu"}, [
-		m("a[href='/']", {config: m.route}, [
-			m("div", {class: "main-item"}, "Flower Wedding")
+		m("div", {class: "mobile-header"}, [
+			m("a[href='/']", {config: m.route}, [
+				m("div", {class: "mobile-header-item"}, "Flower Wedding")
+			]),
+			m("a[href='#", [
+				m("div", {class: "mobile-header-item"}, "X")
+			])
 		]),
 		m("div", {class: "slide-out"}, [
 			m("a[href='/wedding-details']", {config: m.route}, [
