@@ -25,7 +25,7 @@ var boulderInfo = {
     	});
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Boulder Info")

@@ -8,7 +8,7 @@ var Rsvp = {
     view: function() {
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "form to RSVP")

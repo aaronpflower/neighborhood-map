@@ -26,7 +26,7 @@ var boulderInfo = {
     	});
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Boulder Info")
@@ -97,7 +97,7 @@ var Home = {
     view: function() {
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
     				m("h1", "Not that we are counting..."),
@@ -196,31 +196,38 @@ m.route(document.body, "/", {
 },{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":12}],6:[function(require,module,exports){
 var m = require('mithril');
 
-var mobileMenu = function () {
-	return m("header", {class: "mobile-menu"}, [
-		m("div", {class: "mobile-header"}, [
-			m("a[href='/']", {config: m.route}, [
-				m("div", {class: "mobile-header-item"}, "Flower Wedding")
+var mobileMenu = {
+	controller: function() {
+		var open = document.getElementById("menuToggle").addEventListener('click', function() { 
+			alert("Hi");
+		});
+	},
+	view: function(ctrl) {
+		return m("header", {class: "mobile-menu"}, [
+			m("div", {class: "mobile-header"}, [
+				m("a[href='/']", {config: m.route}, [
+					m("div", {class: "mobile-header-item"}, "Flower Wedding")
+				]),
+				m("a[href=javascript:;]", [
+					m("div", {class: "mobile-header-item"}, {id: "menu-toggle"}, {config: ctrl.open}, "X")
+				])
 			]),
-			m("a[href='#", [
-				m("div", {class: "mobile-header-item"}, "X")
+			m("div", {class: "slide-out"}, {id: "slide-out"}, [
+				m("a[href='/wedding-details']", {config: m.route}, [
+					m("div", {class: "slide-out-item"}, "Wedding")
+				]),
+				m("a[href='/boulder-info']", {config: m.route}, [
+					m("div", {class: "slide-out-item"}, "Boulder")
+				]),
+				m("a[href='/registry']", {config: m.route}, [
+					m("div", {class: "slide-out-item"}, "Registry")
+				]),
+				m("a[href='/rsvp']", {config: m.route}, [
+					m("div", {class: "slide-out-item"}, "RSVP")
+				])
 			])
-		]),
-		m("div", {class: "slide-out"}, [
-			m("a[href='/wedding-details']", {config: m.route}, [
-				m("div", {class: "slide-out-item"}, "Wedding")
-			]),
-			m("a[href='/boulder-info']", {config: m.route}, [
-				m("div", {class: "slide-out-item"}, "Boulder")
-			]),
-			m("a[href='/registry']", {config: m.route}, [
-				m("div", {class: "slide-out-item"}, "Registry")
-			]),
-			m("a[href='/rsvp']", {config: m.route}, [
-				m("div", {class: "slide-out-item"}, "RSVP")
-			])
-		])
-	]);
+		]);	
+	}
 }
 
 function persistent(context) {
@@ -239,7 +246,7 @@ var Registry = {
     view: function() {
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Registry Info")
@@ -262,7 +269,7 @@ var Rsvp = {
     view: function() {
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "form to RSVP")
@@ -285,7 +292,7 @@ var weddingDetails = {
     view: function() {
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
                 m("div", {class: "hero-section"}, [
                     m("h1", "Wedding Details")

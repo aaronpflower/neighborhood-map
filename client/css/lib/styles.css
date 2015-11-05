@@ -145,9 +145,9 @@
   flex-flow: column nowrap;
   -webkit-flex-flow: column nowrap;
   -ms-flex-flow: column nowrap;
-  justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  -ms-justify-content: flex-start;
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
   align-content: center;
   -webkit-align-content: center;
   -ms-align-content: center;
@@ -155,11 +155,15 @@
   -webkit-align-items: center;
   -ms-align-items: center;
   width: 100%;
-  background-color: #fff;
+  height: 60%;
+  position: fixed;
+  top: 77px;
+  opacity: 0.98;
+  background-color: #2b3742;
 }
 .slide-out-item {
   margin: 25px 0px 25px 0px;
-  color: #2b3742;
+  color: #fff;
   font-weight: 300;
   font-size: 22px;
   flex-grow: 1;
@@ -469,7 +473,7 @@ input {
   -webkit-flex-basis: auto;
   -ms-flex-basis: auto;
   color: #fff;
-  padding: 15px;
+  padding: 25px;
   border-bottom: 1px solid #aaabad;
 }
 .col-1-right {
@@ -483,7 +487,7 @@ input {
   -webkit-flex-basis: auto;
   -ms-flex-basis: auto;
   color: #fff;
-  padding: 15px;
+  padding: 25px;
 }
 .footer-col-2 {
   display: flex;
@@ -514,7 +518,7 @@ input {
   -webkit-flex-basis: auto;
   -ms-flex-basis: auto;
   color: #fff;
-  padding: 15px;
+  padding: 35px 0px 35px 0px;
 }
 .footer-col-3 {
   display: flex;

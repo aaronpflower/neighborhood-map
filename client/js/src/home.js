@@ -9,7 +9,7 @@ var Home = {
     view: function() {
         return m("div", [
             menu(),
-            mobileMenu(),
+            mobileMenu,
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
     				m("h1", "Not that we are counting..."),
