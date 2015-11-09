@@ -3,14 +3,15 @@ var m = require('mithril');
 var mobileMenu = {
 	controller: function() {
 		this.click = function(){
-			var closed = document.getElementById('slide-out').className = "menu-close",
+			var opened = document.getElementById('slide-out').classList.contains("menu-opened");
 				menuToggle = document.getElementById("menu-toggle");
-			if(closed){
-				slideOut = document.getElementById("slide-out").className += " menu-open";
-				menuToggle.addEventListener("click", slideOut);	
-			} else {
-				remove = document.getElementById("slide-out").className = "menu-close";
-				menuToggle.addEventListener("click", remove);
+			if(opened){
+				close = document.getElementById("slide-out").className = "menu-closed";
+				menuToggle.addEventListener("click", close);	
+			} 
+			else {
+				open = document.getElementById("slide-out").className = "menu-opened";
+				menuToggle.addEventListener("click", open);
 			}
 		}
 	},
@@ -24,7 +25,7 @@ var mobileMenu = {
 					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, "X")
 				])
 			]),
-			m("div#slide-out.menu-close", [
+			m("div#slide-out.menu-closed", [
 				m("a[href='/wedding-details']", {config: m.route}, [
 					m("div", {class: "slide-out-item"}, "Wedding")
 				]),

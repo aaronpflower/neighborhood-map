@@ -45,7 +45,7 @@
 	-webkit-flex-basis: 0
 	-ms-flex-basis: 0
 
-.menu-close
+.slide-out
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -61,17 +61,16 @@
 	align-items: center
 	-webkit-align-items: center
 	-ms-align-items: center
-	width: 0%
 	overflow: hidden
 	height: 60%
 	position: fixed
 	top: 77px
 	opacity: 0.98
 	background-color: darkNavy
-
-.menu-open
-	width: 100%
-	overflow: hidden
+	transition: 0.5s ease
+	width: 0%
+	
+.menu-closed
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -87,6 +86,33 @@
 	align-items: center
 	-webkit-align-items: center
 	-ms-align-items: center
+	overflow: hidden
+	height: 60%
+	position: fixed
+	top: 77px
+	opacity: 0.98
+	background-color: darkNavy
+	transition: 0.5s ease
+	width: 0%
+	
+.menu-opened
+	width: 100%
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	justify-content: space-around
+	-webkit-justify-content: space-around
+	-ms-justify-content: space-around
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
+	overflow: hidden
 	height: 60%
 	position: fixed
 	top: 77px
