@@ -11,7 +11,6 @@ var countDownTimer = {
             this.days = Math.floor( this.t/(1000*60*60*24) );
             m.redraw();
         }.bind(this), 1000)
-
     },
 
     view: function(ctrl) {

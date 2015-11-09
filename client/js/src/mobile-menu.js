@@ -2,9 +2,17 @@ var m = require('mithril');
 
 var mobileMenu = {
 	controller: function() {
-		var open = document.getElementById("menuToggle").addEventListener('click', function() { 
-			alert("Hi");
-		});
+		this.click = function(){
+			var closed = document.getElementById('slide-out').className = "menu-close",
+				menuToggle = document.getElementById("menu-toggle");
+			if(closed){
+				slideOut = document.getElementById("slide-out").className += " menu-open";
+				menuToggle.addEventListener("click", slideOut);	
+			} else {
+				remove = document.getElementById("slide-out").className = "menu-close";
+				menuToggle.addEventListener("click", remove);
+			}
+		}
 	},
 	view: function(ctrl) {
 		return m("header", {class: "mobile-menu"}, [
@@ -12,11 +20,11 @@ var mobileMenu = {
 				m("a[href='/']", {config: m.route}, [
 					m("div", {class: "mobile-header-item"}, "Flower Wedding")
 				]),
-				m("a[href=javascript:;]", [
-					m("div", {class: "mobile-header-item"}, {id: "menu-toggle"}, {config: ctrl.open}, "X")
+				m("a[href='#'", [
+					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, "X")
 				])
 			]),
-			m("div", {class: "slide-out"}, {id: "slide-out"}, [
+			m("div#slide-out.menu-close", [
 				m("a[href='/wedding-details']", {config: m.route}, [
 					m("div", {class: "slide-out-item"}, "Wedding")
 				]),

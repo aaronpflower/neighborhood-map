@@ -5,7 +5,7 @@ var m = require('mithril');
 	Registry = require('./registry'),
 	BoulderInfo = require('./boulder-info.js'),
 	menu = require('./menu.js'),
-	footer = require('./footer.js');
+	footer = require('./footer.js'),
 
 m.route.mode = "hash"
 
@@ -14,7 +14,7 @@ m.route(document.body, "/", {
     "/wedding-details": WeddingDetails,
     "/rsvp": Rsvp,
     "/registry": Registry,
-    "/boulder-info": BoulderInfo
+    "/boulder-info": BoulderInfo,
 })
 
 

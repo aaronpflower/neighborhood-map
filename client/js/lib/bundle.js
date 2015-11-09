@@ -177,7 +177,7 @@ var m = require('mithril');
 	Registry = require('./registry'),
 	BoulderInfo = require('./boulder-info.js'),
 	menu = require('./menu.js'),
-	footer = require('./footer.js');
+	footer = require('./footer.js'),
 
 m.route.mode = "hash"
 
@@ -186,7 +186,7 @@ m.route(document.body, "/", {
     "/wedding-details": WeddingDetails,
     "/rsvp": Rsvp,
     "/registry": Registry,
-    "/boulder-info": BoulderInfo
+    "/boulder-info": BoulderInfo,
 })
 
 
@@ -198,9 +198,17 @@ var m = require('mithril');
 
 var mobileMenu = {
 	controller: function() {
-		var open = document.getElementById("menuToggle").addEventListener('click', function() { 
-			alert("Hi");
-		});
+		this.click = function(){
+			var closed = document.getElementById('slide-out').className = "menu-close",
+				menuToggle = document.getElementById("menu-toggle");
+			if(closed){
+				slideOut = document.getElementById("slide-out").className += " menu-open";
+				menuToggle.addEventListener("click", slideOut);	
+			} else {
+				remove = document.getElementById("slide-out").className = "menu-close";
+				menuToggle.addEventListener("click", remove);
+			}
+		}
 	},
 	view: function(ctrl) {
 		return m("header", {class: "mobile-menu"}, [
@@ -208,11 +216,11 @@ var mobileMenu = {
 				m("a[href='/']", {config: m.route}, [
 					m("div", {class: "mobile-header-item"}, "Flower Wedding")
 				]),
-				m("a[href=javascript:;]", [
-					m("div", {class: "mobile-header-item"}, {id: "menu-toggle"}, {config: ctrl.open}, "X")
+				m("a[href='#'", [
+					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, "X")
 				])
 			]),
-			m("div", {class: "slide-out"}, {id: "slide-out"}, [
+			m("div#slide-out.menu-close", [
 				m("a[href='/wedding-details']", {config: m.route}, [
 					m("div", {class: "slide-out-item"}, "Wedding")
 				]),
@@ -318,7 +326,6 @@ var countDownTimer = {
             this.days = Math.floor( this.t/(1000*60*60*24) );
             m.redraw();
         }.bind(this), 1000)
-
     },
 
     view: function(ctrl) {
