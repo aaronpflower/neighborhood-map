@@ -12,30 +12,35 @@ var Home = {
             mobileMenu,
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
-    				m("h1", "Not that we are counting..."),
+                    m("h1", "June 19th, 2016, Lyons CO"),
+    				m("p", "Not that we are counting..."),
                     countDownTimer
             	]),
             	m("div", {class: "second-section"}, [
             		m("div", {class: "text-row"}, [
             			m("h1", "About Us")
            			]),
-            		m("div", {class: "about-us"}, [
-            			m("div", {class: "left-section"}, [
-            				m("img", {src: "../../../client/img/brittney-home.jpg"}),
+            		m("div.about-us", [
+            			m("div", {class: "about-us-item"}, [
+            				m("div.brittney-img"),
             			]),
-            			m("div", {class: "right-section"}, [
-            				m("h1", "Brittney"),
-            				m("p", "She is Cool. From Mount Vernon, WWU Grad, CU DENVER Grad, and a Masters in Child Development.")
+            			m("div", {class: "about-us-item"}, [
+                            m("div.about-us-text", [
+                                m("h1", "Brittney"),
+                                m("p", "She is Cool. From Mount Vernon, WWU Grad, CU DENVER Grad, and a Masters in Child Development.")
+                            ])
             			])
             		]),
-            		m("div", {class: "about-us"}, [
-            			m("div", {class: "right-section"}, [
-            				m("h1", "Aaron"),
-            				m("p", "He is cool. From South Haven, WSC Grad, degree in Exercise, some church leadership training working as a Web Devloper")
-            			]),
-            			m("div", {class: "left-section"}, [
-            				m("img", {src: "../../../client/img/aaron-home.jpg"}),
-            			]),
+            		m("div#aaron.about-us", [
+                        m("div", {class: "about-us-item"}, [
+                            m("div.aaron-img"),
+                        ]),
+            			m("div", {class: "about-us-item"}, [
+                            m("div.about-us-text", [
+                                m("h1", "Aaron"),
+                                m("p", "He is cool. From South Haven, WSC Grad, degree in Exercise, some church leadership training working as a Web Devloper")
+                            ])
+            			])
             		]),
             		m("div", {class: "text-row"}, [
             			m("h1", "How We Met")

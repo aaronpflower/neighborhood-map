@@ -2,36 +2,22 @@
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
-	footer = require("./footer.js"),
-    GoogleMapsLoader = require('google-maps');
+	footer = require("./footer.js");
 
 var boulderInfo = {
-    controller: function() {
-    	
-    },
     view: function() {
-    	GoogleMapsLoader.load(function(google) {
-    		var map;
-			function initMap() {
-			map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: 40.0274, lng: -105.2519},
-			zoom: 13
-			});
-			var marker = new google.maps.Marker({
-			position: {lat: 40.0274, lng: -105.2519},
-			map: map,
-			title: 'Hello World!'
-			});
-		}
-    	});
         return m("div", [
             menu(),
             mobileMenu,
             m("main", [
-                m("div", {class: "hero-section"}, [
+                m("div", {class: "boulder-hero-section"}, [
                     m("h1", "Boulder Info")
                 ]),
-                m("div", {id: "#map"}, {class: "map"}),
+                m("div.second-section", [
+                    m("div.text-row", [
+                        m("h1",  "Overview of BOCO")
+                    ])
+                ])
             ]),
             footer()
         ])
@@ -39,7 +25,7 @@ var boulderInfo = {
 }
 
 module.exports = boulderInfo;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"google-maps":11,"mithril":12}],2:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],2:[function(require,module,exports){
 var m = require("mithril");
 
 var footer = function() {
@@ -85,7 +71,7 @@ module.exports = footer;
 
 
 
-},{"mithril":12}],3:[function(require,module,exports){
+},{"mithril":11}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
@@ -100,30 +86,35 @@ var Home = {
             mobileMenu,
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
-    				m("h1", "Not that we are counting..."),
+                    m("h1", "June 19th, 2016, Lyons CO"),
+    				m("p", "Not that we are counting..."),
                     countDownTimer
             	]),
             	m("div", {class: "second-section"}, [
             		m("div", {class: "text-row"}, [
             			m("h1", "About Us")
            			]),
-            		m("div", {class: "about-us"}, [
-            			m("div", {class: "left-section"}, [
-            				m("img", {src: "../../../client/img/brittney-home.jpg"}),
+            		m("div.about-us", [
+            			m("div", {class: "about-us-item"}, [
+            				m("div.brittney-img"),
             			]),
-            			m("div", {class: "right-section"}, [
-            				m("h1", "Brittney"),
-            				m("p", "She is Cool. From Mount Vernon, WWU Grad, CU DENVER Grad, and a Masters in Child Development.")
+            			m("div", {class: "about-us-item"}, [
+                            m("div.about-us-text", [
+                                m("h1", "Brittney"),
+                                m("p", "She is Cool. From Mount Vernon, WWU Grad, CU DENVER Grad, and a Masters in Child Development.")
+                            ])
             			])
             		]),
-            		m("div", {class: "about-us"}, [
-            			m("div", {class: "right-section"}, [
-            				m("h1", "Aaron"),
-            				m("p", "He is cool. From South Haven, WSC Grad, degree in Exercise, some church leadership training working as a Web Devloper")
-            			]),
-            			m("div", {class: "left-section"}, [
-            				m("img", {src: "../../../client/img/aaron-home.jpg"}),
-            			]),
+            		m("div#aaron.about-us", [
+                        m("div", {class: "about-us-item"}, [
+                            m("div.aaron-img"),
+                        ]),
+            			m("div", {class: "about-us-item"}, [
+                            m("div.about-us-text", [
+                                m("h1", "Aaron"),
+                                m("p", "He is cool. From South Haven, WSC Grad, degree in Exercise, some church leadership training working as a Web Devloper")
+                            ])
+            			])
             		]),
             		m("div", {class: "text-row"}, [
             			m("h1", "How We Met")
@@ -141,7 +132,7 @@ var Home = {
 };
 
 module.exports = Home;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/timer.js":10,"mithril":12}],4:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/timer.js":10,"mithril":11}],4:[function(require,module,exports){
 var m = require("mithril");
 
 var menu = function() {
@@ -169,7 +160,7 @@ function persistent(context) {
 }
 
 module.exports = menu;
-},{"mithril":12}],5:[function(require,module,exports){
+},{"mithril":11}],5:[function(require,module,exports){
 var m = require('mithril');
 	Home = require('./home.js'),
 	WeddingDetails = require('./wedding-details.js'),
@@ -193,7 +184,7 @@ m.route(document.body, "/", {
 
 // Seinfield App Practice
 
-},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":12}],6:[function(require,module,exports){
+},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":11}],6:[function(require,module,exports){
 var m = require('mithril');
 
 var mobileMenu = {
@@ -203,8 +194,8 @@ var mobileMenu = {
 				menuToggle = document.getElementById("menu-toggle");
 			if(opened){
 				close = document.getElementById("slide-out").className = "menu-closed";
-				menuToggle.addEventListener("click", close);	
-			} 
+				menuToggle.addEventListener("click", close);
+			}
 			else {
 				open = document.getElementById("slide-out").className = "menu-opened";
 				menuToggle.addEventListener("click", open);
@@ -235,7 +226,7 @@ var mobileMenu = {
 					m("div", {class: "slide-out-item"}, "RSVP")
 				])
 			])
-		]);	
+		]);
 	}
 }
 
@@ -244,7 +235,7 @@ function persistent(context) {
 }
 
 module.exports = mobileMenu;
-},{"mithril":12}],7:[function(require,module,exports){
+},{"mithril":11}],7:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -267,7 +258,7 @@ var Registry = {
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],8:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],8:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -290,7 +281,7 @@ var Rsvp = {
 }
 
 module.exports = Rsvp;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],9:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],9:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -313,7 +304,7 @@ var weddingDetails = {
 }
 
 module.exports = weddingDetails;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],10:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],10:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
@@ -360,234 +351,7 @@ var countDownTimer = {
 }
 
 module.exports = countDownTimer;
-},{"mithril":12}],11:[function(require,module,exports){
-(function(root, factory) {
-
-	if (root === null) {
-		throw new Error('Google-maps package can be used only in browser');
-	}
-
-	if (typeof define === 'function' && define.amd) {
-		define(factory);
-	} else if (typeof exports === 'object') {
-		module.exports = factory();
-	} else {
-		root.GoogleMapsLoader = factory();
-	}
-
-})(typeof window !== 'undefined' ? window : null, function() {
-
-
-	'use strict';
-
-
-	var googleVersion = '3.18';
-
-	var script = null;
-
-	var google = null;
-
-	var loading = false;
-
-	var callbacks = [];
-
-	var onLoadEvents = [];
-
-	var originalCreateLoaderMethod = null;
-
-
-	var GoogleMapsLoader = {};
-
-
-	GoogleMapsLoader.URL = 'https://maps.googleapis.com/maps/api/js';
-
-	GoogleMapsLoader.KEY = null;
-
-	GoogleMapsLoader.LIBRARIES = [];
-
-	GoogleMapsLoader.CLIENT = null;
-
-	GoogleMapsLoader.CHANNEL = null;
-
-	GoogleMapsLoader.SENSOR = null;
-
-	GoogleMapsLoader.LANGUAGE = null;
-
-	GoogleMapsLoader.VERSION = googleVersion;
-
-	GoogleMapsLoader.WINDOW_CALLBACK_NAME = '__google_maps_api_provider_initializator__';
-
-
-	GoogleMapsLoader._googleMockApiObject = {};
-
-
-	GoogleMapsLoader.load = function(fn) {
-		if (google === null) {
-			if (loading === true) {
-				if (fn) {
-					callbacks.push(fn);
-				}
-			} else {
-				loading = true;
-
-				window[GoogleMapsLoader.WINDOW_CALLBACK_NAME] = function() {
-					ready(fn);
-				};
-
-				GoogleMapsLoader.createLoader();
-			}
-		} else if (fn) {
-			fn(google);
-		}
-
-		var promiseError = function() {
-			throw new Error('Using promises is not supported anymore. Please take a look in new documentation and use callback instead.');
-		};
-
-		return {
-			then: promiseError,
-			'catch': promiseError,
-			fail: promiseError
-		};
-	};
-
-
-	GoogleMapsLoader.createLoader = function() {
-		script = document.createElement('script');
-		script.type = 'text/javascript';
-		script.src = GoogleMapsLoader.createUrl();
-
-		document.body.appendChild(script);
-	};
-
-
-	GoogleMapsLoader.isLoaded = function() {
-		return google !== null;
-	};
-
-
-	GoogleMapsLoader.createUrl = function() {
-		var url = GoogleMapsLoader.URL;
-
-		url += '?callback=' + GoogleMapsLoader.WINDOW_CALLBACK_NAME;
-
-		url += '&sensor=' + ((GoogleMapsLoader.SENSOR === true || GoogleMapsLoader.SENSOR === 'true') ? 'true' : 'false');
-
-		if (GoogleMapsLoader.KEY) {
-			url += '&key=' + GoogleMapsLoader.KEY;
-		}
-
-		if (GoogleMapsLoader.LIBRARIES.length > 0) {
-			url += '&libraries=' + GoogleMapsLoader.LIBRARIES.join(',');
-		}
-
-		if (GoogleMapsLoader.CLIENT) {
-			url += '&client=' + GoogleMapsLoader.CLIENT + '&v=' + GoogleMapsLoader.VERSION;
-		}
-
-		if (GoogleMapsLoader.CHANNEL) {
-			url += '&channel=' + GoogleMapsLoader.CHANNEL;
-		}
-
-		if (GoogleMapsLoader.LANGUAGE) {
-			url += '&language=' + GoogleMapsLoader.LANGUAGE;
-		}
-
-		return url;
-	};
-
-
-	GoogleMapsLoader.release = function(fn) {
-		var release = function() {
-			GoogleMapsLoader.KEY = null;
-			GoogleMapsLoader.LIBRARIES = [];
-			GoogleMapsLoader.CLIENT = null;
-			GoogleMapsLoader.CHANNEL = null;
-			GoogleMapsLoader.LANGUAGE = null;
-			GoogleMapsLoader.SENSOR = false;
-			GoogleMapsLoader.VERSION = googleVersion;
-
-			google = null;
-			loading = false;
-			callbacks = [];
-			onLoadEvents = [];
-
-			if (typeof window.google !== 'undefined') {
-				delete window.google;
-			}
-
-			if (typeof window[GoogleMapsLoader.WINDOW_CALLBACK_NAME] !== 'undefined') {
-				delete window[GoogleMapsLoader.WINDOW_CALLBACK_NAME];
-			}
-
-			if (originalCreateLoaderMethod !== null) {
-				GoogleMapsLoader.createLoader = originalCreateLoaderMethod;
-				originalCreateLoaderMethod = null;
-			}
-
-			if (script !== null) {
-				script.parentElement.removeChild(script);
-				script = null;
-			}
-
-			fn();
-		};
-
-		if (loading) {
-			GoogleMapsLoader.load(function() {
-				release();
-			});
-		} else {
-			release();
-		}
-	};
-
-
-	GoogleMapsLoader.onLoad = function(fn) {
-		onLoadEvents.push(fn);
-	};
-
-
-	GoogleMapsLoader.makeMock = function() {
-		originalCreateLoaderMethod = GoogleMapsLoader.createLoader;
-
-		GoogleMapsLoader.createLoader = function() {
-			window.google = GoogleMapsLoader._googleMockApiObject;
-			window[GoogleMapsLoader.WINDOW_CALLBACK_NAME]();
-		};
-	};
-
-
-	var ready = function(fn) {
-		var i;
-
-		loading = false;
-
-		if (google === null) {
-			google = window.google;
-		}
-
-		for (i = 0; i < onLoadEvents.length; i++) {
-			onLoadEvents[i](google);
-		}
-
-		if (fn) {
-			fn(google);
-		}
-
-		for (i = 0; i < callbacks.length; i++) {
-			callbacks[i](google);
-		}
-
-		callbacks = [];
-	};
-
-
-	return GoogleMapsLoader;
-
-});
-
-},{}],12:[function(require,module,exports){
+},{"mithril":11}],11:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;

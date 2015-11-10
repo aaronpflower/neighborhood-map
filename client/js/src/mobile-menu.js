@@ -7,8 +7,8 @@ var mobileMenu = {
 				menuToggle = document.getElementById("menu-toggle");
 			if(opened){
 				close = document.getElementById("slide-out").className = "menu-closed";
-				menuToggle.addEventListener("click", close);	
-			} 
+				menuToggle.addEventListener("click", close);
+			}
 			else {
 				open = document.getElementById("slide-out").className = "menu-opened";
 				menuToggle.addEventListener("click", open);
@@ -39,7 +39,7 @@ var mobileMenu = {
 					m("div", {class: "slide-out-item"}, "RSVP")
 				])
 			])
-		]);	
+		]);
 	}
 }
 

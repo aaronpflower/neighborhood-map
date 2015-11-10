@@ -74,9 +74,9 @@
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
-  flex-basis: 95px;
-  -webkit-flex-basis: 95px;
-  -ms-flex-basis: 95px;
+  flex-basis: 88px;
+  -webkit-flex-basis: 88px;
+  -ms-flex-basis: 88px;
 }
 .timer-item {
   height: 95px;
@@ -137,31 +137,6 @@
   flex-basis: 0;
   -webkit-flex-basis: 0;
   -ms-flex-basis: 0;
-}
-.slide-out {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: column nowrap;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  overflow: hidden;
-  height: 60%;
-  position: fixed;
-  top: 77px;
-  opacity: 0.98;
-  background-color: #2b3742;
-  transition: 0.5s ease;
-  width: 0%;
 }
 .menu-closed {
   display: flex;
@@ -374,9 +349,9 @@ input {
   flex-flow: column wrap;
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   align-content: center;
   -webkit-align-content: center;
   -ms-align-content: center;
@@ -386,7 +361,14 @@ input {
   width: 100%;
   height: 400px;
   background-position: center;
+  background-color: #aaabad;
   color: #fff;
+}
+.hero-section h1 {
+  margin-bottom: 10px;
+}
+.hero-section p {
+  margin-bottom: 10px;
 }
 .second-section {
   display: flex;
@@ -426,7 +408,7 @@ input {
   background-color: #fff;
   color: #2b3742;
 }
-.left-section {
+.about-us-item {
   flex-grow: 1;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -437,16 +419,20 @@ input {
   -webkit-flex-basis: 300px;
   -ms-flex-basis: 300px;
 }
-.right-section {
-  flex-grow: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-shrink: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-basis: 300px;
-  -webkit-flex-basis: 300px;
-  -ms-flex-basis: 300px;
+.brittney-img {
+  background-image: url("../../../client/img/brittney-home.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+}
+.aaron-img {
+  background-image: url("../../../client/img/aaron-home.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+}
+.about-us-text {
+  height: 100px;
 }
 .about-us img {
   width: 100%;
@@ -487,12 +473,22 @@ input {
   text-align: left;
   padding: 10px 40px 10px 40px;
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 600px) {
   .about-us h1 p {
     padding: 25px;
   }
   .how-we-met p {
     padding: 15px 80px 15px 80px;
+  }
+  #aaron div:nth-child(1) {
+    order: 2;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+  }
+  #aaron div:nth-child(2) {
+    order: 1;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
   }
 }
 .footer-col-1 {
@@ -635,4 +631,28 @@ input {
   .footer-col-1 {
     border-bottom: 1px solid #aaabad;
   }
+}
+.boulder-hero-section {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+  -ms-align-items: stretch;
+  width: 100%;
+  height: 400px;
+  background-image: url("../../../client/img/boulder.jpg");
+  background-position: center;
+  background-size: cover;
+  background-color: #aaabad;
+  color: #fff;
 }
