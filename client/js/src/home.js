@@ -12,7 +12,8 @@ var Home = {
             mobileMenu,
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
-                    m("h1", "June 19th, 2016, Lyons CO"),
+                    m("h1", "June 19th, 2016"), 
+                    m("h1", "Lyons, CO"),
     				m("p", "Not that we are counting..."),
                     countDownTimer
             	]),

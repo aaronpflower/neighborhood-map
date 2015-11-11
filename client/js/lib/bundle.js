@@ -2,7 +2,8 @@
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
-	footer = require("./footer.js");
+	footer = require("./footer.js"),
+    boulderMap = require("./widgets/map.js");
 
 var boulderInfo = {
     view: function() {
@@ -15,7 +16,32 @@ var boulderInfo = {
                 ]),
                 m("div.second-section", [
                     m("div.text-row", [
-                        m("h1",  "Overview of BOCO")
+                        m("h1", "Boulder Details")
+                    ])
+                ]),
+                m("div.info-section", [
+                    m("div.info-item", [
+                        m("h1", "Places to Stay"),
+                        m("p", "Somewhere"),
+                    ]),
+                    m("div.info-item", [
+                        m("h1", "What to do"),
+                        m("p", "Everything"),
+                    ]),
+                    m("div.info-item", [
+                        m("h1", "What to expect"),
+                        m("p", "Stuff"),
+                    ]),
+                ]),
+                m("div.second-section", [
+                    m("div.text-row", [
+                        m("h1",  "Interactive Map")
+                    ])
+                ]),
+                boulderMap,
+                m("div.weather-section", [
+                    m("div.text-row", [
+                        m("h1", "Weather for Boulder")
                     ])
                 ])
             ]),
@@ -25,7 +51,7 @@ var boulderInfo = {
 }
 
 module.exports = boulderInfo;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],2:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/map.js":10,"mithril":12}],2:[function(require,module,exports){
 var m = require("mithril");
 
 var footer = function() {
@@ -71,7 +97,7 @@ module.exports = footer;
 
 
 
-},{"mithril":11}],3:[function(require,module,exports){
+},{"mithril":12}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
@@ -86,7 +112,8 @@ var Home = {
             mobileMenu,
             m("main", [
             	m("div", {class: "hero-section drop-shadow"}, [
-                    m("h1", "June 19th, 2016, Lyons CO"),
+                    m("h1", "June 19th, 2016"), 
+                    m("h1", "Lyons, CO"),
     				m("p", "Not that we are counting..."),
                     countDownTimer
             	]),
@@ -132,7 +159,7 @@ var Home = {
 };
 
 module.exports = Home;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/timer.js":10,"mithril":11}],4:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/timer.js":11,"mithril":12}],4:[function(require,module,exports){
 var m = require("mithril");
 
 var menu = function() {
@@ -160,7 +187,7 @@ function persistent(context) {
 }
 
 module.exports = menu;
-},{"mithril":11}],5:[function(require,module,exports){
+},{"mithril":12}],5:[function(require,module,exports){
 var m = require('mithril');
 	Home = require('./home.js'),
 	WeddingDetails = require('./wedding-details.js'),
@@ -179,12 +206,7 @@ m.route(document.body, "/", {
     "/registry": Registry,
     "/boulder-info": BoulderInfo,
 })
-
-
-
-// Seinfield App Practice
-
-},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":11}],6:[function(require,module,exports){
+},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":12}],6:[function(require,module,exports){
 var m = require('mithril');
 
 var mobileMenu = {
@@ -235,7 +257,7 @@ function persistent(context) {
 }
 
 module.exports = mobileMenu;
-},{"mithril":11}],7:[function(require,module,exports){
+},{"mithril":12}],7:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -251,6 +273,9 @@ var Registry = {
                 m("div", {class: "hero-section"}, [
                     m("h1", "Registry Info")
                 ]),
+                m("div.second-section", [
+                    m("iframe", {src: "http://www.target.com/"}, {target:"_top"})
+                ])
             ]),
             footer()
         ])
@@ -258,7 +283,7 @@ var Registry = {
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],8:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],8:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -281,7 +306,7 @@ var Rsvp = {
 }
 
 module.exports = Rsvp;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],9:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],9:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -304,7 +329,30 @@ var weddingDetails = {
 }
 
 module.exports = weddingDetails;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":11}],10:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],10:[function(require,module,exports){
+var m = require('mithril');
+	// GoogleMapsLoader = require('google-maps');
+
+var boulderMap = {
+	controller: function() {
+		this.init = function() {
+			var map;
+			window.onload = function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+			    	center: {lat: 40.0274, lng: -105.2519},
+			    	zoom: 12
+			 	});
+			}
+		m.redraw();
+		}
+	},
+	view: function(ctrl) {
+		return m("div#map.map", {config: ctrl.init})
+	}
+}
+
+module.exports = boulderMap;
+},{"mithril":12}],11:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
@@ -351,7 +399,7 @@ var countDownTimer = {
 }
 
 module.exports = countDownTimer;
-},{"mithril":11}],11:[function(require,module,exports){
+},{"mithril":12}],12:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;

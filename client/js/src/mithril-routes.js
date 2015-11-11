@@ -16,7 +16,3 @@ m.route(document.body, "/", {
     "/registry": Registry,
     "/boulder-info": BoulderInfo,
 })
-
-
-
-// Seinfield App Practice

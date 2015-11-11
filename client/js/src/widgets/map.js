@@ -1,23 +1,21 @@
-var m = require('mithril'),
-	GoogleMapsLoader = require('google-maps');
+var m = require('mithril');
+	// GoogleMapsLoader = require('google-maps');
 
 var boulderMap = {
 	controller: function() {
-		GoogleMapsLoader.load(function(google) {
-    		var map;
-			function initMap() {
-			map = new google.maps.Map(document.getElementById('map'), {
-			center: {lat: 40.0274, lng: -105.2519},
-			zoom: 13
-			});
-			var marker = new google.maps.Marker({
-			position: {lat: 40.0274, lng: -105.2519},
-			map: map,
-			title: 'Hello World!'
-		});
+		this.init = function() {
+			var map;
+			window.onload = function initMap() {
+				map = new google.maps.Map(document.getElementById('map'), {
+			    	center: {lat: 40.0274, lng: -105.2519},
+			    	zoom: 12
+			 	});
+			}
+		m.redraw();
+		}
 	},
-	view: function() {
-
+	view: function(ctrl) {
+		return m("div#map.map", {config: ctrl.init})
 	}
 }
 

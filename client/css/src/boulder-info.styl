@@ -21,3 +21,66 @@
 	background-size: cover
 	background-color: gray
 	color: #fff
+
+.info-section
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column wrap
+	-webkit-flex-flow: column wrap
+	-ms-flex-flow: column wrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: stretch
+	-webkit-align-items: stretch
+	-ms-align-items: stretch
+
+.info-item
+	flex-grow: 1
+	-webkit-flex-grow: 1
+	-ms-flex-grow: 1
+	flex-shrink: 1
+	-webkit-flex-shrink: 1
+	-ms-flex-shrink: 1
+	flex-basis: 300px
+	-webkit-flex-basis: 300px
+	-ms-flex-basis: 300px
+
+.info-item h1
+	color: #000
+	background-color: gray
+	font-size: 20px
+	font-weight: 300
+
+.info-item p
+	color: darkNavy
+	font-weight: 200
+	font-size: 15px
+
+.weather-section
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column wrap
+	-webkit-flex-flow: column wrap
+	-ms-flex-flow: column wrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: stretch
+	-webkit-align-items: stretch
+	-ms-align-items: stretch
+
+
+@media only screen and (min-width: 800px)
+	.info-section
+		flex-flow: row nowrap
+		-webkit-flex-flow: row nowrap
+		-ms-flex-flow: row nowrap
