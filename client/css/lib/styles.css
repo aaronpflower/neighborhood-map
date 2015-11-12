@@ -399,18 +399,6 @@ input {
   -webkit-flex-basis: 300px;
   -ms-flex-basis: 300px;
 }
-.brittney-img {
-  background-image: url("../../../client/img/brittney-home.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 350px;
-}
-.aaron-img {
-  background-image: url("../../../client/img/aaron-home.jpg");
-  background-position: center;
-  background-size: cover;
-  height: 350px;
-}
 .about-us-text {
   height: 100px;
 }
@@ -526,20 +514,9 @@ input {
   display: -ms-flex;
   flex-flow: column wrap;
   -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
   background-color: #2b3742;
 }
 .col-2-item {
-  flex-grow: 1;
   -webkit-flex-grow: 1;
   -ms-flex-flow: 1;
   flex-shrink: 1;
@@ -548,6 +525,9 @@ input {
   flex-basis: auto;
   -webkit-flex-basis: auto;
   -ms-flex-basis: auto;
+  align-self: center;
+  -webkit-align-self: center;
+  -ms-align-self: center;
   color: #fff;
   padding: 35px 0px 35px 0px;
 }
@@ -614,6 +594,14 @@ input {
   }
   .footer-col-1 {
     border-bottom: 1px solid #aaabad;
+  }
+  .col-2-item {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
   }
 }
 .boulder-hero-section {

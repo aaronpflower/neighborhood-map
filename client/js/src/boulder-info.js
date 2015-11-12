@@ -2,7 +2,8 @@ var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
 	footer = require("./footer.js"),
-    boulderMap = require("./widgets/map.js");
+    boulderMap = require("./widgets/map.js"),
+    Weather = require("./widgets/weather.js");
 
 var boulderInfo = {
     view: function() {
@@ -41,8 +42,9 @@ var boulderInfo = {
                 m("div.weather-section", [
                     m("div.text-row", [
                         m("h1", "Weather for Boulder")
-                    ])
-                ])
+                    ]),
+                ]),
+                Weather
             ]),
             footer()
         ])
