@@ -11,7 +11,7 @@ var boulderInfo = {
             menu(),
             mobileMenu,
             m("main", [
-                m("div", {class: "boulder-hero-section"}, [
+                m("div", {class: "boulder-hero-section drop-shadow"}, [
                     m("h1", "Boulder Info")
                 ]),
                 m("div.second-section", [
