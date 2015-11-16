@@ -1,5 +1,4 @@
 var m = require('mithril');
-	// GoogleMapsLoader = require('google-maps');
 
 var boulderMap = {
 	controller: function() {
@@ -11,11 +10,12 @@ var boulderMap = {
 			    	zoom: 12
 			 	});
 			}
-		m.redraw();
 		}
 	},
 	view: function(ctrl) {
-		return m("div#map.map", {config: ctrl.init})
+		m.render(document.body, [
+			m("div#map.map", {config: ctrl.init})
+		])
 	}
 }
 

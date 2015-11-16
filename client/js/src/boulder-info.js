@@ -38,7 +38,6 @@ var boulderInfo = {
                         m("h1",  "Interactive Map")
                     ])
                 ]),
-                boulderMap,
                 m("div.weather-section", [
                     m("div.text-row", [
                         m("h1", "Weather for Boulder")

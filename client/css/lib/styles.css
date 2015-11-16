@@ -395,20 +395,23 @@ input {
   flex-shrink: 1;
   -webkit-flex-shrink: 1;
   -ms-flex-shrink: 1;
-  flex-basis: 300px;
-  -webkit-flex-basis: 300px;
-  -ms-flex-basis: 300px;
-}
-.about-us-text {
-  height: 100px;
+  flex-basis: 400px;
+  -webkit-flex-basis: 400px;
+  -ms-flex-basis: 400px;
 }
 .about-us img {
   width: 100%;
   height: 100%;
 }
-.about-us h1 p {
-  text-align: center;
-  padding: 15px;
+.about-us h1 {
+  text-align: left;
+  padding: 15px 13px 15px 20px;
+}
+.about-us p {
+  text-align: left;
+  padding: 0px 25px 10px 13px;
+  border-left: 11px solid #2b3742;
+  line-height: 30px;
 }
 .how-we-met {
   display: flex;
@@ -430,18 +433,20 @@ input {
   color: #2b3742;
 }
 .how-we-met img {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 .how-we-met h1 {
+  padding: 15px 13px 15px 20px;
   text-align: center;
   width: 100%;
 }
 .how-we-met p {
   text-align: left;
   padding: 10px 40px 10px 40px;
+  line-height: 30px;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 802px) {
   .about-us h1 p {
     padding: 25px;
   }
@@ -461,6 +466,24 @@ input {
   .hero-section h1 {
     margin-bottom: 10px;
     font-size: 75px;
+  }
+}
+@media only screen and (min-width: 802px) and (max-width: 950px) {
+  .about-us-text {
+    overflow-y: scroll;
+    max-height: 400px;
+  }
+}
+@media only screen and (min-width: 951px) {
+  .about-us-text {
+    overflow-y: scroll;
+    max-height: 500px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .about-us-text {
+    overflow-y: scroll;
+    max-height: 640px;
   }
 }
 .footer-col-1 {
@@ -683,6 +706,10 @@ input {
   align-items: stretch;
   -webkit-align-items: stretch;
   -ms-align-items: stretch;
+}
+.weatherIframe {
+  height: 245px;
+  width: 75%;
 }
 @media only screen and (min-width: 800px) {
   .info-section {

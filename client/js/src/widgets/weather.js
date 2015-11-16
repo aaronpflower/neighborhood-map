@@ -2,11 +2,8 @@ var Forecast = require('forecast.io'),
 	m = require('mithril');
 
 var boulderWeather = {
-	controller: function() {
-
-	},
 	view: function(ctrl) {
-		return m("div", "weather here")
+		return m("iframe#forecast_embed.weatherIframe", {src: "http://forecast.io/embed/#lat=40.0274&lon=105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
 	}
 }
 

@@ -4,8 +4,8 @@ var m = require('mithril');
 	Rsvp = require('./rsvp'),
 	Registry = require('./registry'),
 	BoulderInfo = require('./boulder-info.js'),
-	menu = require('./menu.js'),
-	footer = require('./footer.js'),
+	// menu = require('./menu.js'),
+	// footer = require('./footer.js'),
 
 m.route.mode = "hash"
 

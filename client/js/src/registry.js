@@ -13,9 +13,7 @@ var Registry = {
                 m("div", {class: "hero-section"}, [
                     m("h1", "Registry Info")
                 ]),
-                m("div.second-section", [
-                    m("iframe", {src: "http://www.target.com/"}, {target:"_top"})
-                ])
+                m("div.second-section")
             ]),
             footer()
         ])
