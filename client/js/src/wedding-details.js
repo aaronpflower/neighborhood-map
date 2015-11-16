@@ -9,12 +9,12 @@ var weddingDetails = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div.hero-section.wedding-hero.drop-shadow", [
+                m("h1", "Lyons, CO"),
+                m("p", "Where: Lyons Farmette"),
+                m("p", "When: June 19th, 2016 4pm")
+            ]),
             m("main", [
-                m("div.wedding-hero-section drop-shadow", [
-                    m("h1", "Lyons, CO"),
-                    m("p", "Where: Lyons Farmette"),
-                    m("p", "When: June 19th, 2016 4pm")
-                ]),
                 m("div", {class: "text-row"}, [
                     m("h1", "Wedding Day Information")
                 ]),

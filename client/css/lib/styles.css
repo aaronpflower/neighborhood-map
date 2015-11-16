@@ -1,3 +1,27 @@
+.hero-section {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+  -ms-align-items: stretch;
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-color: #aaabad;
+  color: #fff;
+  padding-top: 77px;
+}
 .text-row {
   display: flex;
   display: -webkit-flex;
@@ -69,6 +93,11 @@
 }
 .timer-item p {
   padding: 0px 10px;
+}
+@media only screen and (min-width: 800px) {
+  .hero-section {
+    height: 600px;
+  }
 }
 .desktop-nav {
   display: none;
@@ -247,9 +276,6 @@ body {
   margin: 0;
   padding: 0;
 }
-main {
-  padding-top: 77px;
-}
 h1,
 h2,
 h3,
@@ -321,29 +347,9 @@ input {
     background-color: rgba(250,250,250,0.98);
   }
 }
-.hero-section {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: column wrap;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
-  width: 100%;
-  height: 400px;
+.home-hero {
   background-image: url("../../../client/img/home-hero.jpg");
-  background-position: center;
-  background-size: cover;
-  background-color: #aaabad;
-  color: #fff;
+  border-bottom: 4px solid #fee404;
 }
 .hero-section h1 {
   margin-bottom: 10px;
@@ -629,29 +635,9 @@ input {
     -ms-justify-content: center;
   }
 }
-.boulder-hero-section {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: column wrap;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
-  width: 100%;
-  height: 400px;
+.boulder-hero {
   background-image: url("../../../client/img/boulder.jpg");
-  background-position: center;
-  background-size: cover;
-  background-color: #aaabad;
-  color: #fff;
+  border-bottom: 4px solid #0a8e50;
 }
 .boulder-hero-section h1 {
   margin-bottom: 10px;
@@ -731,29 +717,9 @@ input {
   height: 600px;
   width: 100%;
 }
-.wedding-hero-section {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: column wrap;
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
-  width: 100%;
-  height: 400px;
+.wedding-hero {
   background-image: url("../../../client/img/wedding.jpg");
-  background-position: center;
-  background-size: cover;
-  background-color: #aaabad;
-  color: #fff;
+  border-bottom: 4px solid #ff7902;
 }
 .wedding-hero-section h1 {
   margin-bottom: 10px;
@@ -761,4 +727,12 @@ input {
 }
 .wedding-hero-section p {
   margin-bottom: 10px;
+}
+.registry-hero {
+  background-image: url("../../../client/registry-hero.jpg");
+  border-bottom: 4px solid #f5888d;
+}
+.rsvp-hero {
+  background-image: url("../../../client/rsvp-hero.jpg");
+  border-bottom: 4px solid #f9933f;
 }

@@ -10,13 +10,13 @@ var Home = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div", {class: "hero-section home-hero drop-shadow"}, [
+                m("h1", "June 19th, 2016"), 
+                m("h1", "Lyons, CO"),
+                m("p", "Not that we are counting..."),
+                countDownTimer
+            ]),
             m("main", [
-            	m("div", {class: "hero-section drop-shadow"}, [
-                    m("h1", "June 19th, 2016"), 
-                    m("h1", "Lyons, CO"),
-    				m("p", "Not that we are counting..."),
-                    countDownTimer
-            	]),
             	m("div", {class: "second-section"}, [
             		m("div", {class: "text-row"}, [
             			m("h1", "About Us")

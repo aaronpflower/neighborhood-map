@@ -9,10 +9,15 @@ var Rsvp = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div", {class: "hero-section rsvp-hero"}, [
+                m("h1", "RSVP")
+            ]),
             m("main", [
-                m("div", {class: "hero-section"}, [
-                    m("h1", "form to RSVP")
-                ]),
+                m("div.second-section", [
+                    m("div", {class: "text-row"}, [
+                        m("h1", "Coming Soon...")
+                    ])
+                ])  
             ]),
             footer()
         ])

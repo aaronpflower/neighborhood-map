@@ -8,6 +8,30 @@ tangerine = #FF7902
 lime = #0A8E50
 lemon = #FEE404
 
+.hero-section
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column wrap
+	-webkit-flex-flow: column wrap
+	-ms-flex-flow: column wrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: stretch
+	-webkit-align-items: stretch
+	-ms-align-items: stretch
+	width: 100%
+	height: 400px
+	background-position: center
+	background-size: cover
+	background-color: gray
+	color: #fff
+	padding-top: 77px
+
 .text-row
 	display: flex
 	display: -webkit-flex
@@ -71,7 +95,6 @@ lemon = #FEE404
 	-ms-flex-basis: 88px
 	
 .timer-item
-	// width: 90px
 	height: 95px
 	margin: 1px
 	background-color: darkNavy
@@ -83,3 +106,7 @@ lemon = #FEE404
 
 .timer-item p
 	padding: 0px 10px
+
+@media only screen and (min-width: 800px)
+	.hero-section
+		height: 600px

@@ -11,10 +11,10 @@ var boulderInfo = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div", {class: "hero-section boulder-hero drop-shadow"}, [
+                m("h1", "Boulder Info")
+            ]),
             m("main", [
-                m("div", {class: "boulder-hero-section drop-shadow"}, [
-                    m("h1", "Boulder Info")
-                ]),
                 m("div.second-section", [
                     m("div.text-row", [
                         m("h1", "Boulder Details")
@@ -111,13 +111,13 @@ var Home = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div", {class: "hero-section home-hero drop-shadow"}, [
+                m("h1", "June 19th, 2016"), 
+                m("h1", "Lyons, CO"),
+                m("p", "Not that we are counting..."),
+                countDownTimer
+            ]),
             m("main", [
-            	m("div", {class: "hero-section drop-shadow"}, [
-                    m("h1", "June 19th, 2016"), 
-                    m("h1", "Lyons, CO"),
-    				m("p", "Not that we are counting..."),
-                    countDownTimer
-            	]),
             	m("div", {class: "second-section"}, [
             		m("div", {class: "text-row"}, [
             			m("h1", "About Us")
@@ -277,11 +277,15 @@ var Registry = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div", {class: "hero-section registry-hero"}, [
+                m("h1", "Registry Info")
+            ]),
             m("main", [
-                m("div", {class: "hero-section"}, [
-                    m("h1", "Registry Info")
-                ]),
-                m("div.second-section")
+                m("div.second-section", [
+                    m("div", {class: "text-row"}, [
+                        m("h1", "Coming Soon...")
+                    ])
+                ])  
             ]),
             footer()
         ])
@@ -301,10 +305,15 @@ var Rsvp = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div", {class: "hero-section rsvp-hero"}, [
+                m("h1", "RSVP")
+            ]),
             m("main", [
-                m("div", {class: "hero-section"}, [
-                    m("h1", "form to RSVP")
-                ]),
+                m("div.second-section", [
+                    m("div", {class: "text-row"}, [
+                        m("h1", "Coming Soon...")
+                    ])
+                ])  
             ]),
             footer()
         ])
@@ -324,12 +333,12 @@ var weddingDetails = {
         return m("div", [
             menu(),
             mobileMenu,
+            m("div.hero-section.wedding-hero.drop-shadow", [
+                m("h1", "Lyons, CO"),
+                m("p", "Where: Lyons Farmette"),
+                m("p", "When: June 19th, 2016 4pm")
+            ]),
             m("main", [
-                m("div.wedding-hero-section drop-shadow", [
-                    m("h1", "Lyons, CO"),
-                    m("p", "Where: Lyons Farmette"),
-                    m("p", "When: June 19th, 2016 4pm")
-                ]),
                 m("div", {class: "text-row"}, [
                     m("h1", "Wedding Day Information")
                 ]),
