@@ -8,7 +8,7 @@ var Home = {
     controller: function() {},
     view: function() {
         return m("div", [
-            menu(),
+            menu,
             mobileMenu,
             m("div", {class: "hero-section home-hero drop-shadow"}, [
                 m("h1", "June 19th, 2016"), 

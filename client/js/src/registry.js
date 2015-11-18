@@ -7,7 +7,7 @@ var Registry = {
     controller: function() {},
     view: function() {
         return m("div", [
-            menu(),
+            menu,
             mobileMenu,
             m("div", {class: "hero-section registry-hero"}, [
                 m("h1", "Registry Info")

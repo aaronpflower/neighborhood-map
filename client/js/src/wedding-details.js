@@ -7,7 +7,7 @@ var weddingDetails = {
     controller: function() {},
     view: function() {
         return m("div", [
-            menu(),
+            menu,
             mobileMenu,
             m("div.hero-section.wedding-hero.drop-shadow", [
                 m("h1", "Lyons, CO"),

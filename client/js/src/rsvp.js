@@ -7,7 +7,7 @@ var Rsvp = {
     controller: function() {},
     view: function() {
         return m("div", [
-            menu(),
+            menu,
             mobileMenu,
             m("div", {class: "hero-section rsvp-hero"}, [
                 m("h1", "RSVP")
