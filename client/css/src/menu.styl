@@ -69,6 +69,7 @@
 	background-color: darkNavy
 	transition: 0.5s ease
 	width: 0%
+	z-index: 200
 	
 .menu-opened
 	width: 100%
@@ -94,7 +95,8 @@
 	opacity: 0.98
 	background-color: darkNavy
 	transition: 0.5s ease
-	
+	z-index: 200
+
 .slide-out-item
 	margin: 25px 0px 25px 0px
 	color: #fff
@@ -138,20 +140,20 @@
 		-moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
 		box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
 	
-	.desktop-nav div:nth-child(1)
-		color: tangerine
+	// .active-route div:nth-child(1)
+	// 	color: tangerine
 	
-	.desktop-nav div:nth-child(2)
-		color: lime
+	// .active-route div:nth-child(2)
+	// 	color: lime
 	
-	.desktop-nav div:nth-child(3)
-		color: lemon
+	// .active-route div:nth-child(3)
+	// 	color: lemon
 	
-	.desktop-nav div:nth-child(4)
-		color: peach
+	// .active-route div:nth-child(4)
+	// 	color: peach
 	
-	.desktop-nav div:nth-child(5)
-		color: pink
+	// .active-route div:nth-child(5)
+	// 	color: pink
 	
 	.header-item
 		margin: 25px 0px 25px 0px
@@ -167,7 +169,7 @@
 		cursor: pointer
 
 	.active-route
-		color: darkNavy !important
-		border-bottom: 1px solid darkNavy
-		transition: color 0.5s ease
+		color: darkNavy
+		border-bottom: 4px solid darkNavy
+		transition: border-bottom 0.9s ease
 		

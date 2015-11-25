@@ -9,7 +9,7 @@ var menu = {
 			item("Registry", "/registry"),
 			item("RSVP", "/rsvp")
 		]);
-	function item(name, route) {
+		function item(name, route) {
 			var isCurrent = (m.route() === route);
 			var click = function(){ 
 				m.route(route); 

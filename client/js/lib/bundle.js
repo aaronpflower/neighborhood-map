@@ -14,40 +14,40 @@ var boulderInfo = {
             m("div", {class: "hero-section boulder-hero drop-shadow"}, [
                 m("h1", "Boulder Info")
             ]),
-            m("main", [
-                m("div.second-section", [
+            m("main.main-border-boulder-info", [
+                m("div.main-section", [
                     m("div.text-row", [
                         m("h1", "Boulder Details")
-                    ])
-                ]),
-                m("div.info-section", [
-                    m("div.info-item", [
-                        m("h1", "Places to Stay"),
-                        m("p", "Somewhere"),
                     ]),
-                    m("div.info-item", [
-                        m("h1", "What to do"),
-                        m("p", "Everything"),
+                    m("div.info-section", [
+                        m("div.info-item", [
+                            m("h1", "Places to Stay"),
+                            m("p", "Somewhere"),
+                        ]),
+                        m("div.info-item", [
+                            m("h1", "What to do"),
+                            m("p", "Everything"),
+                        ]),
+                        m("div.info-item", [
+                            m("h1", "What to expect"),
+                            m("p", "Stuff"),
+                        ]),
                     ]),
-                    m("div.info-item", [
-                        m("h1", "What to expect"),
-                        m("p", "Stuff"),
+                    m("div.second-section", [
+                        m("div.text-row", [
+                            m("h1",  "Interactive Map")
+                        ])
                     ]),
-                ]),
-                m("div.second-section", [
-                    m("div.text-row", [
-                        m("h1",  "Interactive Map")
-                    ])
-                ]),
-                // boulderMap,
-                m("div.weather-section", [
-                    m("div.text-row", [
-                        m("h1", "Weather for Boulder")
+                    // boulderMap,
+                    m("div.weather-section", [
+                        m("div.text-row", [
+                            m("h1", "Weather for Boulder")
+                        ]),
                     ]),
-                ]),
-                // Weather
-            ]),
-            footer()
+                    // Weather,
+                footer(),
+                ])
+            ])
         ])
     }
 }
@@ -118,8 +118,8 @@ var Home = {
                 m("p", "Not that we are counting..."),
                 countDownTimer
             ]),
-            m("main", [
-            	m("div", {class: "second-section"}, [
+            m("main.main-border-home", [
+            	m("div", {class: "main-section"}, [
             		m("div", {class: "text-row"}, [
             			m("h1", "About Us")
            			]),
@@ -161,8 +161,8 @@ var Home = {
                         m("p", "After their profoundly deep first meeting, Aaron did what any respectable man who wants to state their intentions to a lady does. He friended her on facebook. After a few exchanges on Facebook, and Brittney running away from Aaron at church, they met for coffee at Ozo Coffee. Walking into the coffee shop, Brittney took a deep breath, smiled at Aaron, and said “Aaron? Hi.” Aaron awkwardly sat in silence not knowing what to say, do, or think. But Brittney found the silence oddly calming to her nerves. After the initial awkwardness subsided, the two talked for 3 hours about their families, backgrounds, and everything in between. After finishing the last sips of their beverages, the pair walked outside of the coffee shop and awkwardly stared at each other for a second. Then Aaron looked at Brittney and said “We should do this again soon.” To which Brittney replied “Yes. I’d like that.” This was proceeded by the most awkward hug, arms tapping the others back lightly, torsos feet away from each other. After another awkward look and saying their goodbyes the two walked away from each other grinning.")           		
                     ]),
             	]),
-            ]),
-            footer()
+            footer(),
+            ])
         ])
     }
 };
@@ -180,7 +180,7 @@ var menu = {
 			item("Registry", "/registry"),
 			item("RSVP", "/rsvp")
 		]);
-	function item(name, route) {
+		function item(name, route) {
 			var isCurrent = (m.route() === route);
 			var click = function(){ 
 				m.route(route); 
@@ -280,14 +280,14 @@ var Registry = {
             m("div", {class: "hero-section registry-hero"}, [
                 m("h1", "Registry Info")
             ]),
-            m("main", [
-                m("div.second-section", [
+            m("main.main-border-registry", [
+                m("div.main-section", [
                     m("div", {class: "text-row"}, [
                         m("h1", "Coming Soon...")
                     ])
-                ])  
-            ]),
-            footer()
+                ]),  
+            footer(),
+            ])
         ])
     }
 }
@@ -308,14 +308,14 @@ var Rsvp = {
             m("div", {class: "hero-section rsvp-hero"}, [
                 m("h1", "RSVP")
             ]),
-            m("main", [
-                m("div.second-section", [
+            m("main.main-border-rsvp", [
+                m("div.main-section", [
                     m("div", {class: "text-row"}, [
                         m("h1", "Coming Soon...")
                     ])
-                ])  
-            ]),
-            footer()
+                ]),  
+            footer(),
+            ])
         ])
     }
 }
@@ -338,97 +338,99 @@ var weddingDetails = {
                 m("p", "Where: Lyons Farmette"),
                 m("p", "When: June 19th, 2016 4pm")
             ]),
-            m("main", [
-                m("div", {class: "text-row"}, [
-                    m("h1", "Wedding Day Information")
-                ]),
-                m("div.info-section", [
-                    m("div.info-item", [
-                        m("h1", "Places to Stay"),
-                        m("p", "Somewhere"),
-                    ]),
-                    m("div.info-item", [
-                        m("h1", "What to do"),
-                        m("p", "Everything"),
-                    ]),
-                    m("div.info-item", [
-                        m("h1", "What to expect"),
-                        m("p", "Stuff"),
-                    ])
-                ]),
-                m("div", {class: "second-section"}, [
+            m("main.main-border-wedding-details", [
+                m("div.main-section", [
                     m("div", {class: "text-row"}, [
-                        m("h1", "Wedding Party")
+                        m("h1", "Wedding Day Information")
                     ]),
-                    m("div.about-us", [
-                        m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/brittney-home.jpg"})
+                    m("div.info-section", [
+                        m("div.info-item", [
+                            m("h1", "Places to Stay"),
+                            m("p", "Somewhere"),
                         ]),
-                        m("div", {class: "about-us-item"}, [
-                            m("div.about-us-text", [
-                                m("h1", "Amanda"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                        m("div.info-item", [
+                            m("h1", "What to do"),
+                            m("p", "Everything"),
+                        ]),
+                        m("div.info-item", [
+                            m("h1", "What to expect"),
+                            m("p", "Stuff"),
+                        ])
+                    ]),
+                    m("div", {class: "second-section"}, [
+                        m("div", {class: "text-row"}, [
+                            m("h1", "Wedding Party")
+                        ]),
+                        m("div.about-us", [
+                            m("div", {class: "about-us-item"}, [
+                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                            ]),
+                            m("div", {class: "about-us-item"}, [
+                                m("div.about-us-text", [
+                                    m("h1", "Amanda"),
+                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                ])
+                            ])
+                        ]),
+                        m("div#aaron.about-us", [
+                            m("div", {class: "about-us-item"}, [
+                                m("img", {src: "../../../client/img/aaron-home.jpg"})
+                            ]),
+                            m("div", {class: "about-us-item"}, [
+                                m("div.about-us-text", [
+                                    m("h1", "Ryan"),
+                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                ])
+                            ])
+                        ]),
+                        m("div.about-us", [
+                            m("div", {class: "about-us-item"}, [
+                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                            ]),
+                            m("div", {class: "about-us-item"}, [
+                                m("div.about-us-text", [
+                                    m("h1", "Bailey"),
+                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                ])
+                            ])
+                        ]),
+                        m("div#aaron.about-us", [
+                            m("div", {class: "about-us-item"}, [
+                                m("img", {src: "../../../client/img/aaron-home.jpg"})
+                            ]),
+                            m("div", {class: "about-us-item"}, [
+                                m("div.about-us-text", [
+                                    m("h1", "Ty"),
+                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                ])
+                            ])
+                        ]),
+                        m("div.about-us", [
+                            m("div", {class: "about-us-item"}, [
+                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                            ]),
+                            m("div", {class: "about-us-item"}, [
+                                m("div.about-us-text", [
+                                    m("h1", "Aracely"),
+                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                ])
+                            ])
+                        ]),
+                        m("div#aaron.about-us", [
+                            m("div", {class: "about-us-item"}, [
+                                m("img", {src: "../../../client/img/aaron-home.jpg"})
+                            ]),
+                            m("div", {class: "about-us-item"}, [
+                                m("div.about-us-text", [
+                                    m("h1", "Chase"),
+                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                ])
                             ])
                         ])
                     ]),
-                    m("div#aaron.about-us", [
-                        m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/aaron-home.jpg"})
-                        ]),
-                        m("div", {class: "about-us-item"}, [
-                            m("div.about-us-text", [
-                                m("h1", "Ryan"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                            ])
-                        ])
-                    ]),
-                    m("div.about-us", [
-                        m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/brittney-home.jpg"})
-                        ]),
-                        m("div", {class: "about-us-item"}, [
-                            m("div.about-us-text", [
-                                m("h1", "Bailey"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                            ])
-                        ])
-                    ]),
-                    m("div#aaron.about-us", [
-                        m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/aaron-home.jpg"})
-                        ]),
-                        m("div", {class: "about-us-item"}, [
-                            m("div.about-us-text", [
-                                m("h1", "Ty"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                            ])
-                        ])
-                    ]),
-                    m("div.about-us", [
-                        m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/brittney-home.jpg"})
-                        ]),
-                        m("div", {class: "about-us-item"}, [
-                            m("div.about-us-text", [
-                                m("h1", "Aracely"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                            ])
-                        ])
-                    ]),
-                    m("div#aaron.about-us", [
-                        m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/aaron-home.jpg"})
-                        ]),
-                        m("div", {class: "about-us-item"}, [
-                            m("div.about-us-text", [
-                                m("h1", "Chase"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                            ])
-                        ])
-                    ])
-                ]),
-            ]),
-            footer()
+                footer(),
+                ])
+            ])
         ])
     }
 }
@@ -482,32 +484,27 @@ var countDownTimer = {
 
 module.exports = countDownTimer;
 },{"mithril":12}],11:[function(require,module,exports){
-// var m = require('mithril'),
-// 	forecastIo = require('forecastio');
+var m = require('mithril');
 
-// var boulderWeather = {
-// 	controller: function() {
-// 		var forecastIo = new forecastIo('<75d6ce45a07f135b5c01ec05b09984abgul>');
-// 		forecastIo.forecast('51.506', '-0.127', function(err, data) {
-//   		if (err) throw err;
-//   		console.log(JSON.stringify(data, null, 2));
-// 		});
+var boulderWeather = {
+	controller: function() {
+		return { 
+			currentWeather: m.request({ 
+				method: "GET",
+				url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
+				dataType: "jsonp",
+				callback: "callback"
+			})
+		}	
+	},
+	view: function(ctrl) {
+		console.log(ctrl.currentWeather);
+		return m("div", "Current Boulder Temp:");
+	}
+}
 
-// 	},
-// 	view: function(ctrl) {
-// 		console.log(ctrl);
-// 		return m("div", ctrl);
-// 	}
-// }
-
-// module.exports = boulderWeather;
-
-
-		// setInterval(function(){
-		// 	this.current = m.request({dataType: "jsonp", callbackKey: "jsoncallback", url: "http://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519,currently"});
-		// 	m.redraw();
-		// }.bind(this), 1000)
-},{}],12:[function(require,module,exports){
+module.exports = boulderWeather;
+},{"mithril":12}],12:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;

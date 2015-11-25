@@ -12,14 +12,14 @@ var Registry = {
             m("div", {class: "hero-section registry-hero"}, [
                 m("h1", "Registry Info")
             ]),
-            m("main", [
-                m("div.second-section", [
+            m("main.main-border-registry", [
+                m("div.main-section", [
                     m("div", {class: "text-row"}, [
                         m("h1", "Coming Soon...")
                     ])
-                ])  
-            ]),
-            footer()
+                ]),  
+            footer(),
+            ])
         ])
     }
 }

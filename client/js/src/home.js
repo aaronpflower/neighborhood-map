@@ -16,8 +16,8 @@ var Home = {
                 m("p", "Not that we are counting..."),
                 countDownTimer
             ]),
-            m("main", [
-            	m("div", {class: "second-section"}, [
+            m("main.main-border-home", [
+            	m("div", {class: "main-section"}, [
             		m("div", {class: "text-row"}, [
             			m("h1", "About Us")
            			]),
@@ -59,8 +59,8 @@ var Home = {
                         m("p", "After their profoundly deep first meeting, Aaron did what any respectable man who wants to state their intentions to a lady does. He friended her on facebook. After a few exchanges on Facebook, and Brittney running away from Aaron at church, they met for coffee at Ozo Coffee. Walking into the coffee shop, Brittney took a deep breath, smiled at Aaron, and said “Aaron? Hi.” Aaron awkwardly sat in silence not knowing what to say, do, or think. But Brittney found the silence oddly calming to her nerves. After the initial awkwardness subsided, the two talked for 3 hours about their families, backgrounds, and everything in between. After finishing the last sips of their beverages, the pair walked outside of the coffee shop and awkwardly stared at each other for a second. Then Aaron looked at Brittney and said “We should do this again soon.” To which Brittney replied “Yes. I’d like that.” This was proceeded by the most awkward hug, arms tapping the others back lightly, torsos feet away from each other. After another awkward look and saying their goodbyes the two walked away from each other grinning.")           		
                     ]),
             	]),
-            ]),
-            footer()
+            footer(),
+            ])
         ])
     }
 };

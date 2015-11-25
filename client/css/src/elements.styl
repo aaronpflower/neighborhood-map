@@ -11,6 +11,13 @@ body
 	height 100%
 	margin 0
 	padding 0
+
+main
+	width: 100%
+	position: relative
+	z-index: 90
+	top: 400px
+	background-color: #fff
 h1,
 h2,
 h3,
@@ -64,12 +71,11 @@ input
 	outline none
 
 @media only screen and (min-width: 769px)
-	main, footer
+	main
+		top: 600px
+	footer
 		max-width: 1280px
 		margin 0 auto
-	main
-		border-left: 1px solid gray
-		border-right: 1px solid gray
-	body, html
-		margin 0 auto
-		background-color: #fafafafa
+	// body, html
+	// 	margin 0 auto
+	// 	background-color: #fafafafa
