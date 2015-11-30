@@ -3,11 +3,11 @@ var m = require("mithril");
 var menu = {
 	view: function() {
 		return m("header.desktop-nav", [
-			item("Wedding", "/wedding-details"),
-			item("Boulder", "/boulder-info"),
-			item("Flower Wedding", "/"),
-			item("Registry", "/registry"),
-			item("RSVP", "/rsvp")
+			item("RSVP", "/rsvp"),
+			item("Traveling to Boulder", "/boulder-info"),
+			item("#happliyeverflower", "/"),
+			item("Wedding Day", "/wedding-details"),
+			item("Our Registry", "/registry")
 		]);
 		function item(name, route) {
 			var isCurrent = (m.route() === route);

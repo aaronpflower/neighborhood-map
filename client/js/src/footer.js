@@ -32,7 +32,7 @@ var footer = function() {
 		]),
 		m("div", {class: "footer-col-3"}, [
 			m("div", {class: "col-3-item"}, [
-				m("p", "Site Designed by Brittney Flower & Developed by Aaron Flower")
+				m("p", "Site Designed & Developed by Aaron Flower.  Copy written by Brittney Flower.")
 			])
 		])
 	]) 

@@ -12,39 +12,42 @@ var boulderInfo = {
             menu,
             mobileMenu,
             m("div", {class: "hero-section boulder-hero drop-shadow"}, [
-                m("h1", "Boulder Info")
+                m("h1", "Getting Familar with Boulder")
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
                     m("div.text-row", [
-                        m("h1", "Boulder Details")
+                        m("h1", "The 4 step plan to Boulder")
                     ]),
-                    m("div.info-section", [
-                        m("div.info-item", [
-                            m("h1", "Places to Stay"),
-                            m("p", "Somewhere"),
+                    m("div.step-section", [
+                        m("div.steps", [
+                            m("h1", "Step 1: Getting to Boulder"),
+                            m("p", "Denver International Airport is the best place to fly into, but watch out for the creepy blue horse.  It's about a 45 minute drive away from Boulder."),
+                            m("p", "You can either rent a car or there is a bus that leaves once a hour that takes you to town.  Brittney and Aaron take it all the time, sometimes just for fun.", [
+                                 m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
+                            ]),
+                            m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),
-                        m("div.info-item", [
-                            m("h1", "What to do"),
+                        m("div.steps", [
+                            m("h1", "Step 2: Where Sleep"),
                             m("p", "Everything"),
+                            m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),
-                        m("div.info-item", [
-                            m("h1", "What to expect"),
+                        m("div.steps", [
+                            m("h1", "Step 3: Where to eat and drink"),
                             m("p", "Stuff"),
+                            m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),
-                    ]),
-                    m("div.second-section", [
-                        m("div.text-row", [
-                            m("h1",  "Interactive Map")
+                        m("div.steps", [
+                            m("h1", "Step 4: Where to play"),
+                            m("p", "Stuff"),
+                            m("img", {src: "../../../client/img/down-arrow.svg"})
                         ])
                     ]),
-                    // boulderMap,
-                    m("div.weather-section", [
-                        m("div.text-row", [
-                            m("h1", "Weather for Boulder")
-                        ]),
+                    m("div.text-row", [
+                        m("h1", "Weather and Climate")
                     ]),
-                    // Weather,
+                    Weather,
                 footer(),
                 ])
             ])
@@ -88,7 +91,7 @@ var footer = function() {
 		]),
 		m("div", {class: "footer-col-3"}, [
 			m("div", {class: "col-3-item"}, [
-				m("p", "Site Designed by Brittney Flower & Developed by Aaron Flower")
+				m("p", "Site Designed & Developed by Aaron Flower.  Copy written by Brittney Flower.")
 			])
 		])
 	]) 
@@ -174,11 +177,11 @@ var m = require("mithril");
 var menu = {
 	view: function() {
 		return m("header.desktop-nav", [
-			item("Wedding", "/wedding-details"),
-			item("Boulder", "/boulder-info"),
-			item("Flower Wedding", "/"),
-			item("Registry", "/registry"),
-			item("RSVP", "/rsvp")
+			item("RSVP", "/rsvp"),
+			item("Traveling to Boulder", "/boulder-info"),
+			item("#happliyeverflower", "/"),
+			item("Wedding Day", "/wedding-details"),
+			item("Our Registry", "/registry")
 		]);
 		function item(name, route) {
 			var isCurrent = (m.route() === route);
@@ -236,7 +239,7 @@ var mobileMenu = {
 		return m("header", {class: "mobile-menu"}, [
 			m("div", {class: "mobile-header"}, [
 				m("a[href='/']", {config: m.route}, [
-					m("div", {class: "mobile-header-item"}, "Flower Wedding")
+					m("div", {class: "mobile-header-item"}, "#happliyeverflower")
 				]),
 				m("a[href='#'", [
 					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, "X")
@@ -244,13 +247,13 @@ var mobileMenu = {
 			]),
 			m("div#slide-out.menu-closed", [
 				m("a[href='/wedding-details']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Wedding")
+					m("div", {class: "slide-out-item"}, "Wedding Day")
 				]),
 				m("a[href='/boulder-info']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Boulder")
+					m("div", {class: "slide-out-item"}, "Traveling to Boulder")
 				]),
 				m("a[href='/registry']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Registry")
+					m("div", {class: "slide-out-item"}, "Our Registry")
 				]),
 				m("a[href='/rsvp']", {config: m.route}, [
 					m("div", {class: "slide-out-item"}, "RSVP")
@@ -357,6 +360,12 @@ var weddingDetails = {
                             m("p", "Stuff"),
                         ])
                     ]),
+                    // m("div.second-section", [
+                    //     m("div.text-row", [
+                    //         m("h1",  "Interactive Map")
+                    //     ])
+                    // ]),
+                    // // boulderMap,
                     m("div", {class: "second-section"}, [
                         m("div", {class: "text-row"}, [
                             m("h1", "Wedding Party")
@@ -487,23 +496,50 @@ module.exports = countDownTimer;
 var m = require('mithril');
 
 var boulderWeather = {
-	controller: function() {
-		return { 
-			currentWeather: m.request({ 
-				method: "GET",
-				url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
-				dataType: "jsonp",
-				callback: "callback"
-			})
-		}	
-	},
-	view: function(ctrl) {
-		console.log(ctrl.currentWeather);
-		return m("div", "Current Boulder Temp:");
+	// controller: function() {
+	// 	return { 
+	// 		currentWeather: m.request({ 
+	// 			method: "GET",
+	// 			url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
+	// 			dataType: "jsonp",
+	// 			callback: "callback"
+	// 		})
+	// 	}	
+	// },
+	view: function() {
+		return m("div.weather-section", [
+			m("div.weather-item", [
+				m("h2", "Alitude"),
+				m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those travling from the low lands please remember to drink more water than you ever have in your life to prevent alituide sickness.  Each individual is affected by this differntly"),
+				m("h2", "Typlical Weather"),
+				m("p", "For Boulder and the surronding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
+			]),
+			m("div.weather-item", [
+				m("iframe.forecastio-iframe", {src: "http://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
+			])
+		])
 	}
 }
 
 module.exports = boulderWeather;
+
+// var boulderWeather = {
+// 	controller: function() {
+// 		return { 
+// 			currentWeather: m.request({ 
+// 				method: "GET",
+// 				url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
+// 				dataType: "jsonp",
+// 				callback: "callback"
+// 			})
+// 		}	
+// 	},
+// 	view: function(ctrl) {
+// 		console.log(ctrl.currentWeather);
+// 		return m("div", "Current Boulder Temp:");
+// 	}
+// }
+
 },{"mithril":12}],12:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";

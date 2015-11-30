@@ -33,6 +33,12 @@ var weddingDetails = {
                             m("p", "Stuff"),
                         ])
                     ]),
+                    // m("div.second-section", [
+                    //     m("div.text-row", [
+                    //         m("h1",  "Interactive Map")
+                    //     ])
+                    // ]),
+                    // // boulderMap,
                     m("div", {class: "second-section"}, [
                         m("div", {class: "text-row"}, [
                             m("h1", "Wedding Party")

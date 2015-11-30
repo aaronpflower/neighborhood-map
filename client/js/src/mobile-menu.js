@@ -19,7 +19,7 @@ var mobileMenu = {
 		return m("header", {class: "mobile-menu"}, [
 			m("div", {class: "mobile-header"}, [
 				m("a[href='/']", {config: m.route}, [
-					m("div", {class: "mobile-header-item"}, "Flower Wedding")
+					m("div", {class: "mobile-header-item"}, "#happliyeverflower")
 				]),
 				m("a[href='#'", [
 					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, "X")
@@ -27,13 +27,13 @@ var mobileMenu = {
 			]),
 			m("div#slide-out.menu-closed", [
 				m("a[href='/wedding-details']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Wedding")
+					m("div", {class: "slide-out-item"}, "Wedding Day")
 				]),
 				m("a[href='/boulder-info']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Boulder")
+					m("div", {class: "slide-out-item"}, "Traveling to Boulder")
 				]),
 				m("a[href='/registry']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Registry")
+					m("div", {class: "slide-out-item"}, "Our Registry")
 				]),
 				m("a[href='/rsvp']", {config: m.route}, [
 					m("div", {class: "slide-out-item"}, "RSVP")

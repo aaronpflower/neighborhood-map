@@ -11,7 +11,7 @@
 .main-border-boulder-info
 	border-top: 4px solid lime
 
-.info-section
+.step-section
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -28,27 +28,49 @@
 	-webkit-align-items: stretch
 	-ms-align-items: stretch
 
-.info-item
+.steps
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
 	flex-grow: 1
 	-webkit-flex-grow: 1
 	-ms-flex-grow: 1
 	flex-shrink: 1
 	-webkit-flex-shrink: 1
 	-ms-flex-shrink: 1
-	flex-basis: 300px
-	-webkit-flex-basis: 300px
-	-ms-flex-basis: 300px
+	flex-basis: auto
+	-webkit-flex-basis: auto
+	-ms-flex-basis: auto
 
-.info-item h1
-	color: #000
-	background-color: gray
-	font-size: 20px
-	font-weight: 300
+.steps h1
+	color: darkNavy
+	font-size: 35px
+	font-weight: 400
 
-.info-item p
+.steps p
 	color: darkNavy
 	font-weight: 200
 	font-size: 15px
+	text-align: center
+	padding: 0px 25px 10px 13px
+	line-height: 30px
+
+.steps img
+	height: 100px
+	width: 50px
+	color: darkNavy
 
 .weather-section
 	display: flex
