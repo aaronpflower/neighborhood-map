@@ -3,7 +3,6 @@ var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
 	footer = require("./footer.js"),
-    // boulderMap = require("./widgets/map.js"),
     Weather = require("./widgets/weather.js");
 
 var boulderInfo = {
@@ -12,35 +11,36 @@ var boulderInfo = {
             menu,
             mobileMenu,
             m("div", {class: "hero-section boulder-hero drop-shadow"}, [
-                m("h1", "Getting Familar with Boulder")
+                m("h1", "Boulder, Colorado")
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
-                    m("div.text-row", [
-                        m("h1", "The 4 step plan to Boulder")
-                    ]),
                     m("div.step-section", [
+                        m("h1", "The 4 Step plan to Boulder"),
                         m("div.steps", [
-                            m("h1", "Step 1: Getting to Boulder"),
-                            m("p", "Denver International Airport is the best place to fly into, but watch out for the creepy blue horse.  It's about a 45 minute drive away from Boulder."),
-                            m("p", "You can either rent a car or there is a bus that leaves once a hour that takes you to town.  Brittney and Aaron take it all the time, sometimes just for fun.", [
+                            m("h2", "Step 1: Getting to Boulder"),
+                            m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse."),
+                            m("p", "You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.", [
                                  m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
                             ]),
                             m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),
                         m("div.steps", [
-                            m("h1", "Step 2: Where Sleep"),
-                            m("p", "Everything"),
+                            m("h2", "Step 2: Where Sleep"),
+                            m("p", "Boulder is where we live and the wedding is just 20 miles up the road in Lyons.  So there are a couple options of where you could stay while you are here.  There are plenty of hotels in town, or airBnB. "),
+                            m("p", "Also if you are looking to find cheaper options we would recommend Longmont, Louisville, Superior, or Lafayette."),
                             m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),
                         m("div.steps", [
-                            m("h1", "Step 3: Where to eat and drink"),
-                            m("p", "Stuff"),
+                            m("h2", "Step 3: Where to eat and drink"),
+                            m("p", "Boulder is full of Breweries and a wide variety of restaurants.  We would recommend Avery Brewery, West End Tavern, Bitter Bar, and for the midwest folk, McDonald's, and Dunkin Donuts."),
+                            m("p", "Go here for a full list of places in downtown Boulder."),
                             m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),
                         m("div.steps", [
-                            m("h1", "Step 4: Where to play"),
-                            m("p", "Stuff"),
+                            m("h2", "Step 4: Where to play"),
+                            m("p", "In town go to the Flatirons,  just do it.  If you have a full day Rocky Mountain National Park is only a hour drive away, and is simply amazing."),
+                            m("p", "Another good day trip is the Indian Peaks Wilderness."),
                             m("img", {src: "../../../client/img/down-arrow.svg"})
                         ])
                     ]),
@@ -56,7 +56,7 @@ var boulderInfo = {
 }
 
 module.exports = boulderInfo;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/weather.js":11,"mithril":12}],2:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/weather.js":12,"mithril":13}],2:[function(require,module,exports){
 var m = require("mithril");
 
 var footer = function() {
@@ -102,7 +102,7 @@ module.exports = footer;
 
 
 
-},{"mithril":12}],3:[function(require,module,exports){
+},{"mithril":13}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
@@ -171,7 +171,7 @@ var Home = {
 };
 
 module.exports = Home;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/timer.js":10,"mithril":12}],4:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/timer.js":11,"mithril":13}],4:[function(require,module,exports){
 var m = require("mithril");
 
 var menu = {
@@ -198,7 +198,7 @@ function persistent(context) {
 }
 
 module.exports = menu;
-},{"mithril":12}],5:[function(require,module,exports){
+},{"mithril":13}],5:[function(require,module,exports){
 var m = require('mithril'),
 	Home = require('./home.js'),
 	WeddingDetails = require('./wedding-details.js'),
@@ -217,7 +217,7 @@ m.route(document.body, "/", {
     "/registry": Registry,
     "/boulder-info": BoulderInfo,
 })
-},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":12}],6:[function(require,module,exports){
+},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./menu.js":4,"./registry":7,"./rsvp":8,"./wedding-details.js":9,"mithril":13}],6:[function(require,module,exports){
 var m = require('mithril');
 
 var mobileMenu = {
@@ -268,7 +268,7 @@ function persistent(context) {
 }
 
 module.exports = mobileMenu;
-},{"mithril":12}],7:[function(require,module,exports){
+},{"mithril":13}],7:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -296,7 +296,7 @@ var Registry = {
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],8:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":13}],8:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -324,10 +324,11 @@ var Rsvp = {
 }
 
 module.exports = Rsvp;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],9:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":13}],9:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
+    boulderMap = require("./widgets/map.js"),
 	footer = require('./footer.js');
 
 var weddingDetails = {
@@ -337,101 +338,96 @@ var weddingDetails = {
             menu,
             mobileMenu,
             m("div.hero-section.wedding-hero.drop-shadow", [
-                m("h1", "Lyons, CO"),
-                m("p", "Where: Lyons Farmette"),
-                m("p", "When: June 19th, 2016 4pm")
+                m("h1", "Lyons Farmette,"),
+                m("h1", "Lyons, CO")
             ]),
             m("main.main-border-wedding-details", [
                 m("div.main-section", [
-                    m("div", {class: "text-row"}, [
+                    m("div.text-row", [
                         m("h1", "Wedding Day Information")
                     ]),
                     m("div.info-section", [
                         m("div.info-item", [
-                            m("h1", "Places to Stay"),
-                            m("p", "Somewhere"),
+                            m("h1", "Day of Details"),
+                            m("h2", "Address and Time", [
+                                m("p", "4121 Ute Highway, Lyons, CO 80540"),
+                                m("p", "Cermony starts at 4pm and reception to follow")
+                            ]),
+                            m("h2", "Curtiousy and Reminders", [
+                                m("p", "The whole event will be outdoors, refer to the Boulder Info page for weather information"),
+                                m("p", "We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
+                            ])
                         ]),
                         m("div.info-item", [
-                            m("h1", "What to do"),
-                            m("p", "Everything"),
+                            boulderMap,
                         ]),
-                        m("div.info-item", [
-                            m("h1", "What to expect"),
-                            m("p", "Stuff"),
-                        ])
                     ]),
-                    // m("div.second-section", [
-                    //     m("div.text-row", [
-                    //         m("h1",  "Interactive Map")
-                    //     ])
-                    // ]),
-                    // // boulderMap,
                     m("div", {class: "second-section"}, [
                         m("div", {class: "text-row"}, [
                             m("h1", "Wedding Party")
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                                m("img", {src: "../../../client/img/amanda.jpg"})
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
-                                    m("h1", "Amanda"),
+                                    m("h1", "Main of Honor: Amanda"),
                                     m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 ])
                             ])
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/aaron-home.jpg"})
+                                m("img", {src: "../../../client/img/ryan.jpg"})
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
-                                    m("h1", "Ryan"),
+                                    m("h1", "Best Man: Ryan"),
                                     m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 ])
                             ])
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                                m("img", {src: "../../../client/img/bailey.jpg"})
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
-                                    m("h1", "Bailey"),
+                                    m("h1", "Bridesmaid: Bailey"),
                                     m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 ])
                             ])
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/aaron-home.jpg"})
+                                m("img", {src: "../../../client/img/ty.jpg"})
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
-                                    m("h1", "Ty"),
+                                    m("h1", "Groomsman: Ty"),
                                     m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 ])
                             ])
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                                m("img", {src: "../../../client/img/aracely.jpg"})
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
-                                    m("h1", "Aracely"),
+                                    m("h1", "Bridesmaid: Aracely"),
                                     m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 ])
                             ])
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/aaron-home.jpg"})
+                                m("img", {src: "../../../client/img/chase.jpg"})
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
-                                    m("h1", "Chase"),
+                                    m("h1", "Groomsman: Chase"),
                                     m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 ])
                             ])
@@ -445,7 +441,22 @@ var weddingDetails = {
 }
 
 module.exports = weddingDetails;
-},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"mithril":12}],10:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":4,"./mobile-menu.js":6,"./widgets/map.js":10,"mithril":13}],10:[function(require,module,exports){
+var m = require('mithril');
+
+var boulderMap = {
+	controller: function() {
+		this.init = function() {
+			var map = L.map('map').setView([51.505, -0.09], 13);
+		}
+	},
+	view: function(ctrl) {
+		return m("div#map.map", {config: ctrl.init});	
+	},
+}
+
+module.exports = boulderMap;
+},{"mithril":13}],11:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
@@ -492,7 +503,7 @@ var countDownTimer = {
 }
 
 module.exports = countDownTimer;
-},{"mithril":12}],11:[function(require,module,exports){
+},{"mithril":13}],12:[function(require,module,exports){
 var m = require('mithril');
 
 var boulderWeather = {
@@ -540,7 +551,7 @@ module.exports = boulderWeather;
 // 	}
 // }
 
-},{"mithril":12}],12:[function(require,module,exports){
+},{"mithril":13}],13:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;
