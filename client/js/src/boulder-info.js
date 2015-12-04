@@ -20,7 +20,7 @@ var boulderInfo = {
                             m("h2", "Step 1: Getting to Boulder"),
                             m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse."),
                             m("p", "You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.", [
-                                 m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
+                                m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
                             ]),
                             m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),

@@ -21,7 +21,7 @@ var boulderInfo = {
                             m("h2", "Step 1: Getting to Boulder"),
                             m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse."),
                             m("p", "You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.", [
-                                 m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
+                                m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
                             ]),
                             m("img", {src: "../../../client/img/down-arrow.svg"})
                         ]),
@@ -281,13 +281,41 @@ var Registry = {
             menu,
             mobileMenu,
             m("div", {class: "hero-section registry-hero"}, [
-                m("h1", "Registry Info")
+                m("h1", "Registry Information")
             ]),
             m("main.main-border-registry", [
                 m("div.main-section", [
                     m("div", {class: "text-row"}, [
-                        m("h1", "Coming Soon...")
-                    ])
+                        m("h1", "We have two options")
+                    ]),
+                    m("div.about-us", [
+                        m("div", {class: "about-us-item"}, [
+                            m("img", {src: "../../../client/img/Crate-Barrel-Logo.jpg"})
+                        ]),
+                        m("div", {class: "about-us-item"}, [
+                            m("div.about-us-text", [
+                                m("h1", "Crate and Barrel"),
+                                m("p", "We need stuff for our aptarment"),
+                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020']", [
+                                    m("button", "Go to it") 
+                                ])                           
+                            ])
+                        ])
+                    ]),
+                    m("div#aaron.about-us", [
+                        m("div", {class: "about-us-item"}, [
+                            m("img", {src: "../../../client/img/honeyfund_logo.jpg"})
+                        ]),
+                        m("div", {class: "about-us-item"}, [
+                            m("div.about-us-text", [
+                                m("h1", "Honey Fund"),
+                                m("p", "Help us with our Honey Mood"),
+                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020']", [
+                                    m("button", "Go to it") 
+                                ])
+                            ])
+                        ])
+                    ]),
                 ]),  
             footer(),
             ])
@@ -308,14 +336,36 @@ var Rsvp = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div", {class: "hero-section rsvp-hero"}, [
-                m("h1", "RSVP")
-            ]),
+            m("div.hero-section.rsvp-hero"),
             m("main.main-border-rsvp", [
                 m("div.main-section", [
-                    m("div", {class: "text-row"}, [
-                        m("h1", "Coming Soon...")
-                    ])
+                    m("h1", "The 4 Step plan to RSPV"),
+                    m("div.steps", [
+                        m("h2", "Step 1: Getting to Boulder"),
+                        m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse."),
+                        m("p", "You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.", [
+                            m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
+                        ]),
+                        m("img", {src: "../../../client/img/down-arrow.svg"})
+                    ]),
+                    m("div.steps", [
+                        m("h2", "Step 2: Where Sleep"),
+                        m("p", "Boulder is where we live and the wedding is just 20 miles up the road in Lyons.  So there are a couple options of where you could stay while you are here.  There are plenty of hotels in town, or airBnB. "),
+                        m("p", "Also if you are looking to find cheaper options we would recommend Longmont, Louisville, Superior, or Lafayette."),
+                        m("img", {src: "../../../client/img/down-arrow.svg"})
+                    ]),
+                    m("div.steps", [
+                        m("h2", "Step 3: Where to eat and drink"),
+                        m("p", "Boulder is full of Breweries and a wide variety of restaurants.  We would recommend Avery Brewery, West End Tavern, Bitter Bar, and for the midwest folk, McDonald's, and Dunkin Donuts."),
+                        m("p", "Go here for a full list of places in downtown Boulder."),
+                        m("img", {src: "../../../client/img/down-arrow.svg"})
+                    ]),
+                    m("div.steps", [
+                        m("h2", "Step 4: Where to play"),
+                        m("p", "In town go to the Flatirons,  just do it.  If you have a full day Rocky Mountain National Park is only a hour drive away, and is simply amazing."),
+                        m("p", "Another good day trip is the Indian Peaks Wilderness."),
+                        m("img", {src: "../../../client/img/down-arrow.svg"})
+                    ]),
                 ]),  
             footer(),
             ])
@@ -359,7 +409,7 @@ var weddingDetails = {
                             ])
                         ]),
                         m("div.info-item", [
-                            boulderMap,
+                            // boulderMap,
                         ]),
                     ]),
                     m("div", {class: "second-section"}, [
@@ -446,16 +496,37 @@ var m = require('mithril');
 
 var boulderMap = {
 	controller: function() {
-		this.init = function() {
-			var map = L.map('map').setView([51.505, -0.09], 13);
-		}
+		return { 
+			leafletMap: m.request({ 
+				method: "GET",
+				url: "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js",
+				dataType: "jsonp",
+				callback: "callback"
+			})
+		}	
 	},
 	view: function(ctrl) {
+		console.log(ctrl.leafletMap);
 		return m("div#map.map", {config: ctrl.init});	
 	},
 }
 
 module.exports = boulderMap;
+
+
+// script(src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js")
+
+
+// var boulderMap = {
+// 	controller: function() {
+// 		this.init = function() {
+// 			var map = L.map('map').setView([51.505, -0.09], 13);
+// 		}
+// 	},
+// 	view: function(ctrl) {
+// 		return m("div#map.map", {config: ctrl.init});	
+// 	},
+// }
 },{"mithril":13}],11:[function(require,module,exports){
 var m = require('mithril');
 
