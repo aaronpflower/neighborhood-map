@@ -11,7 +11,7 @@
 .main-border-boulder-info
 	border-top: 4px solid lime
 
-.step-section
+.step-section, .step
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -24,59 +24,62 @@
 	align-content: center
 	-webkit-align-content: center
 	-ms-align-content: center
-	align-items: stretch
-	-webkit-align-items: stretch
-	-ms-align-items: stretch
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
+	flex-basis: auto
+	-webkit-flex-basis: auto
+	-ms-flex-basis: auto
 
 .step-section h1
 	color: darkNavy
 	font-size: 35px
 	font-weight: 400
-	padding: 15px
 
-.steps
-	display: flex
-	display: -webkit-flex
-	display: -ms-flex
-	flex-flow: column nowrap
-	-webkit-flex-flow: column nowrap
-	-ms-flex-flow: column nowrap
-	justify-content: center
-	-webkit-justify-content: center
-	-ms-justify-content: center
-	align-content: center
-	-webkit-align-content: center
-	-ms-align-content: center
-	align-items: center
-	-webkit-align-items: center
-	-ms-align-items: center
-	flex-grow: 1
-	-webkit-flex-grow: 1
-	-ms-flex-grow: 1
-	flex-shrink: 1
-	-webkit-flex-shrink: 1
-	-ms-flex-shrink: 1
-	flex-basis: auto
-	-webkit-flex-basis: auto
-	-ms-flex-basis: auto
-
-.steps h2
+.step-section h2
 	color: darkNavy
 	font-size: 25px
 	font-weight: 400
+	display: -webkit-flex
+	align-self: center
+	-webkit-align-self: center
+	-ms-align-self: center
 
-.steps p
+.step-section p
 	color: darkNavy
 	font-weight: 200
 	font-size: 15px
-	text-align: left
-	padding: 0px 25px 10px 13px
-	line-height: 20px
 
-.steps img
+.step-section img
 	height: 100px
 	width: 50px
 	color: darkNavy
+	display: flex
+	display: -webkit-flex
+	align-self: center
+	-webkit-align-self: center
+	-ms-align-self: center
+	
+.step-left, .step-right
+	color: darkNavy
+	text-align: center
+	padding: 15px
+	line-height: 20px
+
+.step-button
+	width: 125px
+	height: 50px
+	color: #fff
+	background-color: darkNavy
+	transition: background-color 0.5s ease
+	cursor: pointer
+	border: 1px solid #fff
+	border-radius: 5%
+
+.step-button:hover
+	background-color: #fff
+	color: darkNavy
+	border: 1px solid darkNavy
 
 .weather-section
 	display: flex
@@ -98,3 +101,9 @@
 .weatherIframe
 	height: 245px
 	width: 75%
+
+@media only screen and (min-width: 800px)
+	.step
+		flex-flow: row nowrap
+		-webkit-flex-flow: row nowrap
+		-ms-flex-flow: row nowrap

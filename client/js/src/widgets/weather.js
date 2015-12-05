@@ -14,7 +14,7 @@ var boulderWeather = {
 	view: function() {
 		return m("div.weather-section", [
 			m("div.weather-item", [
-				m("h2", "Alitude"),
+				m("h2", "Altitude"),
 				m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those travling from the low lands please remember to drink more water than you ever have in your life to prevent alituide sickness.  Each individual is affected by this differntly"),
 				m("h2", "Typlical Weather"),
 				m("p", "For Boulder and the surronding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
