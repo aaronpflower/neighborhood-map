@@ -21,15 +21,17 @@ var weddingDetails = {
                     ]),
                     m("div.info-section", [
                         m("div.info-item", [
-                            m("h1", "Day of Details"),
-                            m("h2", "Address and Time", [
-                                m("p", "4121 Ute Highway, Lyons, CO 80540"),
-                                m("p", "Cermony starts at 4pm and reception to follow")
+                            m("div.details", [
+                                m("h1", "Day of Details"),
+                                m("h2", "Address and Time", [
+                                    m("p", "4121 Ute Highway, Lyons, CO 80540"),
+                                    m("p", "Cermony starts at 4pm and reception to follow")
+                                ]),
+                                m("h2", "Curtiousy and Reminders", [
+                                    m("p", "The whole event will be outdoors, refer to the Boulder Info page for weather information"),
+                                    m("p", "We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
+                                ])
                             ]),
-                            m("h2", "Curtiousy and Reminders", [
-                                m("p", "The whole event will be outdoors, refer to the Boulder Info page for weather information"),
-                                m("p", "We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
-                            ])
                         ]),
                         m("div.info-item", [
                             // boulderMap,

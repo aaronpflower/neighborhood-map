@@ -395,33 +395,32 @@ var Rsvp = {
             m("div.hero-section.rsvp-hero"),
             m("main.main-border-rsvp", [
                 m("div.main-section", [
-                    m("h1", "The 4 Step plan to RSPV"),
-                    m("div.step", [
-                        m("h2", "Step 1: Getting to Boulder"),
-                        m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse."),
-                        m("p", "You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.", [
-                            m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", "Go here for the schedule."),
+                    m("div.step-section", [
+                        m("h1", "How to RSVP"),
+                        m("h2", "Paperless Post"),
+                        m("div.step", [
+                            m("div.step-left", [
+                                m("p", "Recommended. Cheap on our end, quicker response.  Plus it's 2015 you are on your computer all the time.")
+                            ]),
+                            m("div.step-right", [
+                                m("a[href='#']", [
+                                    m("button.step-button", "RSVP Here")
+                                ]),
+                            ]),
                         ]),
-                        m("img", {src: "../../../client/img/down-arrow.svg"})
-                    ]),
-                    m("div.step", [
-                        m("h2", "Step 2: Where Sleep"),
-                        m("p", "Boulder is where we live and the wedding is just 20 miles up the road in Lyons.  So there are a couple options of where you could stay while you are here.  There are plenty of hotels in town, or airBnB. "),
-                        m("p", "Also if you are looking to find cheaper options we would recommend Longmont, Louisville, Superior, or Lafayette."),
-                        m("img", {src: "../../../client/img/down-arrow.svg"})
-                    ]),
-                    m("div.step", [
-                        m("h2", "Step 3: Where to eat and drink"),
-                        m("p", "Boulder is full of Breweries and a wide variety of restaurants.  We would recommend Avery Brewery, West End Tavern, Bitter Bar, and for the midwest folk, McDonald's, and Dunkin Donuts."),
-                        m("p", "Go here for a full list of places in downtown Boulder."),
-                        m("img", {src: "../../../client/img/down-arrow.svg"})
-                    ]),
-                    m("div.step", [
-                        m("h2", "Step 4: Where to play"),
-                        m("p", "In town go to the Flatirons,  just do it.  If you have a full day Rocky Mountain National Park is only a hour drive away, and is simply amazing."),
-                        m("p", "Another good day trip is the Indian Peaks Wilderness."),
-                        m("img", {src: "../../../client/img/down-arrow.svg"})
-                    ]),
+                        m("img", {src: "../../../client/img/down-arrow.svg"}),
+                        m("h2", "Snail Mail"),
+                        m("div.step", [
+                            m("div.step-left", [
+                                m("p", "If you insist please return the to the address ASAP"),
+                            ]),
+                            m("div.step-right", [
+                                m("a[href='https://www.youtube.com/watch?v=GaoLU6zKaws']", [
+                                    m("button.step-button", "Click Here")
+                                ]),
+                            ]),
+                        ]),
+                    ])
                 ]),  
             footer(),
             ])
@@ -454,15 +453,17 @@ var weddingDetails = {
                     ]),
                     m("div.info-section", [
                         m("div.info-item", [
-                            m("h1", "Day of Details"),
-                            m("h2", "Address and Time", [
-                                m("p", "4121 Ute Highway, Lyons, CO 80540"),
-                                m("p", "Cermony starts at 4pm and reception to follow")
+                            m("div.details", [
+                                m("h1", "Day of Details"),
+                                m("h2", "Address and Time", [
+                                    m("p", "4121 Ute Highway, Lyons, CO 80540"),
+                                    m("p", "Cermony starts at 4pm and reception to follow")
+                                ]),
+                                m("h2", "Curtiousy and Reminders", [
+                                    m("p", "The whole event will be outdoors, refer to the Boulder Info page for weather information"),
+                                    m("p", "We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
+                                ])
                             ]),
-                            m("h2", "Curtiousy and Reminders", [
-                                m("p", "The whole event will be outdoors, refer to the Boulder Info page for weather information"),
-                                m("p", "We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
-                            ])
                         ]),
                         m("div.info-item", [
                             // boulderMap,
@@ -553,36 +554,27 @@ var m = require('mithril');
 var boulderMap = {
 	controller: function() {
 		return { 
-			leafletMap: m.request({ 
+			googleMap: m.request({ 
 				method: "GET",
-				url: "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js",
+				url: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCpRRMEy9sBC95vWunMUBju38m-2XwwEco&callback=initMap",
 				dataType: "jsonp",
 				callback: "callback"
 			})
 		}	
 	},
 	view: function(ctrl) {
-		console.log(ctrl.leafletMap);
-		return m("div#map.map", {config: ctrl.init});	
+		console.log(ctrl.googleMap);
+		return m("div#map.map", {config: ctrl.initMap});	
 	},
+	initMap: function() {
+  		var map = new google.maps.Map(document.getElementById('map'), {
+	    	center: {lat: 40.0274, lng: -105.2519},
+	    	zoom: 8
+	    });
+	}
 }
 
 module.exports = boulderMap;
-
-
-// script(src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js")
-
-
-// var boulderMap = {
-// 	controller: function() {
-// 		this.init = function() {
-// 			var map = L.map('map').setView([51.505, -0.09], 13);
-// 		}
-// 	},
-// 	view: function(ctrl) {
-// 		return m("div#map.map", {config: ctrl.init});	
-// 	},
-// }
 },{"mithril":13}],11:[function(require,module,exports){
 var m = require('mithril');
 
@@ -634,49 +626,25 @@ module.exports = countDownTimer;
 var m = require('mithril');
 
 var boulderWeather = {
-	// controller: function() {
-	// 	return { 
-	// 		currentWeather: m.request({ 
-	// 			method: "GET",
-	// 			url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
-	// 			dataType: "jsonp",
-	// 			callback: "callback"
-	// 		})
-	// 	}	
-	// },
-	view: function() {
-		return m("div.weather-section", [
-			m("div.weather-item", [
-				m("h2", "Altitude"),
-				m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those travling from the low lands please remember to drink more water than you ever have in your life to prevent alituide sickness.  Each individual is affected by this differntly"),
-				m("h2", "Typlical Weather"),
-				m("p", "For Boulder and the surronding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
-			]),
-			m("div.weather-item", [
-				m("iframe.forecastio-iframe", {src: "https://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
-			])
-		])
+	controller: function() {
+		return { 
+			currentWeather: m.request({ 
+				method: "GET",
+				url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
+				dataType: "jsonp",
+				callback: "callback"
+			})
+		}	
+	},
+	view: function(ctrl) {
+		console.log(ctrl.currentWeather);
+		return m("div", "Current Boulder Temp:");
 	}
 }
 
 module.exports = boulderWeather;
 
-// var boulderWeather = {
-// 	controller: function() {
-// 		return { 
-// 			currentWeather: m.request({ 
-// 				method: "GET",
-// 				url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
-// 				dataType: "jsonp",
-// 				callback: "callback"
-// 			})
-// 		}	
-// 	},
-// 	view: function(ctrl) {
-// 		console.log(ctrl.currentWeather);
-// 		return m("div", "Current Boulder Temp:");
-// 	}
-// }
+
 
 },{"mithril":13}],13:[function(require,module,exports){
 var m = (function app(window, undefined) {
