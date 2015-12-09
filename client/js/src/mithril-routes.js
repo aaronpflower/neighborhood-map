@@ -1,4 +1,5 @@
 var m = require('mithril'),
+	Layout = require('./layout.js'),
 	Home = require('./home.js'),
 	WeddingDetails = require('./wedding-details.js'),
 	Rsvp = require('./rsvp'),

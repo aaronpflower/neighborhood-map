@@ -103,8 +103,6 @@ input {
   -ms-align-items: stretch;
   width: 100%;
   height: 400px;
-  background-position: center;
-  background-size: cover;
   background-color: #aaabad;
   color: #fff;
   padding-top: 77px;
@@ -151,11 +149,6 @@ input {
 .text-row h1 {
   padding: 25px;
 }
-.drop-shadow {
-  -moz-box-shadow: inset 0 8px 8px -8px #000, inset 0 -8px 8px -8px #000;
-  -webkit-box-shadow: inset 0 8px 8px -8px #000, inset 0 -8px 8px -8px #000;
-  box-shadow: inset 0 8px 8px -8px #000, inset 0 -8px 8px -8px #000;
-}
 .timer-wrapper {
   display: flex;
   display: -webkit-flex;
@@ -184,16 +177,13 @@ input {
   flex-shrink: 0;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
-  flex-basis: 88px;
-  -webkit-flex-basis: 88px;
-  -ms-flex-basis: 88px;
 }
 .timer-item {
-  height: 95px;
-  margin: 1px;
+  height: 50px;
+  width: 84px;
   background-color: #2b3742;
   color: #fff;
-  border-radius: 5%;
+  border-radius: 10%;
 }
 .timer-item h2 {
   padding: 15px 10px;
@@ -353,10 +343,10 @@ input {
     box-shadow: 0px 3px 5px rgba(100,100,100,0.49);
   }
   .header-item {
-    margin: 25px 0px 25px 0px;
+    margin: 20px 0px 20px 0px;
     color: #2b3742;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
     display: -webkit-flex;
     display: -ms-flex;
@@ -365,14 +355,16 @@ input {
     -ms-justify-content: center;
     cursor: pointer;
     transition: 0.5s ease;
+    opacity: 0.7;
   }
   .header-item:hover {
-    opacity: 0.6;
+    opacity: 1;
   }
   .active-route {
     color: #2b3742;
-    border-bottom: 4px solid #2b3742;
-    transition: border-bottom 0.9s ease;
+    border-bottom: 2px solid #2b3742;
+    transition: border-bottom 1s ease;
+    opacity: 1;
   }
 }
 .footer-col-1 {
@@ -517,7 +509,9 @@ input {
   }
 }
 .home-hero {
-  background-image: url("../../../client/img/home-hero.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 30%, rgba(0,0,0,0.9)), url("../../../client/img/home-hero.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .hero-section h1 {
   margin-bottom: 10px;
@@ -647,7 +641,9 @@ input {
   }
 }
 .boulder-hero {
-  background-image: url("../../../client/img/boulder.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 30%, rgba(0,0,0,0.9)), url("../../../client/img/boulder.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .boulder-hero-section h1 {
   margin-bottom: 10px;
@@ -764,7 +760,9 @@ input {
   width: 100%;
 }
 .wedding-hero {
-  background-image: url("../../../client/img/wedding.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 30%, rgba(0,0,0,0.9)), url("../../../client/img/wedding.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .wedding-hero-section h1 {
   margin-bottom: 10px;
@@ -849,13 +847,17 @@ input {
   }
 }
 .registry-hero {
-  background-image: url("../../../client/boston.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 30%, rgba(0,0,0,0.9)), url("../../../client/boston.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .main-border-registry {
   border-top: 4px solid #f5888d;
 }
 .rsvp-hero {
-  background-image: url("../../../client/rsvp-hero.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 30%, rgba(0,0,0,0.9)), url("../../../client/rsvp-hero.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .main-border-rsvp {
   border-top: 4px solid #f9933f;
