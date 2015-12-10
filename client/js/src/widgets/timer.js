@@ -14,31 +14,34 @@ var countDownTimer = {
     },
 
     view: function(ctrl) {
-        return m("div", {class: "timer-wrapper"}, [
+        return m("div.timer-container", [
+            m("h2", "Not that we are counting..."),
+            m("div", {class: "timer-wrapper"}, [
                 m("div", {class: "timer"}, [
-                    m("div", {class: "timer-item"}, [
+                    m("div.timer-days", [
                         m("h2", ctrl.days),
                         m("p", "Days")
                     ]), 
                 ]),
                 m("div", {class: "timer"}, [
-                    m("div", {class: "timer-item"}, [
+                    m("div.timer-hours", [
                         m("h2", ctrl.hours),
                         m("p", "Hours")
                     ]), 
                 ]),
                 m("div", {class: "timer"}, [
-                    m("div", {class: "timer-item"}, [
+                    m("div.timer-minutes", [
                         m("h2", ctrl.minutes),
                         m("p", "Minutes")
                     ]), 
                 ]),
                 m("div", {class: "timer"}, [
-                    m("div", {class: "timer-item"}, [
+                    m("div.timer-seconds", [
                         m("h2", ctrl.seconds),
                         m("p", "Seconds")
                     ]),
                 ])
+             ])
         ])
     }
 }

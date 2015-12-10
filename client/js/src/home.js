@@ -11,23 +11,25 @@ var Home = {
             menu,
             mobileMenu,
             m("div", {class: "hero-section home-hero"}, [
-                m("h1", "June 19th, 2016"), 
-                m("h1", "Lyons, CO"),
-                m("p", "Not that we are counting..."),
-                countDownTimer,
+                m("h1", "Aaron and Brittney"),
+                m("h2", "June 19th, 2016"), 
+                m("h2", "Lyons, CO")
             ]),
             m("main.main-border-home", [
             	m("div", {class: "main-section"}, [
-            		m("div", {class: "text-row"}, [
-            			m("h1", "About Us")
-           			]),
+                    countDownTimer,
+            		// m("div", {class: "text-row"}, [
+            		// 	m("h1", "About Us")
+           			// ]),
             		m("div.about-us", [
-            			m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/brittney-home.jpg"})
-            			]),
+                        m("div.about-us-item", [
+                            m("div.overlay", [
+                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                            ]),
+                        ]),
             			m("div", {class: "about-us-item"}, [
                             m("div.about-us-text", [
-                                m("h1", "Brittney"),
+                                m("h1", "About Brittney"),
                                 m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
                                 m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
@@ -41,7 +43,7 @@ var Home = {
                         ]),
             			m("div", {class: "about-us-item"}, [
                             m("div.about-us-text", [
-                                m("h1", "Aaron"),
+                                m("h1", "About Aaron"),
                                 m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                 m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
                                 m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
