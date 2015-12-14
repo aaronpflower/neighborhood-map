@@ -8,7 +8,7 @@ var footer = function() {
 			]),
 			m("div", {class: "col-1-right"}, [
 				m("a[href='/rsvp']", {config: m.route}, [
-					m("button", {class: "button"}, "RSVP")
+					m("button", {class: "footer-button"}, "RSVP")
 				]),
 			])
 
@@ -16,17 +16,17 @@ var footer = function() {
 		m("div", {class: "footer-col-2"}, [
 			m("div", {class: "col-2-item"}, [
 				m("a[href='/wedding-day']", {config: m.route}, [
-					m("button", {class: "button"}, "Wedding")
+					m("button", {class: "footer-button"}, "Wedding")
 				])
 			]),
 			m("div", {class: "col-2-item"}, [
 				m("a[href='/boulder-info']", {config: m.route}, [
-					m("button", {class: "button"}, "Boulder")
+					m("button", {class: "footer-button"}, "Boulder")
 				])
 			]),
 			m("div", {class: "col-2-item"}, [
 				m("a[href='/registry']", {config: m.route}, [
-					m("button", {class: "button"}, "Registry")
+					m("button", {class: "footer-button"}, "Registry")
 				])
 			])
 		]),

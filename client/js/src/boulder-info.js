@@ -23,7 +23,7 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", [
-                                    m("button.step-button", "Bus Schedule")
+                                    m("button.button", "Bus Schedule")
                                 ]),
                             ]),
                         ]),
@@ -35,16 +35,16 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='#']", [
-                                    m("button.step-button", "Boulder AirBnB")
+                                    m("button.button", "Boulder AirBnB")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Longmont")
+                                    m("button.button", "Longmont")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Louisville")
+                                    m("button.button", "Louisville")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Lafayette")
+                                    m("button.button", "Lafayette")
                                 ]),
                             ]),
                         ]),
@@ -56,10 +56,10 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='#']", [
-                                    m("button.step-button", "Avery")
+                                    m("button.button", "Avery")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Down Town Boulder")
+                                    m("button.button", "Down Town Boulder")
                                 ]),
                             ]),
                         ]),
@@ -71,13 +71,13 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='#']", [
-                                    m("button.step-button", "Boulder Hiking")
+                                    m("button.button", "Boulder Hiking")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Rocky Mountain NP")
+                                    m("button.button", "Rocky Mountain NP")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Brainer Lake")
+                                    m("button.button", "Brainer Lake")
                                 ]),
                             ]),
                         ]),

@@ -81,9 +81,90 @@ input {
     top: 475px;
   }
   footer {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 100%;
   }
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay h1 {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+}
+.bio-overlay {
+  visibility: hidden;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+}
+.modal {
+  width: 80%;
+  height: 70%;
+  color: #2b3742;
+  background-color: #fafafa;
+  overflow: scroll;
+}
+.modal-close {
+  float: right;
+  margin: 15px;
+  height: 20px;
+  width: 20px;
+}
+.modal h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.modal p {
+  font-size: 16px;
+  font-weight: 300;
 }
 .hero-section {
   display: flex;
@@ -216,29 +297,27 @@ input {
   padding: 0px 10px;
   color: #2b3742;
 }
-.overlay,
-position: absolute,
-width: 100%,
-height: 100%,
-top: 0,
-left: 0,
-background-color: rgba(0,
-0,
-0.6),
-opacity: 0,
-transition: all 0.5s ease-out,
--webkit-transition: all 0.5s ease-out,
--moz-transition: all 0.5s ease-out,
-.overlay:hover {
-  opacity: 1;
+.button {
+  width: 125px;
+  height: 50px;
+  color: #fff;
+  background-color: #2b3742;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  border: 1px solid #fff;
+  margin: 5px;
+}
+.button:hover {
+  background-color: #fff;
+  color: #2b3742;
+  border: 1px solid #2b3742;
 }
 @media only screen and (min-width: 800px) {
   .hero-section {
     height: 475px;
   }
   .main-section {
-    max-width: 1280px;
-    margin: 0 auto;
+    max-width: 100%;
   }
 }
 .desktop-nav {
@@ -395,7 +474,7 @@ transition: all 0.5s ease-out,
     -webkit-justify-content: center;
     -ms-justify-content: center;
     cursor: pointer;
-    transition: 0.5s ease;
+    transition: 0.25s ease;
     opacity: 0.7;
   }
   .header-item:hover {
@@ -406,6 +485,7 @@ transition: all 0.5s ease-out,
     border-bottom: 2px solid #2b3742;
     transition: border-bottom 1s ease;
     opacity: 1;
+    font-weight: 600;
   }
 }
 .footer-col-1 {
@@ -511,19 +591,20 @@ transition: all 0.5s ease-out,
   text-align: center;
   font-size: 13px;
 }
-.button {
+.footer-button {
   width: 150px;
   height: 50px;
-  color: #029da1;
+  color: #2b3742;
   background-color: #fff;
   transition: background-color 0.5s ease;
   cursor: pointer;
-  border: 1px solid #aaabad;
+  border: 1px solid #fff;
   border-radius: 5%;
 }
-.button:hover {
+.footer-button:hover {
   color: #fff;
-  background-color: #029da1;
+  background-color: #2b3742;
+  border: 1px solid #fff;
 }
 @media only screen and (min-width: 769px) {
   .footer-col-1,
@@ -582,6 +663,7 @@ transition: all 0.5s ease-out,
   -ms-align-items: center;
   background-color: #fff;
   color: #2b3742;
+  border-top: 1px solid #2b3742;
 }
 .about-us-item {
   flex-grow: 1;
@@ -593,19 +675,35 @@ transition: all 0.5s ease-out,
   flex-basis: 400px;
   -webkit-flex-basis: 400px;
   -ms-flex-basis: 400px;
+  position: relative;
+}
+.about-us-text {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  text-align: justify;
 }
 .about-us img {
   width: 100%;
   height: 100%;
 }
 .about-us h1 {
-  text-align: left;
   padding: 15px 13px 15px 20px;
 }
 .about-us p {
-  text-align: left;
-  padding: 0px 25px 10px 13px;
-  border-left: 11px solid #2b3742;
+  padding: 0px 20px 5px 20px;
   line-height: 30px;
 }
 .how-we-met {
@@ -630,6 +728,7 @@ transition: all 0.5s ease-out,
 .how-we-met img {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .how-we-met h1 {
   padding: 15px 13px 15px 20px;
@@ -646,7 +745,7 @@ transition: all 0.5s ease-out,
     padding: 25px;
   }
   .how-we-met p {
-    padding: 15px 80px 15px 80px;
+    padding: 15px 100px 30px 100px;
   }
   #aaron div:nth-child(1) {
     order: 2;
@@ -662,23 +761,8 @@ transition: all 0.5s ease-out,
     margin-bottom: 10px;
     font-size: 75px;
   }
-}
-@media only screen and (min-width: 802px) and (max-width: 950px) {
-  .about-us-text {
-    overflow-y: scroll;
-    max-height: 400px;
-  }
-}
-@media only screen and (min-width: 951px) {
-  .about-us-text {
-    overflow-y: scroll;
-    max-height: 500px;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .about-us-text {
-    overflow-y: scroll;
-    max-height: 640px;
+  .how-we-met h1 {
+    padding: 30px 13px 15px 20px;
   }
 }
 .boulder-hero {
@@ -752,21 +836,6 @@ transition: all 0.5s ease-out,
   text-align: center;
   padding: 15px;
   line-height: 20px;
-}
-.step-button {
-  width: 125px;
-  height: 50px;
-  color: #fff;
-  background-color: #2b3742;
-  transition: background-color 0.5s ease;
-  cursor: pointer;
-  border: 1px solid #fff;
-  border-radius: 5%;
-}
-.step-button:hover {
-  background-color: #fff;
-  color: #2b3742;
-  border: 1px solid #2b3742;
 }
 .weather-section {
   display: flex;

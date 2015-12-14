@@ -43,7 +43,10 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/amanda.jpg"})
+                                m("img", {src: "../../../client/img/amanda.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Gettin married right after this"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -54,7 +57,10 @@ var weddingDetails = {
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/ryan.jpg"})
+                                m("img", {src: "../../../client/img/ryan.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Straight outta Monte"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -65,7 +71,10 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/bailey.jpg"})
+                                m("img", {src: "../../../client/img/bailey.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Gonna be a momma"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -76,7 +85,10 @@ var weddingDetails = {
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/ty.jpg"})
+                                m("img", {src: "../../../client/img/ty.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Mucho take it easy"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -87,7 +99,10 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/aracely.jpg"})
+                                m("img", {src: "../../../client/img/aracely.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Weeeee!"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -98,7 +113,10 @@ var weddingDetails = {
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/chase.jpg"})
+                                m("img", {src: "../../../client/img/chase.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Hazaah!"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [

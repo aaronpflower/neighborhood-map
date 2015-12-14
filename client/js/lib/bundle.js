@@ -24,7 +24,7 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", [
-                                    m("button.step-button", "Bus Schedule")
+                                    m("button.button", "Bus Schedule")
                                 ]),
                             ]),
                         ]),
@@ -36,16 +36,16 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='#']", [
-                                    m("button.step-button", "Boulder AirBnB")
+                                    m("button.button", "Boulder AirBnB")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Longmont")
+                                    m("button.button", "Longmont")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Louisville")
+                                    m("button.button", "Louisville")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Lafayette")
+                                    m("button.button", "Lafayette")
                                 ]),
                             ]),
                         ]),
@@ -57,10 +57,10 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='#']", [
-                                    m("button.step-button", "Avery")
+                                    m("button.button", "Avery")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Down Town Boulder")
+                                    m("button.button", "Down Town Boulder")
                                 ]),
                             ]),
                         ]),
@@ -72,13 +72,13 @@ var boulderInfo = {
                             ]),
                             m("div.step-right", [
                                 m("a[href='#']", [
-                                    m("button.step-button", "Boulder Hiking")
+                                    m("button.button", "Boulder Hiking")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Rocky Mountain NP")
+                                    m("button.button", "Rocky Mountain NP")
                                 ]),
                                 m("a[href='#']", [
-                                    m("button.step-button", "Brainer Lake")
+                                    m("button.button", "Brainer Lake")
                                 ]),
                             ]),
                         ]),
@@ -123,7 +123,7 @@ var footer = function() {
 			]),
 			m("div", {class: "col-1-right"}, [
 				m("a[href='/rsvp']", {config: m.route}, [
-					m("button", {class: "button"}, "RSVP")
+					m("button", {class: "footer-button"}, "RSVP")
 				]),
 			])
 
@@ -131,17 +131,17 @@ var footer = function() {
 		m("div", {class: "footer-col-2"}, [
 			m("div", {class: "col-2-item"}, [
 				m("a[href='/wedding-day']", {config: m.route}, [
-					m("button", {class: "button"}, "Wedding")
+					m("button", {class: "footer-button"}, "Wedding")
 				])
 			]),
 			m("div", {class: "col-2-item"}, [
 				m("a[href='/boulder-info']", {config: m.route}, [
-					m("button", {class: "button"}, "Boulder")
+					m("button", {class: "footer-button"}, "Boulder")
 				])
 			]),
 			m("div", {class: "col-2-item"}, [
 				m("a[href='/registry']", {config: m.route}, [
-					m("button", {class: "button"}, "Registry")
+					m("button", {class: "footer-button"}, "Registry")
 				])
 			])
 		]),
@@ -166,57 +166,78 @@ var m = require("mithril"),
 	countDownTimer = require('./widgets/timer.js');
 
 var Home = {
-    controller: function() {},
-    view: function() {
+    controller: function() {
+    },
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
-            m("div", {class: "hero-section home-hero"}, [
+            m("div.hero-section home-hero", [
                 m("h1", "Aaron and Brittney"),
                 m("h2", "June 19th, 2016"), 
                 m("h2", "Lyons, CO")
             ]),
             m("main.main-border-home", [
-            	m("div", {class: "main-section"}, [
+            	m("div.main-section", [
                     countDownTimer,
-            		// m("div", {class: "text-row"}, [
-            		// 	m("h1", "About Us")
-           			// ]),
             		m("div.about-us", [
                         m("div.about-us-item", [
+                            m("img.img", {src: "../../../client/img/brittney-home.jpg"}),
                             m("div.overlay", [
-                                m("img", {src: "../../../client/img/brittney-home.jpg"})
+                                m("h1", "Hi"),
                             ]),
                         ]),
-            			m("div", {class: "about-us-item"}, [
+            			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Brittney"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                                m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
-                                m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
-                                m("p", "After Seattle, Aaron felt called to move to Boulder, CO to help some of his good friends start a church. He spent three years in his personal hell as a Whole Foods employee, and by God’s grace was given an opportunity to try his hand at web development at a hip new startup in Boulder. If you want to find Aaron on any given night, if he’s not with his hottie fiancee, he can be found playing Madden with his friends Ryan and Ty. But if you’re looking for him past 9:30pm just wait until tomorrow. He’s gone to sleep because he’s so tired from being such a baller all day.")
-                            ])
-            			])
+                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
+                                m("button#brittneyBio.button", "Read More")
+                            ]),
+                            m("div#moreBio1.bio-overlay", [
+                                m("div.modal", [
+                                    m("div#brittneyClose.modal-close", "X"),
+                                    m("h1", "About Brittney"),
+                                    m("p", "MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                    m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
+                                    m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
+                                    m("p", "After Seattle, Aaron felt called to move to Boulder, CO to help some of his good friends start a church. He spent three years in his personal hell as a Whole Foods employee, and by God’s grace was given an opportunity to try his hand at web development at a hip new startup in Boulder. If you want to find Aaron on any given night, if he’s not with his hottie fiancee, he can be found playing Madden with his friends Ryan and Ty. But if you’re looking for him past 9:30pm just wait until tomorrow. He’s gone to sleep because he’s so tired from being such a baller all day.") 
+                                ]), 
+                            ]),    
+            			]),
             		]),
             		m("div#aaron.about-us", [
-                        m("div", {class: "about-us-item"}, [
-                            m("img", {src: "../../../client/img/aaron-home.jpg"})
+                        m("div.about-us-item", [
+                            m("img", {src: "../../../client/img/aaron-home.jpg"}),
+                            m("div.overlay", [
+                                m("h1", "What's up?"),
+                            ]),
                         ]),
-            			m("div", {class: "about-us-item"}, [
+            			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Aaron"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                                m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
-                                m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
-                                m("p", "After Seattle, Aaron felt called to move to Boulder, CO to help some of his good friends start a church. He spent three years in his personal hell as a Whole Foods employee, and by God’s grace was given an opportunity to try his hand at web development at a hip new startup in Boulder. If you want to find Aaron on any given night, if he’s not with his hottie fiancee, he can be found playing Madden with his friends Ryan and Ty. But if you’re looking for him past 9:30pm just wait until tomorrow. He’s gone to sleep because he’s so tired from being such a baller all day.")
-                            ])
-            			])
+                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
+                                m("button#aaronBio.button", "Read More")
+                            ]),
+                            m("div#moreBio1.bio-overlay", [
+                                m("div.modal", [
+                                    m("div#aaronClose.modal-close", "X"),
+                                    m("h1", "About Aaron"),
+                                    m("p", "MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                    m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
+                                    m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
+                                    m("p", "After Seattle, Aaron felt called to move to Boulder, CO to help some of his good friends start a church. He spent three years in his personal hell as a Whole Foods employee, and by God’s grace was given an opportunity to try his hand at web development at a hip new startup in Boulder. If you want to find Aaron on any given night, if he’s not with his hottie fiancee, he can be found playing Madden with his friends Ryan and Ty. But if you’re looking for him past 9:30pm just wait until tomorrow. He’s gone to sleep because he’s so tired from being such a baller all day.") 
+                                ]), 
+                            ]),   
+            			]),
             		]),
-            		m("div", {class: "text-row"}, [
+            		m("div.text-row", [
             			m("h1", "How We Met")
            			]),
-           			m("div", {class: "how-we-met"}, [
+           			m("div.how-we-met", [
            				m("img", {src: "../../../client/img/ba-home.jpg"}),
+                        // m("div.overlay", [
+                        //     m("h1", "Hi"),
+                        // ]),
            				m("h1", "It's a pretty simple story..."),
             			m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program, and Aaron had just quit his job at Whole Foods and started a new job at a local tech startup. While both of them were in a state of transition, God saw it fit to allow their worlds collide. Brittney who generally dislikes the act of meeting new people, had forced herself to go to a Missional Community (MC) gathering from her new church, The Well. On this particular night that she was going, Aaron’s MC was combining with that MC. That night, Aaron shirked on the other side of the house as this cute girl he had never met introduced herself to everyone. As they were sitting down to start a Bible Study, the two exchanged niceties, shook hands, and sat down. For the next hour Aaron proceeded to stare at Brittney, while Brittney wondered “Is he staring at me? Crap. Now he thinks I’m staring at him.”"),
                         m("p", "After their profoundly deep first meeting, Aaron did what any respectable man who wants to state their intentions to a lady does. He friended her on facebook. After a few exchanges on Facebook, and Brittney running away from Aaron at church, they met for coffee at Ozo Coffee. Walking into the coffee shop, Brittney took a deep breath, smiled at Aaron, and said “Aaron? Hi.” Aaron awkwardly sat in silence not knowing what to say, do, or think. But Brittney found the silence oddly calming to her nerves. After the initial awkwardness subsided, the two talked for 3 hours about their families, backgrounds, and everything in between. After finishing the last sips of their beverages, the pair walked outside of the coffee shop and awkwardly stared at each other for a second. Then Aaron looked at Brittney and said “We should do this again soon.” To which Brittney replied “Yes. I’d like that.” This was proceeded by the most awkward hug, arms tapping the others back lightly, torsos feet away from each other. After another awkward look and saying their goodbyes the two walked away from each other grinning.")           		
@@ -489,7 +510,10 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/amanda.jpg"})
+                                m("img", {src: "../../../client/img/amanda.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Gettin married right after this"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -500,7 +524,10 @@ var weddingDetails = {
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/ryan.jpg"})
+                                m("img", {src: "../../../client/img/ryan.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Straight outta Monte"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -511,7 +538,10 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/bailey.jpg"})
+                                m("img", {src: "../../../client/img/bailey.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Gonna be a momma"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -522,7 +552,10 @@ var weddingDetails = {
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/ty.jpg"})
+                                m("img", {src: "../../../client/img/ty.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Mucho take it easy"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -533,7 +566,10 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/aracely.jpg"})
+                                m("img", {src: "../../../client/img/aracely.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Weeeee!"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
@@ -544,7 +580,10 @@ var weddingDetails = {
                         ]),
                         m("div#aaron.about-us", [
                             m("div", {class: "about-us-item"}, [
-                                m("img", {src: "../../../client/img/chase.jpg"})
+                                m("img", {src: "../../../client/img/chase.jpg"}),
+                                m("div.overlay", [
+                                    m("h1", "Hazaah!"),
+                                ]),
                             ]),
                             m("div", {class: "about-us-item"}, [
                                 m("div.about-us-text", [
