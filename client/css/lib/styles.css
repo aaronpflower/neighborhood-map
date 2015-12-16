@@ -76,7 +76,7 @@ img {
 input {
   outline: none;
 }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 800px) {
   main {
     top: 475px;
   }
@@ -146,11 +146,20 @@ input {
   -ms-align-items: center;
 }
 .modal {
-  width: 80%;
-  height: 70%;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  width: 100%;
+  margin-top: 60px;
   color: #2b3742;
   background-color: #fafafa;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .modal-close {
   float: right;
@@ -207,6 +216,7 @@ input {
   -ms-align-items: stretch;
   border-left: 1px solid #2b3742;
   border-right: 1px solid #2b3742;
+  overflow: hidden;
 }
 .text-row {
   display: flex;
@@ -224,11 +234,14 @@ input {
   align-items: stretch;
   -webkit-align-items: stretch;
   -ms-align-items: stretch;
-  border-bottom: 1px solid #aaabad;
-  border-top: 1px solid #aaabad;
+  border-bottom: 1px solid #2b3742;
+  border-top: 1px solid #2b3742;
+  width: 100%;
 }
 .text-row h1 {
-  padding: 25px;
+  padding: 35px 16px;
+  font-size: 27px;
+  font-weight: 500;
 }
 .timer-container,
 .timer-wrapper {
@@ -298,7 +311,7 @@ input {
   color: #2b3742;
 }
 .button {
-  width: 125px;
+  width: 200px;
   height: 50px;
   color: #fff;
   background-color: #2b3742;
@@ -306,6 +319,7 @@ input {
   cursor: pointer;
   border: 1px solid #fff;
   margin: 5px;
+  align-self: center;
 }
 .button:hover {
   background-color: #fff;
@@ -318,6 +332,17 @@ input {
   }
   .main-section {
     max-width: 100%;
+  }
+  .modal {
+    flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    width: 90%;
+    max-width: 1000px;
+    flex-basis: auto;
+    -ms-flex-basis: auto;
+    -webkit-flex-basis: auto;
+    margin-top: 50px;
   }
 }
 .desktop-nav {
@@ -353,7 +378,7 @@ input {
   box-shadow: 0px 3px 5px rgba(100,100,100,0.49);
 }
 .mobile-header-item {
-  margin: 25px 0px 25px 0px;
+  margin: 18px 0px 18px 0px;
   color: #2b3742;
   font-weight: 300;
   font-size: 22px;
@@ -386,7 +411,7 @@ input {
   overflow: hidden;
   height: 60%;
   position: fixed;
-  top: 77px;
+  top: 63px;
   opacity: 0.98;
   background-color: #2b3742;
   transition: 0.5s ease;
@@ -413,7 +438,7 @@ input {
   overflow: hidden;
   height: 60%;
   position: fixed;
-  top: 77px;
+  top: 63px;
   opacity: 0.98;
   background-color: #2b3742;
   transition: 0.5s ease;
@@ -599,7 +624,6 @@ input {
   transition: background-color 0.5s ease;
   cursor: pointer;
   border: 1px solid #fff;
-  border-radius: 5%;
 }
 .footer-button:hover {
   color: #fff;
@@ -631,7 +655,7 @@ input {
   }
 }
 .home-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 40%, rgba(0,0,0,0.9)), url("../../../client/img/home-hero.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/home-hero.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -664,8 +688,12 @@ input {
   background-color: #fff;
   color: #2b3742;
   border-top: 1px solid #2b3742;
+  border-bottom: 1px solid #2b3742;
 }
 .about-us-item {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
   flex-grow: 1;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -693,7 +721,7 @@ input {
   align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
-  text-align: justify;
+  padding: 15px 5px 25px 5px;
 }
 .about-us img {
   width: 100%;
@@ -705,14 +733,22 @@ input {
 .about-us p {
   padding: 0px 20px 5px 20px;
   line-height: 30px;
+  text-align: center;
+}
+.about-us .modal p {
+  text-align: left;
+  padding: 15px 20px 5px 20px;
+}
+.about-us .modal h1 {
+  padding: 0px 15px;
 }
 .how-we-met {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
+  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
   justify-content: space-between;
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
@@ -736,13 +772,13 @@ input {
   width: 100%;
 }
 .how-we-met p {
-  text-align: left;
+  text-align: center;
   padding: 10px 40px 10px 40px;
   line-height: 30px;
 }
 @media only screen and (min-width: 802px) {
-  .about-us h1 p {
-    padding: 25px;
+  .about-us p {
+    padding: 0px 40px 5px 40px;
   }
   .how-we-met p {
     padding: 15px 100px 30px 100px;
@@ -766,7 +802,7 @@ input {
   }
 }
 .boulder-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 40%, rgba(0,0,0,0.9)), url("../../../client/img/boulder.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/boulder.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -797,14 +833,10 @@ input {
   align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
-  flex-basis: auto;
-  -webkit-flex-basis: auto;
-  -ms-flex-basis: auto;
 }
-.step-section h1 {
-  color: #2b3742;
-  font-size: 35px;
-  font-weight: 400;
+.step {
+  border-top: 1px solid #2b3742;
+  padding: 28px 0px 4px 0px;
 }
 .step-section h2 {
   color: #2b3742;
@@ -814,55 +846,56 @@ input {
   align-self: center;
   -webkit-align-self: center;
   -ms-align-self: center;
+  padding: 15px;
 }
 .step-section p {
   color: #2b3742;
   font-weight: 200;
   font-size: 15px;
+  text-align: justify;
+  padding-bottom: 15px;
 }
 .step-section img {
   height: 100px;
   width: 50px;
-  color: #2b3742;
+  color: #2b3742 !important;
   display: flex;
   display: -webkit-flex;
   align-self: center;
   -webkit-align-self: center;
   -ms-align-self: center;
+  margin-bottom: 15px;
 }
 .step-left,
 .step-right {
   color: #2b3742;
-  text-align: center;
-  padding: 15px;
+  padding: 15px 25px;
   line-height: 20px;
-}
-.weather-section {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
   flex-flow: column wrap;
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
 }
 .weatherIframe {
   height: 245px;
-  width: 75%;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
 }
 @media only screen and (min-width: 800px) {
-  .step {
-    flex-flow: row nowrap;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
+  .step-right {
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
   }
 }
 .map {
@@ -870,7 +903,7 @@ input {
   width: 100%;
 }
 .wedding-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 40%, rgba(0,0,0,0.9)), url("../../../client/img/wedding.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/wedding.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -957,7 +990,7 @@ input {
   }
 }
 .registry-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 40%, rgba(0,0,0,0.9)), url("../../../client/boston.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/boston.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -965,59 +998,10 @@ input {
   border-top: 4px solid #f5888d;
 }
 .rsvp-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 40%, rgba(0,0,0,0.9)), url("../../../client/rsvp-hero.jpg");
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/rsvp-hero.jpg");
   background-position: center;
   background-size: cover;
 }
 .main-border-rsvp {
   border-top: 4px solid #f9933f;
-}
-.weather-section {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: column nowrap;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-}
-.weather-item {
-  flex-grow: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-grow: 1;
-  flex-shrink: 1;
-  -webkit-flex-shrink: 1;
-  -ms-flex-shrink: 1;
-  flex-basis: auto;
-  -webkit-flex-basis: auto;
-  -ms-flex-basis: auto;
-  width: 100%;
-}
-.weather-item h2 {
-  padding: 10px;
-  color: #2b3742;
-}
-.weather-item p {
-  padding: 10px;
-  color: #2b3742;
-}
-.forecastio-iframe {
-  frameborder: 0;
-  height: 245px;
-  width: 100%;
-}
-@media only screen and (min-width: 800px) {
-  .weather-section {
-    flex-flow: row nowrap;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
-  }
 }

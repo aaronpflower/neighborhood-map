@@ -2,8 +2,7 @@
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
-	footer = require("./footer.js"),
-    Weather = require("./widgets/weather.js");
+	footer = require("./footer.js");
 
 var boulderInfo = {
     view: function() {
@@ -16,9 +15,11 @@ var boulderInfo = {
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
                     m("div.step-section", [
-                        m("h1", "The 4 Step plan to Boulder"),
-                        m("h2", "Step 1: Getting to Boulder"),
+                        m("div.text-row", [
+                            m("h1", "The 5 Step plan to Boulder")
+                        ]),
                         m("div.step", [
+                            m("h2", "Step 1: Getting to Boulder"),
                             m("div.step-left", [
                                 m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse. You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.")
                             ]),
@@ -29,8 +30,8 @@ var boulderInfo = {
                             ]),
                         ]),
                         m("img", {src: "../../../client/img/down-arrow.svg"}),
-                        m("h2", "Step 2: Where Sleep"),
                         m("div.step", [
+                            m("h2", "Step 2: Where Sleep"),
                             m("div.step-left", [
                                 m("p", "Boulder is where we live and the wedding is just 20 miles up the road in Lyons.  So there are a couple options of where you could stay while you are here.  There are plenty of hotels in town, or airBnB. Also if you are looking to find cheaper options we would recommend Longmont, Louisville, Superior, or Lafayette."),
                             ]),
@@ -50,8 +51,8 @@ var boulderInfo = {
                             ]),
                         ]),
                         m("img", {src: "../../../client/img/down-arrow.svg"}),
-                         m("h2", "Step 3: Where to eat and drink"),
                         m("div.step", [
+                            m("h2", "Step 3: Where to eat and drink"),
                             m("div.step-left", [
                                m("p", "Boulder is full of Breweries and a wide variety of restaurants.  We would recommend Avery Brewery, West End Tavern, Bitter Bar, and for the midwest folk, McDonald's, and Dunkin Donuts. Go here for a full list of places in downtown Boulder."),
                             ]),
@@ -65,8 +66,8 @@ var boulderInfo = {
                             ]),
                         ]),
                         m("img", {src: "../../../client/img/down-arrow.svg"}),
-                        m("h2", "Step 4: Where to play"),
                         m("div.step", [
+                            m("h2", "Step 4: Where to play"),
                             m("div.step-left", [
                                m("p", "In town go to the Flatirons,  just do it.  If you have a full day Rocky Mountain National Park is only a hour drive away, and is simply amazing. Another good day trip is the Indian Peaks Wilderness."),
                             ]),
@@ -83,19 +84,15 @@ var boulderInfo = {
                             ]),
                         ]),
                         m("img", {src: "../../../client/img/down-arrow.svg"}),
-                        m("h2", "Step 5: Weather and Climate"),
                         m("div.step", [
-                            m("div.weather-section", [
-                                m("div.weather-item", [
-                                    m("h2", "Altitude"),
-                                    m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those travling from the low lands please remember to drink more water than you ever have in your life to prevent alituide sickness.  Each individual is affected by this differntly"),
-                                    m("h2", "Typlical Weather"),
-                                    m("p", "For Boulder and the surronding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
-                                ]),
-                                m("div.weather-item", [
-                                    m("iframe.forecastio-iframe", {src: "https://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
-                                ])
-                            ]) 
+                            m("h2", "Step 5: Weather and Climate"),
+                            m("div.step-left", [
+                                m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those travling from the low lands please remember to drink more water than you ever have in your life to prevent alituide sickness.  Each individual is affected by this differntly"),
+                                m("p", "For Boulder and the surronding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
+                            ]),
+                            m("div.weatherIframe", [
+                                m("iframe.forecastio-iframe", {src: "https://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
+                            ])
                         ])
                     ]),
                 footer(),
@@ -112,7 +109,7 @@ module.exports = boulderInfo;
 
 
 
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/weather.js":13,"mithril":15}],2:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":14}],2:[function(require,module,exports){
 var m = require("mithril");
 
 var footer = function() {
@@ -158,7 +155,7 @@ module.exports = footer;
 
 
 
-},{"mithril":15}],3:[function(require,module,exports){
+},{"mithril":14}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
@@ -218,7 +215,7 @@ var Home = {
                                 m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
                                 m("button#aaronBio.button", "Read More")
                             ]),
-                            m("div#moreBio1.bio-overlay", [
+                            m("div#moreBio2.bio-overlay", [
                                 m("div.modal", [
                                     m("div#aaronClose.modal-close", "X"),
                                     m("h1", "About Aaron"),
@@ -230,17 +227,19 @@ var Home = {
                             ]),   
             			]),
             		]),
-            		m("div.text-row", [
-            			m("h1", "How We Met")
-           			]),
            			m("div.how-we-met", [
            				m("img", {src: "../../../client/img/ba-home.jpg"}),
-                        // m("div.overlay", [
-                        //     m("h1", "Hi"),
-                        // ]),
-           				m("h1", "It's a pretty simple story..."),
-            			m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program, and Aaron had just quit his job at Whole Foods and started a new job at a local tech startup. While both of them were in a state of transition, God saw it fit to allow their worlds collide. Brittney who generally dislikes the act of meeting new people, had forced herself to go to a Missional Community (MC) gathering from her new church, The Well. On this particular night that she was going, Aaron’s MC was combining with that MC. That night, Aaron shirked on the other side of the house as this cute girl he had never met introduced herself to everyone. As they were sitting down to start a Bible Study, the two exchanged niceties, shook hands, and sat down. For the next hour Aaron proceeded to stare at Brittney, while Brittney wondered “Is he staring at me? Crap. Now he thinks I’m staring at him.”"),
-                        m("p", "After their profoundly deep first meeting, Aaron did what any respectable man who wants to state their intentions to a lady does. He friended her on facebook. After a few exchanges on Facebook, and Brittney running away from Aaron at church, they met for coffee at Ozo Coffee. Walking into the coffee shop, Brittney took a deep breath, smiled at Aaron, and said “Aaron? Hi.” Aaron awkwardly sat in silence not knowing what to say, do, or think. But Brittney found the silence oddly calming to her nerves. After the initial awkwardness subsided, the two talked for 3 hours about their families, backgrounds, and everything in between. After finishing the last sips of their beverages, the pair walked outside of the coffee shop and awkwardly stared at each other for a second. Then Aaron looked at Brittney and said “We should do this again soon.” To which Brittney replied “Yes. I’d like that.” This was proceeded by the most awkward hug, arms tapping the others back lightly, torsos feet away from each other. After another awkward look and saying their goodbyes the two walked away from each other grinning.")           		
+           				m("h1", "How we met, well it's a pretty simple story"),
+            			m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program"), 
+                        m("button#aboutUs.button", "Read More")
+                    ]),
+                    m("div#moreBio3.bio-overlay", [
+                        m("div.modal", [
+                            m("div#aboutUsClose.modal-close", "X"),
+                            m("h1", "About Us"),
+                            m("p", "and Aaron had just quit his job at Whole Foods and started a new job at a local tech startup. While both of them were in a state of transition, God saw it fit to allow their worlds collide. Brittney who generally dislikes the act of meeting new people, had forced herself to go to a Missional Community (MC) gathering from her new church, The Well. On this particular night that she was going, Aaron’s MC was combining with that MC. That night, Aaron shirked on the other side of the house as this cute girl he had never met introduced herself to everyone. As they were sitting down to start a Bible Study, the two exchanged niceties, shook hands, and sat down. For the next hour Aaron proceeded to stare at Brittney, while Brittney wondered “Is he staring at me? Crap. Now he thinks I’m staring at him.”"),
+                            m("p", "After their profoundly deep first meeting, Aaron did what any respectable man who wants to state their intentions to a lady does. He friended her on facebook. After a few exchanges on Facebook, and Brittney running away from Aaron at church, they met for coffee at Ozo Coffee. Walking into the coffee shop, Brittney took a deep breath, smiled at Aaron, and said “Aaron? Hi.” Aaron awkwardly sat in silence not knowing what to say, do, or think. But Brittney found the silence oddly calming to her nerves. After the initial awkwardness subsided, the two talked for 3 hours about their families, backgrounds, and everything in between. After finishing the last sips of their beverages, the pair walked outside of the coffee shop and awkwardly stared at each other for a second. Then Aaron looked at Brittney and said “We should do this again soon.” To which Brittney replied “Yes. I’d like that.” This was proceeded by the most awkward hug, arms tapping the others back lightly, torsos feet away from each other. After another awkward look and saying their goodbyes the two walked away from each other grinning.")
+                        ]),
                     ]),
             	]),
             footer(),
@@ -250,18 +249,18 @@ var Home = {
 };
 
 module.exports = Home;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/timer.js":12,"mithril":15}],4:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/timer.js":12,"mithril":14}],4:[function(require,module,exports){
 var $ = require('jquery'),
 	m = require('mithril');
 
-$(window).scroll(function () {
-    var scrollTop = $(window).scrollTop();
-    var height = $(window).height();
-    $('.hero-section').css({
-        'opacity': ((height - scrollTop) / height)
-    });
-});
-},{"jquery":14,"mithril":15}],5:[function(require,module,exports){
+// $(window).scroll(function () {
+//     var scrollTop = $(window).scrollTop();
+//     var height = $(window).height();
+//     $('.hero-section').css({
+//         'opacity': ((height - scrollTop) / height)
+//     });
+// });
+},{"jquery":13,"mithril":14}],5:[function(require,module,exports){
 var m = require("mithril");
 
 var menu = {
@@ -288,7 +287,7 @@ function persistent(context) {
 }
 
 module.exports = menu;
-},{"mithril":15}],6:[function(require,module,exports){
+},{"mithril":14}],6:[function(require,module,exports){
 var m = require('mithril'),
 	Layout = require('./layout.js'),
 	Home = require('./home.js'),
@@ -308,7 +307,7 @@ m.route(document.body, "/", {
     "/registry": Registry,
     "/boulder-info": BoulderInfo,
 })
-},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./layout.js":4,"./menu.js":5,"./registry":8,"./rsvp":9,"./wedding-details.js":10,"mithril":15}],7:[function(require,module,exports){
+},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./layout.js":4,"./menu.js":5,"./registry":8,"./rsvp":9,"./wedding-details.js":10,"mithril":14}],7:[function(require,module,exports){
 var m = require('mithril');
 
 var mobileMenu = {
@@ -359,7 +358,7 @@ function persistent(context) {
 }
 
 module.exports = mobileMenu;
-},{"mithril":15}],8:[function(require,module,exports){
+},{"mithril":14}],8:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -415,7 +414,7 @@ var Registry = {
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":15}],9:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":14}],9:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -431,27 +430,29 @@ var Rsvp = {
             m("main.main-border-rsvp", [
                 m("div.main-section", [
                     m("div.step-section", [
-                        m("h1", "How to RSVP"),
-                        m("h2", "Paperless Post"),
+                        m("div.text-row", [
+                            m("h1", "How to RSVP")
+                        ]),
                         m("div.step", [
+                            m("h2", "Paperless Post"),
                             m("div.step-left", [
                                 m("p", "Recommended. Cheap on our end, quicker response.  Plus it's 2015 you are on your computer all the time.")
                             ]),
                             m("div.step-right", [
                                 m("a[href='#']", [
-                                    m("button.step-button", "RSVP Here")
+                                    m("button.button", "RSVP Here")
                                 ]),
                             ]),
                         ]),
                         m("img", {src: "../../../client/img/down-arrow.svg"}),
-                        m("h2", "Snail Mail"),
                         m("div.step", [
+                            m("h2", "Snail Mail"),
                             m("div.step-left", [
                                 m("p", "If you insist please return the to the address ASAP"),
                             ]),
                             m("div.step-right", [
                                 m("a[href='https://www.youtube.com/watch?v=GaoLU6zKaws']", [
-                                    m("button.step-button", "Click Here")
+                                    m("button.button", "Click Here")
                                 ]),
                             ]),
                         ]),
@@ -464,7 +465,7 @@ var Rsvp = {
 }
 
 module.exports = Rsvp;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":15}],10:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":14}],10:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -601,7 +602,7 @@ var weddingDetails = {
 }
 
 module.exports = weddingDetails;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/map.js":11,"mithril":15}],11:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/map.js":11,"mithril":14}],11:[function(require,module,exports){
 var m = require('mithril');
 
 var boulderMap = {
@@ -628,7 +629,7 @@ var boulderMap = {
 }
 
 module.exports = boulderMap;
-},{"mithril":15}],12:[function(require,module,exports){
+},{"mithril":14}],12:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
@@ -678,31 +679,7 @@ var countDownTimer = {
 }
 
 module.exports = countDownTimer;
-},{"mithril":15}],13:[function(require,module,exports){
-var m = require('mithril');
-
-var boulderWeather = {
-	controller: function() {
-		return { 
-			currentWeather: m.request({ 
-				method: "GET",
-				url: "https://api.forecast.io/forecast/75d6ce45a07f135b5c01ec05b09984ab/40.0274,-105.2519/",
-				dataType: "jsonp",
-				callback: "callback"
-			})
-		}	
-	},
-	view: function(ctrl) {
-		console.log(ctrl.currentWeather);
-		return m("div", "Current Boulder Temp:");
-	}
-}
-
-module.exports = boulderWeather;
-
-
-
-},{"mithril":15}],14:[function(require,module,exports){
+},{"mithril":14}],13:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -9914,7 +9891,7 @@ return jQuery;
 
 }));
 
-},{}],15:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;

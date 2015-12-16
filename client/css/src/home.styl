@@ -1,6 +1,5 @@
 .home-hero
-	// background-image: url("../../../client/img/home-hero.jpg")
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 40%, rgba(0, 0, 0, 0.9)), url("../../../client/img/home-hero.jpg")
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 15%, rgba(0, 0, 0, 0.9)), url("../../../client/img/home-hero.jpg")
 	background-position: center
 	background-size: cover
 
@@ -33,8 +32,12 @@
 	background-color: #fff
 	color: darkNavy
 	border-top: 1px solid darkNavy
+	border-bottom: 1px solid darkNavy 
 
 .about-us-item
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
 	flex-grow: 1
 	-webkit-flex-grow: 1
 	-ms-flex-grow: 1
@@ -62,7 +65,7 @@
 	align-items: center
 	-webkit-align-items: center
 	-ms-align-items: center
-	text-align: justify
+	padding: 15px 5px 25px 5px
 		
 .about-us img
 	width: 100%
@@ -74,14 +77,22 @@
 .about-us p
 	padding: 0px 20px 5px 20px
 	line-height: 30px
+	text-align: center
 
+.about-us .modal p
+	text-align: left
+	padding: 15px 20px 5px 20px
+
+.about-us .modal h1
+	padding: 0px 15px
+	
 .how-we-met
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
-	flex-flow: row wrap
-	-webkit-flex-flow: row wrap
-	-ms-flex-flow: row wrap
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
 	justify-content: space-between
 	-webkit-justify-content: space-between
 	-ms-justify-content: space-between
@@ -105,13 +116,13 @@
 	width: 100%
 
 .how-we-met p
-	text-align: left
+	text-align: center
 	padding: 10px 40px 10px 40px
 	line-height: 30px
 
 @media only screen and (min-width: 802px)
-	.about-us h1 p
-		padding: 25px
+	.about-us p
+		padding: 0px 40px 5px 40px
 	.how-we-met p
 		padding: 15px 100px 30px 100px
 	#aaron div:nth-child(1)

@@ -70,11 +70,20 @@ lemon = #FEE404
 	-ms-align-items: center
 	
 .modal
-	width: 80%
-	height: 70%
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	justify-content: flex-start
+	-webkit-justify-content: flex-start
+	-ms-justify-content: flex-start
+	width: 100%
+	margin-top: 60px
 	color: darkNavy
 	background-color: #fafafa
-	overflow: scroll
+	overflow-y: scroll
 
 .modal-close
 	float: right
@@ -131,6 +140,7 @@ lemon = #FEE404
 	-ms-align-items: stretch
 	border-left: 1px solid darkNavy
 	border-right: 1px solid darkNavy
+	overflow: hidden
 
 .text-row
 	display: flex
@@ -148,11 +158,14 @@ lemon = #FEE404
 	align-items: stretch
 	-webkit-align-items: stretch
 	-ms-align-items: stretch
-	border-bottom: 1px solid gray
-	border-top: 1px solid gray
+	border-bottom: 1px solid darkNavy
+	border-top: 1px solid darkNavy
+	width: 100%
 
 .text-row h1
-	padding: 25px
+	padding: 35px 16px
+	font-size: 27px
+	font-weight: 500
 
 .timer-container, .timer-wrapper
 	display: flex
@@ -221,7 +234,7 @@ lemon = #FEE404
 	color: darkNavy
 
 .button
-	width: 125px
+	width: 200px
 	height: 50px
 	color: #fff
 	background-color: darkNavy
@@ -229,6 +242,7 @@ lemon = #FEE404
 	cursor: pointer
 	border: 1px solid #fff
 	margin: 5px
+	align-self: center
 
 .button:hover
 	background-color: #fff
@@ -240,4 +254,13 @@ lemon = #FEE404
 		height: 475px
 	.main-section
 		max-width: 100%
-		// margin 0 auto
+	.modal
+		flex-flow: column wrap
+		-webkit-flex-flow: column wrap
+		-ms-flex-flow: column wrap
+		width: 90%
+		max-width: 1000px
+		flex-basis: auto
+		-ms-flex-basis: auto
+		-webkit-flex-basis: auto
+		margin-top: 50px
