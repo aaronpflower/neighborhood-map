@@ -817,7 +817,8 @@ input {
   border-top: 4px solid #0a8e50;
 }
 .step-section,
-.step {
+.step,
+.step-inverse {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -833,12 +834,9 @@ input {
   align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
+  width: 100%;
 }
-.step {
-  border-top: 1px solid #2b3742;
-  padding: 28px 0px 4px 0px;
-}
-.step-section h2 {
+.step h2 {
   color: #2b3742;
   font-size: 25px;
   font-weight: 400;
@@ -848,23 +846,68 @@ input {
   -ms-align-self: center;
   padding: 15px;
 }
-.step-section p {
+.step p {
   color: #2b3742;
   font-weight: 200;
   font-size: 15px;
   text-align: justify;
   padding-bottom: 15px;
 }
-.step-section img {
-  height: 100px;
-  width: 50px;
-  color: #2b3742 !important;
-  display: flex;
+.step-inverse {
+  background-color: #2b3742;
+}
+.step-inverse h2 {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
   display: -webkit-flex;
   align-self: center;
   -webkit-align-self: center;
   -ms-align-self: center;
-  margin-bottom: 15px;
+  padding: 15px;
+}
+.step-inverse p {
+  color: #fff;
+  font-weight: 200;
+  font-size: 15px;
+  text-align: justify;
+  padding-bottom: 15px;
+}
+.step-inverse,
+.step {
+  padding: 25px;
+}
+.step-button {
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  background-color: #2b3742;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  border: 1px solid #fff;
+  margin: 5px;
+  align-self: center;
+}
+.step-button:hover {
+  background-color: #fff;
+  color: #2b3742;
+  border: 1px solid #2b3742;
+}
+.step-inverse-button {
+  width: 200px;
+  height: 50px;
+  color: #2b3742;
+  background-color: #fff;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+  border: 1px solid #fff;
+  margin: 5px;
+  align-self: center;
+}
+.step-inverse-button:hover {
+  background-color: #2b3742;
+  color: #fff;
+  border: 1px solid #fff;
 }
 .step-left,
 .step-right {
@@ -877,19 +920,13 @@ input {
   flex-flow: column wrap;
   -webkit-flex-flow: column wrap;
   -ms-flex-flow: column wrap;
-}
-.weatherIframe {
-  height: 245px;
-  width: 100%;
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
   justify-content: center;
   -webkit-justify-content: center;
   -ms-justify-content: center;
+}
+.weather-iframe {
+  height: 245px;
+  width: 100%;
 }
 @media only screen and (min-width: 800px) {
   .step-right {
@@ -897,9 +934,13 @@ input {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
   }
+  .step-left,
+  .step-right {
+    width: 50%;
+  }
 }
 .map {
-  height: 600px;
+  height: 100%;
   width: 100%;
 }
 .wedding-hero {
@@ -917,8 +958,7 @@ input {
 .main-border-wedding-details {
   border-top: 4px solid #ff7902;
 }
-.info-section,
-.details {
+.info-section {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -931,9 +971,6 @@ input {
   align-content: center;
   -webkit-align-content: center;
   -ms-align-content: center;
-  align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
 }
 .info-section h1 {
   color: #2b3742;
@@ -965,6 +1002,20 @@ input {
   -ms-flex-basis: 400px;
   padding: 25px;
 }
+.details {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+}
 @media only screen and (min-width: 800px) {
   .info-section {
     flex-flow: row nowrap;
@@ -975,9 +1026,9 @@ input {
     display: flex;
     display: -webkit-flex;
     display: -ms-flex;
-    flex-flow: row nowrap;
-    -webkit-flex-flow: row nowrap;
-    -ms-flex-flow: row nowrap;
+    flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
     justify-content: flex-start;
     -webkit-justify-content: flex-start;
     -ms-justify-content: flex-start;

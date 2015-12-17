@@ -14,7 +14,7 @@
 .main-border-wedding-details
 	border-top: 4px solid tangerine
 
-.info-section, .details
+.info-section
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -27,9 +27,6 @@
 	align-content: center
 	-webkit-align-content: center
 	-ms-align-content: center
-	align-items: stretch
-	-webkit-align-items: stretch
-	-ms-align-items: stretch
 
 .info-section h1
 	color: darkNavy
@@ -61,6 +58,20 @@
 	-ms-flex-basis: 400px
 	padding: 25px
 
+.details
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+
 @media only screen and (min-width: 800px)
 	.info-section
 		flex-flow: row nowrap
@@ -70,9 +81,9 @@
 		display: flex
 		display: -webkit-flex
 		display: -ms-flex
-		flex-flow: row nowrap
-		-webkit-flex-flow: row nowrap
-		-ms-flex-flow: row nowrap
+		flex-flow: column nowrap
+		-webkit-flex-flow: column nowrap
+		-ms-flex-flow: column nowrap
 		justify-content: flex-start
 		-webkit-justify-content: flex-start
 		-ms-justify-content: flex-start

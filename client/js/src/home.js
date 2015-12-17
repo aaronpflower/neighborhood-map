@@ -21,7 +21,7 @@ var Home = {
                     countDownTimer,
             		m("div.about-us", [
                         m("div.about-us-item", [
-                            m("img.img", {src: "../../../client/img/brittney-home.jpg"}),
+                            m("img", {src: "../../../client/img/brittney-home.jpg"}),
                             m("div.overlay", [
                                 m("h1", "Hi"),
                             ]),

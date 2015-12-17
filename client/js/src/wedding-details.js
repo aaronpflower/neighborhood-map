@@ -11,14 +11,11 @@ var weddingDetails = {
             menu,
             mobileMenu,
             m("div.hero-section.wedding-hero.drop-shadow", [
-                m("h1", "Lyons Farmette,"),
+                m("h1", "Wedding Day Information,"),
                 m("h1", "Lyons, CO")
             ]),
             m("main.main-border-wedding-details", [
                 m("div.main-section", [
-                    m("div.text-row", [
-                        m("h1", "Wedding Day Information")
-                    ]),
                     m("div.info-section", [
                         m("div.info-item", [
                             m("div.details", [
@@ -34,13 +31,10 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            // boulderMap,
+                            boulderMap,
                         ]),
                     ]),
                     m("div", {class: "second-section"}, [
-                        m("div", {class: "text-row"}, [
-                            m("h1", "Wedding Party")
-                        ]),
                         m("div.about-us", [
                             m("div", {class: "about-us-item"}, [
                                 m("img", {src: "../../../client/img/amanda.jpg"}),
