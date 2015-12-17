@@ -21,66 +21,62 @@ var boulderInfo = {
                                 m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse. You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.")
                             ]),
                             m("div.step-right", [
-                                m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction']", [
+                                m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction'] [target='blank']", [
                                     m("button.step-button", "Bus Schedule")
                                 ]),
                             ]),
                         ]),
-                        // m("img", {src: "../../../client/img/down-arrow.svg"}),
                         m("div.step-inverse", [
                             m("h2", "Step 2: Where Sleep"),
                             m("div.step-left", [
                                 m("p", "Boulder is where we live and the wedding is just 20 miles up the road in Lyons.  So there are a couple options of where you could stay while you are here.  There are plenty of hotels in town, or airBnB. Also if you are looking to find cheaper options we would recommend Longmont, Louisville, Superior, or Lafayette."),
                             ]),
                             m("div.step-right", [
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-inverse-button", "Boulder AirBnB")
                                 ]),
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-inverse-button", "Longmont")
                                 ]),
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-inverse-button", "Louisville")
                                 ]),
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-inverse-button", "Lafayette")
                                 ]),
                             ]),
                         ]),
-                        // m("img", {src: "../../../client/img/down-arrow.svg"}),
                         m("div.step", [
                             m("h2", "Step 3: Where to eat and drink"),
                             m("div.step-left", [
                                m("p", "Boulder is full of Breweries and a wide variety of restaurants.  We would recommend Avery Brewery, West End Tavern, Bitter Bar, and for the midwest folk, McDonald's, and Dunkin Donuts. Go here for a full list of places in downtown Boulder."),
                             ]),
                             m("div.step-right", [
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-button", "Avery")
                                 ]),
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-button", "Down Town Boulder")
                                 ]),
                             ]),
                         ]),
-                        // m("img", {src: "../../../client/img/down-arrow.svg"}),
                         m("div.step-inverse", [
                             m("h2", "Step 4: Where to play"),
                             m("div.step-left", [
                                m("p", "In town go to the Flatirons,  just do it.  If you have a full day Rocky Mountain National Park is only a hour drive away, and is simply amazing. Another good day trip is the Indian Peaks Wilderness."),
                             ]),
                             m("div.step-right", [
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-inverse-button", "Boulder Hiking")
                                 ]),
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-inverse-button", "Rocky Mountain NP")
                                 ]),
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.step-inverse-button", "Brainer Lake")
                                 ]),
                             ]),
                         ]),
-                        // m("img", {src: "../../../client/img/down-arrow.svg"}),
                         m("div.step", [
                             m("h2", "Step 5: Weather and Climate"),
                             m("div.step-left", [
@@ -88,9 +84,7 @@ var boulderInfo = {
                                 m("p", "For Boulder and the surronding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
                             ]),
                             m("div.step-right", [
-                                m("div.weather-iframe", [
-                                    m("iframe.forecastio-iframe", {src: "https://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
-                                ]),
+                                m("iframe.weather-iframe", {src: "https://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
                             ]),
                         ]),
                     ]),
@@ -370,48 +364,47 @@ var Registry = {
             menu,
             mobileMenu,
             m("div", {class: "hero-section registry-hero"}, [
-                m("h1", "Registry Information"),
-                m("h1", "We have two options")
+                m("h1", "Registry Information")
             ]),
             m("main.main-border-registry", [
                 m("div.main-section", [
-                    m("div.about-us", [
-                        m("div.about-us-item", [
-                            m("img", {src: "../../../client/img/Crate-Barrel-Logo.jpg"})
+                    m("div.registry", [
+                        m("div.registry-item", [
+                            m("img", {src: "../../../client/img/honeyfund_logo.svg"})
                         ]),
-                        m("div.about-us-item", [
-                            m("div.about-us-text", [
-                                m("h1", "Crate and Barrel"),
-                                m("p", "We need stuff for our aptarment"),
-                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020']", [
-                                    m("button.button", "Go to it") 
-                                ])                           
-                            ])
-                        ])
-                    ]),
-                    m("div#aaron.about-us", [
-                        m("div.about-us-item", [
-                            m("img", {src: "../../../client/img/honeyfund_logo.jpg"})
-                        ]),
-                        m("div.about-us-item", [
-                            m("div.about-us-text", [
+                        m("div.registry-item", [
+                            m("div.registry-text", [
                                 m("h1", "Honey Fund"),
                                 m("p", "Help us with our Honey Mood"),
-                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020']", [
+                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020'] [target='blank']", [
                                     m("button.button", "Go to it") 
                                 ])
                             ])
                         ])
                     ]),
-                    m("div#aaron.about-us", [
-                        m("div.about-us-item", [
-                            m("img", {src: "../../../client/img/honeyfund_logo.jpg"})
+                    m("div#crateBarrel.registry", [
+                        m("div.registry-item", [
+                            m("img", {src: "../../../client/img/CrateandBarrelLogo.svg"})
                         ]),
-                        m("div.about-us-item", [
+                        m("div.registry-item", [
+                            m("div.registry-text", [
+                                m("h1", "Crate and Barrel"),
+                                m("p", "We need stuff for our aptarment"),
+                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020'] [target='blank']", [
+                                    m("button.button", "Go to it") 
+                                ])                           
+                            ])
+                        ])
+                    ]),
+                    m("div.registry", [
+                        m("div.registry-item", [
+                            m("img", {src: "../../../client/img/target-logo.svg"})
+                        ]),
+                        m("div.registry-item", [
                             m("div.about-us-text", [
                                 m("h1", "Target"),
                                 m("p", "Target Stuff"),
-                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020']", [
+                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020'] [target='blank']", [
                                     m("button.button", "Go to it") 
                                 ])
                             ])
@@ -447,19 +440,18 @@ var Rsvp = {
                                 m("p", "Recommended. Cheap on our end, quicker response.  Plus it's 2015 you are on your computer all the time.")
                             ]),
                             m("div.step-right", [
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.button", "RSVP Here")
                                 ]),
                             ]),
                         ]),
-                        // m("img", {src: "../../../client/img/down-arrow.svg"}),
                         m("div.step", [
                             m("h2", "Snail Mail"),
                             m("div.step-left", [
                                 m("p", "If you insist please return the to the address ASAP"),
                             ]),
                             m("div.step-right", [
-                                m("a[href='https://www.youtube.com/watch?v=GaoLU6zKaws']", [
+                                m("a[href='https://www.youtube.com/watch?v=GaoLU6zKaws'] [target='blank']", [
                                     m("button.button", "Click Here")
                                 ]),
                             ]),
@@ -487,8 +479,7 @@ var weddingDetails = {
             menu,
             mobileMenu,
             m("div.hero-section.wedding-hero.drop-shadow", [
-                m("h1", "Wedding Day Information,"),
-                m("h1", "Lyons, CO")
+                m("h1", "Wedding Day Information")
             ]),
             m("main.main-border-wedding-details", [
                 m("div.main-section", [
@@ -529,7 +520,7 @@ var weddingDetails = {
                             m("div", {class: "about-us-item"}, [
                                 m("img", {src: "../../../client/img/ryan.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Straight outta Monte"),
+                                    m("h1", "Straight outta Monte Vista"),
                                 ]),
                             ]),
                             m("div", {class: "about-us-item"}, [

@@ -11,8 +11,7 @@ var weddingDetails = {
             menu,
             mobileMenu,
             m("div.hero-section.wedding-hero.drop-shadow", [
-                m("h1", "Wedding Day Information,"),
-                m("h1", "Lyons, CO")
+                m("h1", "Wedding Day Information")
             ]),
             m("main.main-border-wedding-details", [
                 m("div.main-section", [
@@ -53,7 +52,7 @@ var weddingDetails = {
                             m("div", {class: "about-us-item"}, [
                                 m("img", {src: "../../../client/img/ryan.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Straight outta Monte"),
+                                    m("h1", "Straight outta Monte Vista"),
                                 ]),
                             ]),
                             m("div", {class: "about-us-item"}, [

@@ -19,19 +19,18 @@ var Rsvp = {
                                 m("p", "Recommended. Cheap on our end, quicker response.  Plus it's 2015 you are on your computer all the time.")
                             ]),
                             m("div.step-right", [
-                                m("a[href='#']", [
+                                m("a[href='#'] [target='blank']", [
                                     m("button.button", "RSVP Here")
                                 ]),
                             ]),
                         ]),
-                        // m("img", {src: "../../../client/img/down-arrow.svg"}),
                         m("div.step", [
                             m("h2", "Snail Mail"),
                             m("div.step-left", [
                                 m("p", "If you insist please return the to the address ASAP"),
                             ]),
                             m("div.step-right", [
-                                m("a[href='https://www.youtube.com/watch?v=GaoLU6zKaws']", [
+                                m("a[href='https://www.youtube.com/watch?v=GaoLU6zKaws'] [target='blank']", [
                                     m("button.button", "Click Here")
                                 ]),
                             ]),
