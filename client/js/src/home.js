@@ -84,7 +84,7 @@ var Home = {
                                 m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
                                 m("button#aaronBio.button", "Read More")
                             ]),
-                            m("div#moreBio2.bio-overlay", [
+                            m("div#moreBio2.bio-overlay-closed", [
                                 m("div.modal", [
                                     m("div#aaronClose.modal-close", "X"),
                                     m("h1", "About Aaron"),
@@ -97,12 +97,16 @@ var Home = {
             			]),
             		]),
            			m("div.how-we-met", [
-           				m("img", {src: "../../../client/img/ba-home.jpg"}),
-           				m("h1", "How we met, well it's a pretty simple story"),
-            			m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program"), 
-                        m("button#aboutUs.button", "Read More")
+                        m("div.how-we-met-img", [
+                            m("img", {src: "../../../client/img/ba-home.jpg"})
+                        ]),
+                        m("div.about-us-text", [
+                            m("h1", "How we met, well it's a pretty simple story"),
+                            m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program"), 
+                            m("button#aboutUs.button", "Read More")
+                        ]),
                     ]),
-                    m("div#moreBio3.bio-overlay", [
+                    m("div#moreBio3.bio-overlay-closed", [
                         m("div.modal", [
                             m("div#aboutUsClose.modal-close", "X"),
                             m("h1", "About Us"),

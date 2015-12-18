@@ -107,16 +107,16 @@ var m = require("mithril");
 
 var footer = function() {
 	return m("footer", [
-		m("div", {class: "footer-col-1"}, [
-			m("div", {class: "col-1-left"}, [
-				m("p", "Hallelujah! For the Lord our God the Almighty reigns. Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready; it was granted her to clothe herself with fine linen, bright and pure for the fine linen is the righteous deeds of the saints. Revelation 19:6-8"),
-			]),
-			// m("div", {class: "col-1-right"}, [
-			// 	m("a[href='/rsvp']", {config: m.route}, [
-			// 		m("button", {class: "footer-button"}, "RSVP")
-			// 	]),
-			// ])
-		]),
+		// m("div", {class: "footer-col-1"}, [
+		// 	m("div", {class: "col-1-left"}, [
+		// 		m("p", "Hallelujah! For the Lord our God the Almighty reigns. Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready; it was granted her to clothe herself with fine linen, bright and pure for the fine linen is the righteous deeds of the saints. Revelation 19:6-8"),
+		// 	]),
+		// 	// m("div", {class: "col-1-right"}, [
+		// 	// 	m("a[href='/rsvp']", {config: m.route}, [
+		// 	// 		m("button", {class: "footer-button"}, "RSVP")
+		// 	// 	]),
+		// 	// ])
+		// ]),
 		// m("div", {class: "footer-col-2"}, [
 		// 	m("div", {class: "col-2-item"}, [
 		// 		m("a[href='/wedding-day']", {config: m.route}, [
@@ -234,7 +234,7 @@ var Home = {
                                 m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
                                 m("button#aaronBio.button", "Read More")
                             ]),
-                            m("div#moreBio2.bio-overlay", [
+                            m("div#moreBio2.bio-overlay-closed", [
                                 m("div.modal", [
                                     m("div#aaronClose.modal-close", "X"),
                                     m("h1", "About Aaron"),
@@ -247,12 +247,14 @@ var Home = {
             			]),
             		]),
            			m("div.how-we-met", [
-           				m("img", {src: "../../../client/img/ba-home.jpg"}),
+                        m("div.how-we-met-img", [
+                            m("img", {src: "../../../client/img/ba-home.jpg"})
+                        ]),
            				m("h1", "How we met, well it's a pretty simple story"),
             			m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program"), 
                         m("button#aboutUs.button", "Read More")
                     ]),
-                    m("div#moreBio3.bio-overlay", [
+                    m("div#moreBio3.bio-overlay-closed", [
                         m("div.modal", [
                             m("div#aboutUsClose.modal-close", "X"),
                             m("h1", "About Us"),
@@ -272,13 +274,13 @@ module.exports = Home;
 var $ = require('jquery'),
 	m = require('mithril');
 
-// $(window).scroll(function () {
-//     var scrollTop = $(window).scrollTop();
-//     var height = $(window).height();
-//     $('.hero-section').css({
-//         'opacity': ((height - scrollTop) / height)
-//     });
-// });
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height();
+    $('.hero-section').css({
+        'opacity': ((height - scrollTop) / height)
+    });
+});
 },{"jquery":13,"mithril":14}],5:[function(require,module,exports){
 var m = require("mithril");
 
