@@ -4,7 +4,7 @@
 html {
   height: 100%;
 /* mobile momentum scrolling */
-  overflow-y: scroll /* has to be scroll, not auto */;
+  overflow: scroll /* has to be scroll, not auto */;
   -webkit-overflow-scrolling: touch;
 }
 body {
@@ -120,8 +120,34 @@ input {
   height: 100%;
   width: 100%;
 }
-.bio-overlay {
+.bio-overlay-closed {
   visibility: hidden;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+}
+.bio-overlay-opened {
+  visibility: visible;
   position: fixed;
   left: 0px;
   top: 0px;
@@ -162,7 +188,7 @@ input {
   background-color: #fafafa;
   overflow-y: scroll;
 }
-.modal-close {
+.modal-x {
   float: right;
   margin: 15px;
   height: 20px;
@@ -953,7 +979,7 @@ input {
   }
   .step-left,
   .step-right {
-    width: 50%;
+    width: 75%;
   }
 }
 .map {
@@ -1085,7 +1111,8 @@ input {
   color: #2b3742;
   width: 100%;
 }
-.registry-item {
+.registry-item-image,
+.registry-item-content {
   flex-grow: 1;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -1098,7 +1125,11 @@ input {
   border: 1px solid #2b3742;
   width: 100%;
 }
-.registry-text {
+.registry-item-content {
+  background-color: #2b3742;
+}
+.registry-text,
+.registry-item-image {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -1119,14 +1150,17 @@ input {
 .registry img {
   width: 100%;
   height: 100%;
+  padding: 25px;
 }
 .registry h1 {
   padding: 15px 13px 15px 20px;
+  color: #fff;
 }
 .registry p {
   padding: 0px 20px 5px 20px;
   line-height: 30px;
   text-align: center;
+  color: #fff;
 }
 @media only screen and (min-width: 800px) {
   .registry {
@@ -1134,8 +1168,10 @@ input {
     -webkit-flex-flow: row nowrap;
     -ms-flex-flow: row nowrap;
   }
-  .registry-item {
+  .registry-item-content,
+  .registry-item-image {
     width: 50%;
+    height: 250px;
   }
   #crateBarrel div:nth-child(1) {
     order: 2;

@@ -6,7 +6,34 @@ var m = require("mithril"),
 
 var Home = {
     controller: function() {
+        this.modal = function() {
+            var modalOpened = document.getElementById('modal-content').classList.contains("bio-overlay-opened"),
+                triggerOpen = document.getElementById('trigger-open'),
+                triggerClose = document.getElementById('trigger-close');
+
+            if(modalOpened){
+                a = document.getElementById('modal-content').className = "bio-overlay-closed";
+                triggerClose.addEventListener("click", a);
+            }
+            else {
+                b = document.getElementById('modal-content').className = "bio-overlay-opened";
+                triggerOpen.addEventListener("click", b);
+            }
+        }
     },
+                            // aaronBio = document.getElementById('aaronBio'),
+                // aboutUs = document.getElementById('aboutUs'),
+                // moreBio2 = document.getElementById('moreBio2'),
+                // moreBio3 = document.getElementById('moreBio3'),
+            // brittneyBio.addEventListener('click', function() {moreBio1.style.visibility = (moreBio1.style.visibility === "visible") ? "hidden" :"visible";});
+            // brittneyClose.addEventListener('click', function() {moreBio1.style.visibility = (moreBio1.style.visibility === "visible") ? "hidden" :"visible";});
+            // aaronBio.addEventListener('click', function() {moreBio2.style.visibility = (moreBio2.style.visibility === "visible") ? "hidden" :"visible";});
+            // aaronClose.addEventListener('click', function() {moreBio2.style.visibility = (moreBio2.style.visibility === "visible") ? "hidden" :"visible";});
+
+            // aboutUs.addEventListener('click', function() {moreBio3.style.visibility = (moreBio3.style.visibility === "visible") ? "hidden" :"visible";});
+            // aboutUsClose.addEventListener('click', function() {moreBio3.style.visibility = (moreBio3.style.visibility === "visible") ? "hidden" :"visible";});
+  
+
     view: function(ctrl) {
         return m("div", [
             menu,
@@ -30,11 +57,11 @@ var Home = {
                             m("div.about-us-text", [
                                 m("h1", "About Brittney"),
                                 m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
-                                m("button#brittneyBio.button", "Read More")
+                                m("button#trigger-open.button", {onclick: ctrl.modal}, "Read More")
                             ]),
-                            m("div#moreBio1.bio-overlay", [
+                            m("div#modal-content.bio-overlay-closed", [
                                 m("div.modal", [
-                                    m("div#brittneyClose.modal-close", "X"),
+                                    m("div#trigger-close.modal-x", {onclick: ctrl.modal}, "X"),
                                     m("h1", "About Brittney"),
                                     m("p", "MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
                                     m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
