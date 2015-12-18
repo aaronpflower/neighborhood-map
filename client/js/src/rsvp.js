@@ -13,7 +13,7 @@ var Rsvp = {
             m("main.main-border-rsvp", [
                 m("div.main-section", [
                     m("div.step-section", [
-                        m("div.step-inverse", [
+                        m("div.step", [
                             m("h2", "Paperless Post"),
                             m("div.step-left", [
                                 m("p", "Recommended. Cheap on our end, quicker response.  Plus it's 2015 you are on your computer all the time.")
@@ -24,7 +24,7 @@ var Rsvp = {
                                 ]),
                             ]),
                         ]),
-                        m("div.step", [
+                        m("div.step-inverse", [
                             m("h2", "Snail Mail"),
                             m("div.step-left", [
                                 m("p", "If you insist please return the to the address ASAP"),

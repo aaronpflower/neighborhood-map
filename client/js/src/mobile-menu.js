@@ -22,8 +22,10 @@ var mobileMenu = {
 					m("div", {class: "mobile-header-item"}, "#happliyeverflower")
 				]),
 				m("a[href='#'", [
-					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, "X")
-				])
+					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, [
+						m("img", {src: "../../../client/img/menu.svg"})
+					]),
+				]),
 			]),
 			m("div#slide-out.menu-closed", [
 				m("a[href='/wedding-details']", {config: m.route}, [
