@@ -30,7 +30,7 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            boulderMap,
+                            // boulderMap,
                         ]),
                     ]),
                     m("div", {class: "second-section"}, [
