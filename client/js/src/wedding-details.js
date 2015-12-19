@@ -5,8 +5,7 @@ var m = require('mithril'),
 	footer = require('./footer.js');
 
 var weddingDetails = {
-    controller: function() {},
-    view: function() {
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
@@ -30,7 +29,7 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            // boulderMap,
+                            boulderMap,
                         ]),
                     ]),
                     m("div", {class: "second-section"}, [
