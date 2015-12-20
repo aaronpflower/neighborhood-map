@@ -334,7 +334,6 @@ input {
   transition: background-color 0.5s ease;
   cursor: pointer;
   border: 1px solid #fff;
-  margin: 5px;
   align-self: center;
   -ms-align-self: center;
   -webkit-align-self: center;
@@ -638,6 +637,7 @@ input {
   -webkit-flex-basis: auto;
   -ms-flex-basis: auto;
   position: relative;
+  background-color: #fff;
 }
 .about-us-text {
   display: flex;
@@ -662,11 +662,11 @@ input {
   height: 100%;
 }
 .about-us h1 {
-  padding: 15px 13px 15px 20px;
+  padding: 0px 15px 10px 15px;
 }
 .about-us p {
-  padding: 0px 20px 5px 20px;
-  line-height: 30px;
+  padding: 0px 15px 10px 15px;
+  line-height: 25px;
   text-align: center;
 }
 .about-us .modal p {
@@ -956,6 +956,32 @@ input {
   align-content: center;
   -webkit-align-content: center;
   -ms-align-content: center;
+}
+.about-party {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  padding: 25px 15px 25px 15px;
+}
+.about-party h1 {
+  padding: 0px 15px 10px 15px;
+}
+.about-party p {
+  padding: 0px 15px 10px 15px;
+  line-height: 25px;
+  text-align: justify;
 }
 @media only screen and (min-width: 800px) {
   .info-section {
