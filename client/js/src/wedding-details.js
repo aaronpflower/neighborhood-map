@@ -40,7 +40,7 @@ var weddingDetails = {
                                     m("h1", "Gettin married right after this"),
                                 ]),
                             ]),
-                            m("divabout-us-item", [
+                            m("div.about-us-item", [
                                 m("div.about-party", [
                                     m("h1", "Main of Honor: Amanda"),
                                     m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),

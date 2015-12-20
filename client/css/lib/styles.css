@@ -234,31 +234,6 @@ input {
   background-color: #fafafa;
   z-index: 10;
 }
-.text-row {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  justify-content: space-around;
-  -webkit-justify-content: space-around;
-  -ms-justify-content: space-around;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
-  border-bottom: 1px solid #2b3742;
-  border-top: 1px solid #2b3742;
-  width: 100%;
-}
-.text-row h1 {
-  padding: 35px 16px;
-  font-size: 27px;
-  font-weight: 500;
-}
 .timer-container,
 .timer-wrapper {
   display: flex;
@@ -655,7 +630,7 @@ input {
   align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
-  padding: 25px 25px 25px 25px;
+  padding: 25px 0px 25px 0px;
 }
 .about-us img {
   width: 100%;
@@ -682,7 +657,7 @@ input {
   position: relative;
 }
 .how-we-met h1 {
-  padding: 15px 13px 15px 20px;
+  padding: 0px 15px 0px 15px;
   text-align: center;
   width: 100%;
 }
@@ -721,9 +696,6 @@ input {
   .hero-section h1 {
     margin-bottom: 10px;
     font-size: 75px;
-  }
-  .how-we-met h1 {
-    padding: 30px 13px 15px 20px;
   }
 }
 .boulder-hero {
