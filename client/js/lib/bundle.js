@@ -18,7 +18,7 @@ var boulderInfo = {
                         m("div.step", [
                             m("h2", "Step 1: Getting to Boulder"),
                             m("div.step-left", [
-                                m("p", "Denver International Airport is only a 45 minute drive away from Boulder.  But watch out for the creepy blue horse. You can rent rent, or take a bus that leaves once an hour to Boulder.  Brittney and Aaron use it all the time, sometimes for a fun date night.")
+                                m("p", "Denver International Airport (DIA) is located about 45 minutes from Boulder. Once you arrive at DIA we recommend either picking up a rental car or taking an RTD bus to Boulder. Buses run hourly and are $13/person. Luggage can be loaded underneath, and the bus has more of a charter bus feel that public transit. Bussing is what most locals (including us) do to get to and from the airport. You can find the bus schedule and more information here.")
                             ]),
                             m("div.step-right", [
                                 m("a[href='http://www3.rtd-denver.com/schedules/getSchedule.action?runboardId=153&routeId=AB&routeType=9&direction=W-Bound&serviceType=3#direction'] [target='blank']", [

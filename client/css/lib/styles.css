@@ -798,10 +798,6 @@ input {
   text-align: justify;
   padding-bottom: 15px;
 }
-.step-inverse,
-.step {
-  padding: 25px;
-}
 .step-button {
   width: 200px;
   height: 50px;
