@@ -40,14 +40,13 @@
 	align-self: center
 	-webkit-align-self: center
 	-ms-align-self: center
-	padding: 15px
+	padding: 15px 15px 0px 15px;
 
 .step p
 	color: darkNavy
 	font-weight: 200
 	font-size: 15px
 	text-align: justify
-	padding-bottom: 15px
 	
 .step-inverse
 	background-color: darkNavy
@@ -69,32 +68,28 @@
 	text-align: justify
 	padding-bottom: 15px
 
-.step-button
-	width: 200px
-	height: 50px
-	color: #fff
-	background-color: darkNavy
-	transition: background-color 0.5s ease
+.step-button, .step-inverse-button
+	width: 180px
+	height: 45px
 	cursor: pointer
-	border: 1px solid #fff
 	margin: 5px
 	align-self: center
+	transition: background-color 0.5s ease
 
+.step-button
+	background-color: darkNavy
+	color: #fff
+	border: 1px solid #fff
+	
 .step-button:hover
 	background-color: #fff
 	color: darkNavy
 	border: 1px solid darkNavy
 
 .step-inverse-button
-	width: 200px
-	height: 50px
 	color: darkNavy
 	background-color: #fff
-	transition: background-color 0.5s ease
-	cursor: pointer
 	border: 1px solid #fff
-	margin: 5px
-	align-self: center
 
 .step-inverse-button:hover
 	background-color: darkNavy
@@ -103,7 +98,7 @@
 	
 .step-left, .step-right
 	color: darkNavy
-	padding: 15px 25px
+	padding: 0px 25px 15px 25px
 	line-height: 20px
 	display: flex
 	display: -webkit-flex
@@ -135,10 +130,13 @@
 	-webkit-flex-basis: auto
 	-ms-flex-basis: auto
 
-@media only screen and (min-width: 800px)
+@media only screen and (min-width: 700px)
 	.step-right
 		flex-flow: row wrap
 		-webkit-flex-flow: row wrap
 		-ms-flex-flow: row wrap
 	.step-left, .step-right
-		width: 75%
+		width: 80%
+	.step-inverse-button, .step-button
+		width: 150px
+		height: 40px

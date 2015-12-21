@@ -302,8 +302,8 @@ input {
   color: #2b3742;
 }
 .button {
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 45px;
   color: #fff;
   background-color: #2b3742;
   transition: background-color 0.5s ease;
@@ -328,6 +328,10 @@ input {
   .modal {
     width: 90%;
     margin: auto;
+  }
+  .button {
+    width: 150px;
+    height: 40px;
   }
 }
 .desktop-nav {
@@ -741,14 +745,13 @@ input {
   align-self: center;
   -webkit-align-self: center;
   -ms-align-self: center;
-  padding: 15px;
+  padding: 15px 15px 0px 15px;
 }
 .step p {
   color: #2b3742;
   font-weight: 200;
   font-size: 15px;
   text-align: justify;
-  padding-bottom: 15px;
 }
 .step-inverse {
   background-color: #2b3742;
@@ -770,16 +773,19 @@ input {
   text-align: justify;
   padding-bottom: 15px;
 }
-.step-button {
-  width: 200px;
-  height: 50px;
-  color: #fff;
-  background-color: #2b3742;
-  transition: background-color 0.5s ease;
+.step-button,
+.step-inverse-button {
+  width: 180px;
+  height: 45px;
   cursor: pointer;
-  border: 1px solid #fff;
   margin: 5px;
   align-self: center;
+  transition: background-color 0.5s ease;
+}
+.step-button {
+  background-color: #2b3742;
+  color: #fff;
+  border: 1px solid #fff;
 }
 .step-button:hover {
   background-color: #fff;
@@ -787,15 +793,9 @@ input {
   border: 1px solid #2b3742;
 }
 .step-inverse-button {
-  width: 200px;
-  height: 50px;
   color: #2b3742;
   background-color: #fff;
-  transition: background-color 0.5s ease;
-  cursor: pointer;
   border: 1px solid #fff;
-  margin: 5px;
-  align-self: center;
 }
 .step-inverse-button:hover {
   background-color: #2b3742;
@@ -805,7 +805,7 @@ input {
 .step-left,
 .step-right {
   color: #2b3742;
-  padding: 15px 25px;
+  padding: 0px 25px 15px 25px;
   line-height: 20px;
   display: flex;
   display: -webkit-flex;
@@ -837,7 +837,7 @@ input {
   -webkit-flex-basis: auto;
   -ms-flex-basis: auto;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
   .step-right {
     flex-flow: row wrap;
     -webkit-flex-flow: row wrap;
@@ -845,7 +845,12 @@ input {
   }
   .step-left,
   .step-right {
-    width: 75%;
+    width: 80%;
+  }
+  .step-inverse-button,
+  .step-button {
+    width: 150px;
+    height: 40px;
   }
 }
 .map {

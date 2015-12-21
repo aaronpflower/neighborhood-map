@@ -29,59 +29,87 @@ var boulderInfo = {
                         m("div.step-inverse", [
                             m("h2", "Step 2: Where Sleep"),
                             m("div.step-left", [
-                                m("p", "Boulder is where we live and the wedding is just 20 miles up the road in Lyons.  So there are a couple options of where you could stay while you are here.  There are plenty of hotels in town, or airBnB. Also if you are looking to find cheaper options we would recommend Longmont, Louisville, Superior, or Lafayette."),
+                                m("p", "The wedding will take place in Lyons which is about 20 miles north of Boulder. We recommend coordinating with other guests if possible and sharing AirBnb’s or hotel rooms. Also the sister property of the Farmette, the Riverbend has Tiny Homes to rent."),
                             ]),
                             m("div.step-right", [
-                                m("a[href='#'] [target='blank']", [
+                                m("a[href='https://www.airbnb.com/s/Boulder--CO'] [target='blank']", [
                                     m("button.step-inverse-button", "Boulder AirBnB")
                                 ]),
-                                m("a[href='#'] [target='blank']", [
-                                    m("button.step-inverse-button", "Longmont")
+                                m("a[href='https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=boulder%20colorado%20hotes'] [target='blank']", [
+                                    m("button.step-inverse-button", "Boulder Hotles")
                                 ]),
-                                m("a[href='#'] [target='blank']", [
-                                    m("button.step-inverse-button", "Louisville")
-                                ]),
-                                m("a[href='#'] [target='blank']", [
-                                    m("button.step-inverse-button", "Lafayette")
-                                ]),
+                                m("a[href='http://weecasa.com/'] [target='blank']", [
+                                    m("button.step-inverse-button", "River Bend Tiny Homes"),
+                                ])
                             ]),
                         ]),
                         m("div.step", [
                             m("h2", "Step 3: Where to eat and drink"),
                             m("div.step-left", [
-                               m("p", "Boulder is full of Breweries and a wide variety of restaurants.  We would recommend Avery Brewery, West End Tavern, Bitter Bar, and for the midwest folk, McDonald's, and Dunkin Donuts. Go here for a full list of places in downtown Boulder."),
+                               m("p", "Boulder is full of amazing local craft breweries and restaurants. A few of our favorites are Avery Brewery, West End Tavern, Tahona, The Kitchen Next Door, and the Bitter Bar."),
                             ]),
                             m("div.step-right", [
-                                m("a[href='#'] [target='blank']", [
+                                m("a[href='http://averybrewing.com/'] [target='blank']", [
                                     m("button.step-button", "Avery")
                                 ]),
-                                m("a[href='#'] [target='blank']", [
-                                    m("button.step-button", "Down Town Boulder")
+                                m("a[href='http://www.thewestendtavern.com/'] [target='blank']", [
+                                    m("button.step-button", "West End Tavern")
+                                ]),
+                                m("a[href='http://www.tahonaboulder.com/'] [target='blank']", [
+                                    m("button.step-button", "Tahona")
+                                ]),
+                                m("a[href='http://thekitchen.com/nextdoor-boulder/'] [target='blank']", [
+                                    m("button.step-button", "The Kitchen Next Door")
+                                ]),
+                                m("a[href='http://www.thebitterbar.com/'] [target='blank']", [
+                                    m("button.step-button", "Bitter Bar")
                                 ]),
                             ]),
                         ]),
                         m("div.step-inverse", [
                             m("h2", "Step 4: Where to play"),
                             m("div.step-left", [
-                               m("p", "In town go to the Flatirons,  just do it.  If you have a full day Rocky Mountain National Park is only a hour drive away, and is simply amazing. Another good day trip is the Indian Peaks Wilderness."),
+                               m("p", "Trails and Open Space Scenic Hikes near Boulder:"),
                             ]),
                             m("div.step-right", [
                                 m("a[href='#'] [target='blank']", [
-                                    m("button.step-inverse-button", "Boulder Hiking")
+                                    m("button.step-inverse-button", "Chautauqua Park/Flatirons")
                                 ]),
                                 m("a[href='#'] [target='blank']", [
-                                    m("button.step-inverse-button", "Rocky Mountain NP")
+                                    m("button.step-inverse-button", "Wonderland Lake")
                                 ]),
                                 m("a[href='#'] [target='blank']", [
-                                    m("button.step-inverse-button", "Brainer Lake")
+                                    m("button.step-inverse-button", "Hogback")
+                                ]),
+                            ]),
+                            m("div.step-left", [
+                               m("p", "Rocky Mountain National Park."),
+                            ]),
+                            m("div.step-right", [
+                                m("a[href='#'] [target='blank']", [
+                                    m("button.step-inverse-button", "Bear Lake")
+                                ]),
+                                m("a[href='#'] [target='blank']", [
+                                    m("button.step-inverse-button", "Trail Ridge Road")
+                                ]),
+                            ]),
+                            m("div.step-left", [
+                               m("p", "Indian Peaks Wildnerness"),
+                            ]),
+                            m("div.step-right", [
+                                m("a[href='#'] [target='blank']", [
+                                    m("button.step-inverse-button", "Lake Isabelle")
+                                ]),
+                                m("a[href='#'] [target='blank']", [
+                                    m("button.step-inverse-button", "Brainard Lake")
                                 ]),
                             ]),
                         ]),
                         m("div.step", [
                             m("h2", "Step 5: Weather and Climate"),
                             m("div.step-left", [
-                                m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those travling from the low lands please remember to drink more water than you ever have in your life to prevent alituide sickness.  Each individual is affected by this differntly"),
-                                m("p", "For Boulder and the surronding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
+                                m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those traveling from the lowlands please remember to drink more water than you ever have in your life to prevent altitude sickness.  Each individual is affected by this differently."),
+                                m("p", "For Boulder and the surrounding areas, June is typically warm and dry.  Highs temps range from the 80-95, and lows 60-70.  But be prepared for an afternoon thunderstorm.  They happen often.")
                             ]),
                             m("div.step-right", [
                                 m("iframe.weather-iframe", {src: "https://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
