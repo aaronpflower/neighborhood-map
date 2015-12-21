@@ -417,17 +417,17 @@ var mobileMenu = {
 				]),
 			]),
 			m("div#slide-out.menu-closed", [
-				m("a[href='/wedding-details']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Wedding Day")
+				m("a.slide-out-item[href='/wedding-details']", {config: m.route}, [
+					m("div", "Wedding Day")
 				]),
-				m("a[href='/boulder-info']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Traveling to Boulder")
+				m("a.slide-out-item[href='/boulder-info']", {config: m.route}, [
+					m("div", "Traveling to Boulder")
 				]),
-				m("a[href='/registry']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "Our Registry")
+				m("a.slide-out-item[href='/registry']", {config: m.route}, [
+					m("div", "Our Registry")
 				]),
-				m("a[href='/rsvp']", {config: m.route}, [
-					m("div", {class: "slide-out-item"}, "RSVP")
+				m("a.slide-out-item[href='/rsvp']", {config: m.route}, [
+					m("div", "RSVP")
 				])
 			])
 		]);
