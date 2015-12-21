@@ -85,10 +85,10 @@ var boulderInfo = {
                                m("p", "Rocky Mountain National Park."),
                             ]),
                             m("div.step-right", [
-                                m("a[href='#'] [target='blank']", [
+                                m("a[href='http://www.rockymountainhikingtrails.com/bear-lake-nature-trail.htm'] [target='blank']", [
                                     m("button.step-inverse-button", "Bear Lake")
                                 ]),
-                                m("a[href='#'] [target='blank']", [
+                                m("a[href='http://rockymountainnationalpark.com/trails-maps/trail-ridge-road'] [target='blank']", [
                                     m("button.step-inverse-button", "Trail Ridge Road")
                                 ]),
                             ]),
@@ -96,10 +96,10 @@ var boulderInfo = {
                                m("p", "Indian Peaks Wildnerness"),
                             ]),
                             m("div.step-right", [
-                                m("a[href='#'] [target='blank']", [
+                                m("a[href='http://www.fs.usda.gov/wps/portal/fsinternet/!ut/p/c4/04_SB8K8xLLM9MSSzPy8xBz9CP0os3gDfxMDT8MwRydLA1cj72BTJw8jAwjQL8h2VAQAzHJMsQ!!/?ss=110210&navtype=BROWSEBYSUBJECT&cid=FSE_003741&navid=110000000000000&pnavid=null&position=BROWSEBYSUBJECT&recid=28182&ttype=recarea&pname=Arapaho%2520&%2520Roosevelt%2520National%2520Forests%2520Pawnee%2520National%2520Grassland%2520-%2520Brainard%2520Lake%2520Recreation%2520Area'] [target='blank']", [
                                     m("button.step-inverse-button", "Lake Isabelle")
                                 ]),
-                                m("a[href='#'] [target='blank']", [
+                                m("a[href='http://alltrails.com/trail/us/colorado/lake-isabelle'] [target='blank']", [
                                     m("button.step-inverse-button", "Brainard Lake")
                                 ]),
                             ]),
