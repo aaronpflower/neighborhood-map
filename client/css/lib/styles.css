@@ -29,13 +29,7 @@ h5,
 h6 {
   margin: 0;
   text-align: center;
-}
-h1 {
-  font-size: 25px;
   font-weight: 300;
-}
-h2 {
-  font-size: 20px;
 }
 ul,
 ol {
@@ -211,6 +205,14 @@ input {
   position: fixed;
   z-index: 10;
 }
+.hero-section h1 {
+  padding: 3px;
+  font-size: 30px;
+}
+.hero-section h2 {
+  padding: 3px;
+  font-size: 25px;
+}
 .main-section {
   display: flex;
   display: -webkit-flex;
@@ -321,6 +323,12 @@ input {
 @media only screen and (min-width: 800px) {
   .hero-section {
     height: 475px;
+  }
+  .hero-section h1 {
+    font-size: 40px;
+  }
+  .hero-section h2 {
+    font-size: 35px;
   }
   .main-section {
     max-width: 100%;
@@ -580,13 +588,6 @@ input {
   background-position: center;
   background-size: cover;
 }
-.hero-section h1 {
-  margin-bottom: 10px;
-  font-size: 25px;
-}
-.hero-section p {
-  margin-bottom: 10px;
-}
 .main-border-home {
   border-top: 4px solid #fee404;
 }
@@ -642,11 +643,12 @@ input {
 }
 .about-us h1 {
   padding: 0px 15px 10px 15px;
+  font-size: 25px;
 }
 .about-us p {
   padding: 0px 15px 10px 15px;
   line-height: 25px;
-  text-align: center;
+  font-size: 15px;
 }
 .about-us .modal p {
   text-align: left;
@@ -664,11 +666,13 @@ input {
   padding: 0px 15px 0px 15px;
   text-align: center;
   width: 100%;
+  font-size: 25px;
 }
 .how-we-met p {
   text-align: center;
   padding: 10px 40px 10px 40px;
   line-height: 30px;
+  font-size: 15px;
 }
 @media only screen and (min-width: 802px) {
   .about-us {
@@ -697,22 +701,11 @@ input {
     -webkit-order: 1;
     -ms-flex-order: 1;
   }
-  .hero-section h1 {
-    margin-bottom: 10px;
-    font-size: 75px;
-  }
 }
 .boulder-hero {
   background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/boulder.jpg");
   background-position: center;
   background-size: cover;
-}
-.boulder-hero-section h1 {
-  margin-bottom: 10px;
-  font-size: 25px;
-}
-.boulder-hero-section p {
-  margin-bottom: 10px;
 }
 .main-border-boulder-info {
   border-top: 4px solid #0a8e50;
@@ -861,13 +854,6 @@ input {
   background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/wedding.jpg");
   background-position: center;
   background-size: cover;
-}
-.wedding-hero-section h1 {
-  margin-bottom: 10px;
-  font-size: 25px;
-}
-.wedding-hero-section p {
-  margin-bottom: 10px;
 }
 .main-border-wedding-details {
   border-top: 4px solid #ff7902;
