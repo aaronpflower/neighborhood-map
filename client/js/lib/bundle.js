@@ -561,6 +561,43 @@ var m = require('mithril'),
 	footer = require('./footer.js');
 
 var weddingDetails = {
+    controller: function() {
+        var lyons = {lat: 40.2239, lng: -105.2689};
+
+        return {
+            map: function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: lyons,
+                    zoom: 10
+                });
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p>It is located about 17 miles north of Boulder, ' +
+                    'and it is easy to get to. '+
+                    'Take hwy 36 north all the way to hwy 60, turn left,'+
+                    'and drive for a mile and it is on the right</p>' +
+                    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+                    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+                    '(last visited June 22, 2009).</p>'+
+                    '</div>'+
+                    '</div>';
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+                var marker = new google.maps.Marker({
+                    position: lyons,
+                    map: map,
+                    title: 'Hello World!'
+                });
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+            }
+        }
+    },
     view: function(ctrl) {
         return m("div", [
             menu,
@@ -585,7 +622,8 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            boulderMap,
+                            console.log(ctrl.map),
+                            m("div#map.map", {config: ctrl.map})
                         ]),
                     ]),
                     m("div.second-section", [
@@ -683,38 +721,45 @@ var weddingDetails = {
 
 module.exports = weddingDetails;
 },{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/map.js":11,"mithril":14}],11:[function(require,module,exports){
-var m = require('mithril');
+// var m = require('mithril');
 
-var boulderMap = {
-	controller: function() {
-		return { 
-			googleMap: m.request({ 
-				method: "GET",
-				url: "http://maps.googleapis.com/maps/api/js?key=AIzaSyCpRRMEy9sBC95vWunMUBju38m-2XwwEco&callback=initMap",
-				dataType: "jsonp",
-				callback: "callback"
-			})
-		},
-		this.initMap = function() {
-  			var map = new google.maps.Map(document.getElementById('map'), {
-	    		center: {lat: 40.0274, lng: -105.2519},
-	    		zoom: 8
-	    	});
-		}	
-	},
-	view: function(ctrl) {
-		console.log(ctrl.map);
-		return m("div#map.map", {config: ctrl.initMap});	
-	},
-}
+// var boulderMap = {
+// 	controller: function() {
+// 		// var initMap = m.prop([]);
+// 		// var doSomething = function () {
+// 		// 	var map = new google.maps.Map(document.getElementById('map'), {
+// 		// 		center: {lat: 40.0274, lng: -105.2519},
+// 		// 		zoom: 8
+// 		// 		});
+// 		// 	};
+// 		// return m.request({
+// 		// 	dataType: "jsonp",
+//   //   		callbackKey: "jsoncallback",			
+//   //   		url: "http://maps.googleapis.com/maps/api/js?key=AIzaSyCpRRMEy9sBC95vWunMUBju38m-2XwwEco&callback=initMap"
+// 		// }).then(initMap).then(doSomething)
+// 		// m.render();
+// 		// return {
+// 		// 	this.initMap = function() {
+// 		// 	var map = new google.maps.Map(document.getElementById('map'), {
+// 		// 		center: {lat: 40.0274, lng: -105.2519},
+// 		// 		zoom: 8
+// 		// 		});
+// 		// 	};
+// 		}
+// 	},
+// 	view: function(ctrl) {
+// 		console.log(ctrl);
+// 		return m("div#map.map");	
+// 	},
+// }
 
-module.exports = boulderMap;
-},{"mithril":14}],12:[function(require,module,exports){
+// module.exports = boulderMap;
+},{}],12:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
     controller: function() {
-        setInterval(function(){
+        (setInterval(function(){
             var deadline = "2016/6/19 15:59:59";
             this.t = Date.parse(deadline) - Date.parse(new Date());
             this.seconds = Math.floor( (this.t/1000) % 60 );
@@ -722,7 +767,7 @@ var countDownTimer = {
             this.hours = Math.floor( (this.t/(1000*60*60)) % 24 );
             this.days = Math.floor( this.t/(1000*60*60*24) );
             m.redraw();
-        }.bind(this), 1000)
+        }.bind(this), 1000))
     },
 
     view: function(ctrl) {

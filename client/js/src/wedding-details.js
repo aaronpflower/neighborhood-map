@@ -5,6 +5,43 @@ var m = require('mithril'),
 	footer = require('./footer.js');
 
 var weddingDetails = {
+    controller: function() {
+        var lyons = {lat: 40.2239, lng: -105.2689};
+
+        return {
+            map: function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: lyons,
+                    zoom: 10
+                });
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p>It is located about 17 miles north of Boulder, ' +
+                    'and it is easy to get to. '+
+                    'Take hwy 36 north all the way to hwy 60, turn left,'+
+                    'and drive for a mile and it is on the right</p>' +
+                    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+                    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+                    '(last visited June 22, 2009).</p>'+
+                    '</div>'+
+                    '</div>';
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+                var marker = new google.maps.Marker({
+                    position: lyons,
+                    map: map,
+                    title: 'Hello World!'
+                });
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+            }
+        }
+    },
     view: function(ctrl) {
         return m("div", [
             menu,
@@ -29,7 +66,8 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            boulderMap,
+                            console.log(ctrl.map),
+                            m("div#map.map", {config: ctrl.map})
                         ]),
                     ]),
                     m("div.second-section", [

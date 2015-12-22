@@ -6,7 +6,17 @@
 .main-border-home
 	border-top: 4px solid lemon
     
-.about-us, .how-we-met
+.about-us
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	background-color: #fafafa
+	color: darkNavy
+
+.how-we-met
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -49,6 +59,7 @@
 	-webkit-align-items: center
 	-ms-align-items: center
 	padding: 25px 0px 25px 0px
+	width: 100%
 		
 .about-us img
 	width: 100%
@@ -87,7 +98,7 @@
 	line-height: 30px
 	font-size: 15px
 
-@media only screen and (min-width: 802px)
+@media only screen and (min-width: 800px)
 	.about-us
 		flex-flow: row nowrap
 		-webkit-flex-flow: row nowrap
