@@ -2,7 +2,7 @@ var m = require('mithril');
 
 var countDownTimer = {
     controller: function() {
-        (setInterval(function(){
+        setInterval(function(){
             var deadline = "2016/6/19 15:59:59";
             this.t = Date.parse(deadline) - Date.parse(new Date());
             this.seconds = Math.floor( (this.t/1000) % 60 );
@@ -10,7 +10,7 @@ var countDownTimer = {
             this.hours = Math.floor( (this.t/(1000*60*60)) % 24 );
             this.days = Math.floor( this.t/(1000*60*60*24) );
             m.redraw();
-        }.bind(this), 1000))
+        }.bind(this), 1000)
     },
 
     view: function(ctrl) {

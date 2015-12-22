@@ -23,9 +23,8 @@ var weddingDetails = {
                     'and it is easy to get to. '+
                     'Take hwy 36 north all the way to hwy 60, turn left,'+
                     'and drive for a mile and it is on the right</p>' +
-                    '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-                    'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-                    '(last visited June 22, 2009).</p>'+
+                    '<p>Directions to Lyons, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+                    'https://en.wikipedia.org/w/index.php?title=Uluru</a></p> '+
                     '</div>'+
                     '</div>';
                 var infowindow = new google.maps.InfoWindow({
