@@ -6,7 +6,7 @@ var m = require('mithril'),
 
 var weddingDetails = {
     controller: function() {
-        var lyons = {lat: 40.2239, lng: -105.2689};
+        var lyons = {lat: 40.2170362, lng: -105.2601925};
 
         return {
             map: function initMap() {
@@ -23,8 +23,7 @@ var weddingDetails = {
                     'and it is easy to get to. '+
                     'Take hwy 36 north all the way to hwy 60, turn left,'+
                     'and drive for a mile and it is on the right</p>' +
-                    '<p>Directions to Lyons, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-                    'https://en.wikipedia.org/w/index.php?title=Uluru</a></p> '+
+                    '<p>Zoom in and use street view to help seen turn</p>' +
                     '</div>'+
                     '</div>';
                 var infowindow = new google.maps.InfoWindow({
@@ -38,6 +37,7 @@ var weddingDetails = {
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
+                clearInterval(initMap);
             }
         }
     },
@@ -53,15 +53,10 @@ var weddingDetails = {
                     m("div.info-section", [
                         m("div.info-item", [
                             m("div.details", [
-                                m("h1", "Day of Details"),
-                                m("h2", "Address and Time", [
-                                    m("p", "4121 Ute Highway, Lyons, CO 80540"),
-                                    m("p", "Cermony starts at 4pm and reception to follow")
-                                ]),
-                                m("h2", "Curtiousy and Reminders", [
-                                    m("p", "The whole event will be outdoors, refer to the Boulder Info page for weather information"),
-                                    m("p", "We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
-                                ])
+                                m("h1", "Address and Time"),
+                                m("p", "4121 Ute Highway, Lyons, CO 80540. Cermony starts at 4pm and reception to follow"),
+                                m("h1", "Curtiousy and Reminders"),
+                                m("p", "The whole event will be outdoors, please dress nice but remeber the weather can change quickly, refer to the Boulder Info page for weather information. We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
                             ]),
                         ]),
                         m("div.info-item", [

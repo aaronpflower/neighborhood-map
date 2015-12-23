@@ -30,6 +30,7 @@ h6 {
   margin: 0;
   text-align: center;
   font-weight: 300;
+  color: #2b3742;
 }
 ul,
 ol {
@@ -61,6 +62,7 @@ a img {
 p {
   margin: 0;
   text-align: center;
+  color: #2b3742;
 }
 hr {
   border: none;
@@ -208,10 +210,12 @@ input {
 .hero-section h1 {
   padding: 3px;
   font-size: 30px;
+  color: #fff;
 }
 .hero-section h2 {
   padding: 3px;
   font-size: 25px;
+  color: #fff;
 }
 .main-section {
   display: flex;
@@ -864,24 +868,23 @@ input {
   align-content: center;
   -webkit-align-content: center;
   -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
 }
 .info-section h1 {
-  color: #2b3742;
-  font-size: 35px;
-  font-weight: 400;
-  padding: 15px;
+  padding: 10px;
+  font-size: 25px;
 }
 .info-section h2 {
-  color: #2b3742;
-  font-size: 25px;
-  font-weight: 400;
-  padding: 15px;
+  font-size: 20px;
+  padding: 10px;
 }
 .info-section p {
-  color: #2b3742;
-  font-weight: 200;
+  padding: 0px 18px 0px 18px;
+  line-height: 30px;
   font-size: 15px;
-  padding: 15px;
+  text-align: justify;
 }
 .info-item {
   flex-grow: 1;
@@ -935,6 +938,15 @@ input {
   text-align: justify;
 }
 @media only screen and (min-width: 800px) {
+  .info-section h1 {
+    font-size: 25px;
+  }
+  .info-section h2 {
+    font-size: 20px;
+  }
+  .info-section p {
+    font-size: 15px;
+  }
   .info-section {
     flex-flow: row nowrap;
     -webkit-flex-flow: row nowrap;

@@ -19,24 +19,23 @@
 	align-content: center
 	-webkit-align-content: center
 	-ms-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
 
 .info-section h1
-	color: darkNavy
-	font-size: 35px
-	font-weight: 400
-	padding: 15px
+	padding: 10px
+	font-size: 25px
 
 .info-section h2
-	color: darkNavy
-	font-size: 25px
-	font-weight: 400
-	padding: 15px
-
+	font-size: 20px
+	padding: 10px
+	
 .info-section p
-	color: darkNavy
-	font-weight: 200
+	padding: 0px 18px 0px 18px
+	line-height: 30px
 	font-size: 15px
-	padding: 15px
+	text-align: justify
 
 .info-item
 	flex-grow: 1
@@ -90,10 +89,20 @@
 	text-align: justify
 
 @media only screen and (min-width: 800px)
+	.info-section h1
+		font-size: 25px
+
+	.info-section h2
+		font-size: 20px
+		
+	.info-section p
+		font-size: 15px
+		
 	.info-section
 		flex-flow: row nowrap
 		-webkit-flex-flow: row nowrap
 		-ms-flex-flow: row nowrap
+		
 	.details
 		display: flex
 		display: -webkit-flex
