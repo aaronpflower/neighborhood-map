@@ -45,7 +45,7 @@ var weddingDetails = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section.wedding-hero.drop-shadow", [
+            m("div.hero-section.wedding-hero", [
                 m("h1", "Wedding Day Information")
             ]),
             m("main.main-border-wedding-details", [

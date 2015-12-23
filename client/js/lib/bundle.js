@@ -231,7 +231,7 @@ var Home = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section home-hero", [
+            m("div.hero-section.home-hero", [
                 m("h1", "Aaron and Brittney"),
                 m("h2", "June 19th, 2016"), 
                 m("h2", "Lyons, CO")
@@ -601,7 +601,7 @@ var weddingDetails = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section.wedding-hero.drop-shadow", [
+            m("div.hero-section.wedding-hero", [
                 m("h1", "Wedding Day Information")
             ]),
             m("main.main-border-wedding-details", [
