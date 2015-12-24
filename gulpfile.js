@@ -2,11 +2,11 @@
 
 var gulp = require('gulp'),
 	gutil = require('gulp-util'),
-	// jshint = require('gulp-jshint'),
 	stylus = require('gulp-stylus'),
 	nodemon = require('gulp-nodemon'),
 	browserify = require('browserify'),
-	source = require('vinyl-source-stream');
+	source = require('vinyl-source-stream'),
+	minifyCss = require('gulp-minify-css');
 
 // Configure the gulp task
 gulp.task('jshint', function() {
@@ -43,3 +43,10 @@ gulp.task('default', function() {
 			console.log('restarted!')
 		})
 })
+
+//Mini CSS
+gulp.task('build', function() {
+  return gulp.src('client/css/lib/styles.css')
+    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(gulp.dest('client/css/dist'));
+});
