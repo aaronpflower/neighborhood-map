@@ -463,7 +463,7 @@ var Registry = {
                         m("div.registry-item-content", [
                             m("div.registry-text", [
                                 m("h1", "Honey Fund"),
-                                m("p", "Help us with our Honey Mood"),
+                                m("p", "Help us enjoy our first week of marriage in style."),
                                 m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020'] [target='blank']", [
                                     m("button.step-inverse-button", "Go to it") 
                                 ])
@@ -477,7 +477,7 @@ var Registry = {
                         m("div.registry-item-content", [
                             m("div.registry-text", [
                                 m("h1", "Crate and Barrel"),
-                                m("p", "We need stuff for our aptarment"),
+                                m("p", "Help us equip our new kitchen and home."),
                                 m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020'] [target='blank']", [
                                     m("button.step-inverse-button", "Go to it") 
                                 ])                           
@@ -491,8 +491,8 @@ var Registry = {
                         m("div.registry-item-content", [
                             m("div.about-us-text", [
                                 m("h1", "Target"),
-                                m("p", "Target Stuff"),
-                                m("a[href='http://www.crateandbarrel.com/gift-registry/brittney-richter-and-aaron-flower/r5433020'] [target='blank']", [
+                                m("p", "Help us equip our new kitchen and home."),
+                                m("a[href='https://www-secure.target.com/gift-registry/giftgiver?registryId=GzXw_J9o0a2iZ9b2AmXBhg&registryType=WEDDING'] [target='blank']", [
                                     m("button.step-inverse-button", "Go to it") 
                                 ])
                             ])
