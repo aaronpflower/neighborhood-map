@@ -61,7 +61,7 @@
 	align-content: center
 	-webkit-align-content: center
 	-ms-align-content: center
-
+	padding 25px
 .about-party
 	display: flex
 	display: -webkit-flex
@@ -79,14 +79,36 @@
 	-webkit-align-items: center
 	-ms-align-items: center
 	padding: 25px 15px 25px 15px
+	width: 100%
 
+.about-party-item
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: row nowrap
+	-webkit-flex-flow: row nowrap
+	-ms-flex-flow: row nowrap
+	justify-content: flex-start
+	-webkit-justify-content: flex-start
+	-ms-justify-content: flex-start
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: baseline
+	-webkit-align-items: baseline
+	-ms-align-items: baseline
+	width 100%
+	
 .about-party h1
 	padding: 0px 15px 10px 15px
 	
 .about-party p
 	padding: 0px 15px 10px 15px
 	line-height: 25px
-	text-align: justify
+	text-align: left
+	width 50%
+.about-party p:nth-child(1)
+		font-weight 600
 
 @media only screen and (min-width: 800px)
 	.info-section h1

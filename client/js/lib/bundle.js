@@ -625,13 +625,35 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/amanda.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Gettin married right after this"),
+                                    m("h1", "Teaches, name, Amanda and Maid of Honor.")
                                 ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
-                                    m("h1", "Main of Honor: Amanda"),
-                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                    m("div.about-party-item", [
+                                        m("p", "What was your childhood nickname?"),
+                                        m("p", "Boo, or Booski")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What, or who, are you a “closet” fan of?"),
+                                        m("p", "Once upon a time")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What is your favorite cereal?"),
+                                        m("p", "Reeses puffs")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "If you could be any animal which one would you prefer to be and why?"),
+                                        m("p", "Otter, they are fun and fluffy and adorable, and they spend their lives in the water")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "How did you meet and become friends with Brittney?"),
+                                        m("p", "Same program, and roomies and besties from junior year on!")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What did Brittney first tell you about Aaron?"),
+                                        m("p", "That she liked this guy, he was totally her type, a shy, soft spoken, sweet and nerdy (in the best way) ginger guy.")
+                                    ])
                                 ])
                             ])
                         ]),
@@ -639,13 +661,35 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/ryan.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Straight outta Monte Vista"),
+                                    m("h1", "Straight outta Monte Vista, Ryan and Best Man."),
                                 ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
-                                    m("h1", "Best Man: Ryan"),
-                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                    m("div.about-party-item", [
+                                        m("p", "What was your childhood nickname?"),
+                                        m("p", "Ry-NO!")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What, or who, are you a “closet” fan of?"),
+                                        m("p", "Aaron Flower")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What is your favorite cereal?"),
+                                        m("p", "Special K")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "If you could be any animal which one would you prefer to be and why?"),
+                                        m("p", "Cat because I love cats")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "How did you meet and become friends with Aaron?"),
+                                        m("p", "Roomate for the last 1000 years.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What did Aaron first tell you about Brittney?"),
+                                        m("p", "Gonna marry her.")
+                                    ])
                                 ])
                             ])
                         ]),
@@ -653,13 +697,35 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/bailey.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Gonna be a momma"),
+                                    m("h1", "Another teacher, Bailey, and bridesmaid.")
                                 ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
-                                    m("h1", "Bridesmaid: Bailey"),
-                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                    m("div.about-party-item", [
+                                        m("p", "What was your childhood nickname?"),
+                                        m("p", "Boo, or Booski")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What, or who, are you a “closet” fan of?"),
+                                        m("p", "Once upon a time")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What is your favorite cereal?"),
+                                        m("p", "Reeses puffs")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "If you could be any animal which one would you prefer to be and why?"),
+                                        m("p", "Otter, they are fun and fluffy and adorable, and they spend their lives in the water")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "How did you meet and become friends with Brittney?"),
+                                        m("p", "Same program, and roomies and besties from junior year on!")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What did Brittney first tell you about Aaron?"),
+                                        m("p", "That she liked this guy, he was totally her type, a shy, soft spoken, sweet and nerdy (in the best way) ginger guy.")
+                                    ])
                                 ])
                             ])
                         ]),
@@ -667,13 +733,35 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/ty.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Mucho take it easy"),
+                                    m("h1", "Ty, Groomsman. Mucho take it easy."),
                                 ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
-                                    m("h1", "Groomsman: Ty"),
-                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                    m("div.about-party-item", [
+                                        m("p", "What was your childhood nickname?"),
+                                        m("p", "Ty Daddy Dollars")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What, or who, are you a “closet” fan of?"),
+                                        m("p", "Reggae Music")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What is your favorite cereal?"),
+                                        m("p", "Golden Grahams")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "If you could be any animal which one would you prefer to be and why?"),
+                                        m("p", "Killer Whale bc I love Free Willy and Orcas are bad ass. They kill Great Whites.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "How did you meet and become friends with Aaron?"),
+                                        m("p", "Met Aaron through Ryan right when I moved to Boulder in Aug. 2013. Been close since.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What did Aaron first tell you about Brittney?"),
+                                        m("p", "Aaron first told me about Brittany by saying (with 3% enthusiasm, standard Aaron inflection...) 'So...I met a girl.'")
+                                    ])
                                 ])
                             ])
                         ]),
@@ -681,13 +769,35 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/aracely.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Weeeee!"),
+                                    m("h1", "Bridesmaid, Aracely. Weeeee!"),
                                 ]),
                             ]),
                             m("div.about-us-item", [
-                                m("div.about-party", [
-                                    m("h1", "Bridesmaid: Aracely"),
-                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                 m("div.about-party", [
+                                    m("div.about-party-item", [
+                                        m("p", "What was your childhood nickname?"),
+                                        m("p", "Cely, Chely")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What, or who, are you a “closet” fan of?"),
+                                        m("p", "Taylor Swift...shhhhhh <--- Who isn't? signed Aaron.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What is your favorite cereal?"),
+                                        m("p", "Honey Nut Cheerios")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "If you could be any animal which one would you prefer to be and why?"),
+                                        m("p", "Wolf because they are loyal, intelligent and a protector")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "How did you meet and become friends with Brittney?"),
+                                        m("p", "Freshman year of HS when we took body shaping class & bonded over eye liner in the locker room.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What did Brittney first tell you about Aaron?"),
+                                        m("p", "She mentioned a guy who she met at church who friended her on FB and creeped on her. Naturally, I asked for his name & creeped on him for her!")
+                                    ])
                                 ])
                             ])
                         ]),
@@ -695,13 +805,35 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/chase.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Hazaah!"),
+                                    m("h1", "Chase, groomsman. Hazaah!"),
                                 ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
-                                    m("h1", "Groomsman: Chase"),
-                                    m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
+                                    m("div.about-party-item", [
+                                        m("p", "What was your childhood nickname?"),
+                                        m("p", "Chase")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What, or who, are you a “closet” fan of?"),
+                                        m("p", "Taylor Swift. <--- Told ya, Aaron. She is great.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What is your favorite cereal?"),
+                                        m("p", "Cracklin’ Oat Bran")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "If you could be any animal which one would you prefer to be and why?"),
+                                        m("p", "Cheetah, cause they’re the fastest.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "How did you meet and become friends with Aaron?"),
+                                        m("p", "I met Aaron in Gunnison through church.")
+                                    ]),
+                                    m("div.about-party-item", [
+                                        m("p", "What did Aaron first tell you about Brittney?"),
+                                        m("p", "She talks a lot.")
+                                    ])
                                 ])
                             ])
                         ])
