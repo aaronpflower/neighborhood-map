@@ -4,7 +4,7 @@ var $ = require('jquery'),
 $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     var height = $(window).height();
-    $('.hero-section').css({
+    $('.hero-wrapper').css({
         'opacity': ((height - scrollTop) / height)
     });
 });

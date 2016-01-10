@@ -9,8 +9,10 @@ var boulderInfo = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section.boulder-hero.drop-shadow", [
-                m("h1", "The 5 Step plan to Boulder")
+            m("div.hero-wrapper.boulder-hero", [
+                m("div.hero-content", [
+                    m("h1", "The 5 Step plan to Boulder")
+                ])
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
@@ -229,13 +231,6 @@ var Home = {
     },
     view: function(ctrl) {
         return m("div", [
-            menu,
-            mobileMenu,
-            m("div.hero-section.home-hero", [
-                m("h1", "Aaron and Brittney"),
-                m("h2", "June 19th, 2016"), 
-                m("h2", "Lyons, CO")
-            ]),
             // modal content
              m("div#modal-content.bio-overlay-closed", [
                 m("div.modal", [
@@ -276,6 +271,13 @@ var Home = {
                         m("p", "After their profoundly deep first meeting, Aaron did what any respectable man who wants to state their intentions to a lady does. He friended her on facebook. After a few exchanges on Facebook, and Brittney running away from Aaron at church, they met for coffee at Ozo Coffee. Walking into the coffee shop, Brittney took a deep breath, smiled at Aaron, and said “Aaron? Hi.” Aaron awkwardly sat in silence not knowing what to say, do, or think. But Brittney found the silence oddly calming to her nerves. After the initial awkwardness subsided, the two talked for 3 hours about their families, backgrounds, and everything in between. After finishing the last sips of their beverages, the pair walked outside of the coffee shop and awkwardly stared at each other for a second. Then Aaron looked at Brittney and said “We should do this again soon.” To which Brittney replied “Yes. I’d like that.” This was proceeded by the most awkward hug, arms tapping the others back lightly, torsos feet away from each other. After another awkward look and saying their goodbyes the two walked away from each other grinning.")
                     ]),
                 ]),    
+            ]),
+            menu,
+            mobileMenu,
+            m("div.hero-wrapper.home-hero", [
+                m("div.hero-content", [
+                    m("p", "Aaron and Brittney")
+                ])
             ]),
             m("main.main-border-home", [
             	m("div.main-section", [
@@ -335,7 +337,7 @@ var $ = require('jquery'),
 $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     var height = $(window).height();
-    $('.hero-section').css({
+    $('.hero-wrapper').css({
         'opacity': ((height - scrollTop) / height)
     });
 });
@@ -451,8 +453,10 @@ var Registry = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div", {class: "hero-section registry-hero"}, [
-                m("h1", "Registry Information")
+            m("div.hero-wrapper.registry-hero", [
+                m("div.hero-content", [
+                    m("h1", "Registry Information")
+                ])
             ]),
             m("main.main-border-registry", [
                 m("div.main-section", [
@@ -518,7 +522,11 @@ var Rsvp = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section.rsvp-hero"),
+            m("div.hero-wrapper.rsvp-hero", [
+                m("div.hero-content", [
+                    m("p", "RSVP")
+                ])
+            ]),
             m("main.main-border-rsvp", [
                 m("div.main-section", [
                     m("div.step-section", [
@@ -601,8 +609,10 @@ var weddingDetails = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section.wedding-hero", [
-                m("h1", "Wedding Day Information")
+            m("div.hero-wrapper.wedding-hero", [
+                m("div.hero-content", [
+                    m("h1", "Wedding Day Information")
+                ])
             ]),
             m("main.main-border-wedding-details", [
                 m("div.main-section", [

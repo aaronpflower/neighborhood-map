@@ -9,7 +9,11 @@ var Rsvp = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section.rsvp-hero"),
+            m("div.hero-wrapper.rsvp-hero", [
+                m("div.hero-content", [
+                    m("p", "RSVP")
+                ])
+            ]),
             m("main.main-border-rsvp", [
                 m("div.main-section", [
                     m("div.step-section", [

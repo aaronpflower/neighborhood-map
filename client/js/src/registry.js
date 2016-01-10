@@ -9,8 +9,10 @@ var Registry = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div", {class: "hero-section registry-hero"}, [
-                m("h1", "Registry Information")
+            m("div.hero-wrapper.registry-hero", [
+                m("div.hero-content", [
+                    m("h1", "Registry Information")
+                ])
             ]),
             m("main.main-border-registry", [
                 m("div.main-section", [

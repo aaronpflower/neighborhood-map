@@ -75,7 +75,7 @@ input {
 }
 @media only screen and (min-width: 800px) {
   main {
-    top: 475px;
+    top: 600px;
   }
   footer {
     max-width: 100%;
@@ -183,7 +183,35 @@ input {
   line-height: 20px;
   padding: 10px;
 }
-.hero-section {
+.hero-wrapper {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  width: 100%;
+  height: 400px;
+  background-color: #aaabad;
+  color: #fff;
+  padding-top: 66px;
+  position: fixed;
+  z-index: 10;
+}
+.hero-wrapper img {
+  width: 100%;
+  flex: 1 1 0;
+}
+.hero-content {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -196,26 +224,32 @@ input {
   align-content: center;
   -webkit-align-content: center;
   -ms-align-content: center;
-  align-items: stretch;
-  -webkit-align-items: stretch;
-  -ms-align-items: stretch;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   width: 100%;
-  height: 400px;
-  background-color: #aaabad;
   color: #fff;
-  padding-top: 77px;
-  position: fixed;
+  position: absolute;
+  top: 50%;
   z-index: 10;
 }
-.hero-section h1 {
+.hero-content h1 {
   padding: 3px;
   font-size: 30px;
   color: #fff;
 }
-.hero-section h2 {
+.hero-content h2 {
   padding: 3px;
   font-size: 25px;
   color: #fff;
+}
+.hero-content p {
+  width: 150px;
+  height: 15px;
+  font-size: 15px;
+  color: #fff;
+  text-align: left;
+  margin: 25px;
 }
 .main-section {
   display: flex;
@@ -325,13 +359,13 @@ input {
   border: 1px solid #2b3742;
 }
 @media only screen and (min-width: 800px) {
-  .hero-section {
-    height: 475px;
+  .hero-wrapper {
+    height: 600px;
   }
-  .hero-section h1 {
+  .hero-wrapper h1 {
     font-size: 40px;
   }
-  .hero-section h2 {
+  .hero-wrapper h2 {
     font-size: 35px;
   }
   .main-section {
@@ -571,7 +605,7 @@ input {
   }
 }
 .home-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/home.jpg");
+  background-image: url("../../../client/img/home-hero.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -700,7 +734,7 @@ input {
   }
 }
 .boulder-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/boulder.jpg");
+  background-image: url("../../../client/img/boulder.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -726,6 +760,10 @@ input {
   -webkit-align-items: center;
   -ms-align-items: center;
   width: 100%;
+}
+.step,
+.step-inverse {
+  padding: 50px 0px;
 }
 .step h2 {
   color: #2b3742;
@@ -848,7 +886,7 @@ input {
   width: 100%;
 }
 .wedding-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/img/wedding.jpg");
+  background-image: url("../../../client/img/wedding.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -995,7 +1033,7 @@ input {
   }
 }
 .registry-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/boston.jpg");
+  background-image: url("../../../client/boston.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -1096,7 +1134,7 @@ input {
   }
 }
 .rsvp-hero {
-  background: linear-gradient(to bottom, rgba(255,255,255,0.1) 15%, rgba(0,0,0,0.9)), url("../../../client/rsvp-hero.jpg");
+  background-image: url("../../../client/rsvp-hero.jpg");
   background-position: center;
   background-size: cover;
 }

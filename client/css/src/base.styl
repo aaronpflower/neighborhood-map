@@ -109,7 +109,50 @@ lemon = #FEE404
 	line-height: 20px
 	padding: 10px
 
-.hero-section
+.hero-wrapper
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column wrap
+	-webkit-flex-flow: column wrap
+	-ms-flex-flow: column wrap
+	justify-content: flex-start
+	-webkit-justify-content: flex-start
+	-ms-justify-content: flex-start
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
+	width: 100%
+	height: 400px
+	background-color: gray
+	color: #fff
+	padding-top: 66px
+	position: fixed
+	z-index: 10
+	
+.hero-wrapper img
+	width 100%
+	flex 1 1 0
+	// display: flex
+	// display: -webkit-flex
+	// display: -ms-flex
+	// flex-flow: column wrap
+	// -webkit-flex-flow: column wrap
+	// -ms-flex-flow: column wrap
+	// justify-content: center
+	// -webkit-justify-content: center
+	// -ms-justify-content: center
+	// align-content: center
+	// -webkit-align-content: center
+	// -ms-align-content: center
+	// align-items: center
+	// -webkit-align-items: center
+	// -ms-align-items: center
+	
+.hero-content
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -122,27 +165,35 @@ lemon = #FEE404
 	align-content: center
 	-webkit-align-content: center
 	-ms-align-content: center
-	align-items: stretch
-	-webkit-align-items: stretch
-	-ms-align-items: stretch
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
 	width: 100%
-	height: 400px
-	background-color: gray
+	// height: 600px
+	// background-color: gray
 	color: #fff
-	padding-top: 77px
-	position: fixed
+	position: absolute
+	top: 50%
 	z-index: 10
 
-.hero-section h1
+.hero-content h1
 	padding: 3px
 	font-size: 30px
 	color: #fff
 
-.hero-section h2
+.hero-content h2
 	padding: 3px
 	font-size: 25px
 	color: #fff
-	
+
+.hero-content p
+	width 150px
+	height 15px
+	font-size 15px
+	color #fff
+	text-align left
+	margin 25px
+
 .main-section
 	display: flex
 	display: -webkit-flex
@@ -250,11 +301,12 @@ lemon = #FEE404
 	border: 1px solid darkNavy
 
 @media only screen and (min-width: 800px)
-	.hero-section
-		height: 475px
-	.hero-section h1
+	.hero-wrapper
+		height: 600px
+		// top 67px
+	.hero-wrapper h1
 		font-size: 40px
-	.hero-section h2
+	.hero-wrapper h2
 		font-size: 35px
 	.main-section
 		max-width: 100%

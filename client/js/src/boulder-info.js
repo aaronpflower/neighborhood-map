@@ -8,8 +8,10 @@ var boulderInfo = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-section.boulder-hero.drop-shadow", [
-                m("h1", "The 5 Step plan to Boulder")
+            m("div.hero-wrapper.boulder-hero", [
+                m("div.hero-content", [
+                    m("h1", "The 5 Step plan to Boulder")
+                ])
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
