@@ -610,7 +610,7 @@ input {
   background-size: cover;
 }
 .main-border-home {
-  border-top: 4px solid #fee404;
+  border-top: 1px solid #2b3742;
 }
 .about-us {
   display: flex;
@@ -739,11 +739,10 @@ input {
   background-size: cover;
 }
 .main-border-boulder-info {
-  border-top: 4px solid #0a8e50;
+  border-top: 1px solid #2b3742;
 }
 .step-section,
-.step,
-.step-inverse {
+.step {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -761,8 +760,24 @@ input {
   -ms-align-items: center;
   width: 100%;
 }
-.step,
-.step-inverse {
+.step-content {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column wrap;
+  -webkit-flex-flow: column wrap;
+  -ms-flex-flow: column wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  width: 80%;
+  border-bottom: 1px solid #2b3742;
   padding: 50px 0px;
 }
 .step h2 {
@@ -773,33 +788,13 @@ input {
   align-self: center;
   -webkit-align-self: center;
   -ms-align-self: center;
-  padding: 15px 15px 0px 15px;
+  padding: 15px;
 }
 .step p {
   color: #2b3742;
   font-weight: 200;
   font-size: 15px;
   text-align: justify;
-}
-.step-inverse {
-  background-color: #2b3742;
-}
-.step-inverse h2 {
-  color: #fff;
-  font-size: 25px;
-  font-weight: 400;
-  display: -webkit-flex;
-  align-self: center;
-  -webkit-align-self: center;
-  -ms-align-self: center;
-  padding: 15px;
-}
-.step-inverse p {
-  color: #fff;
-  font-weight: 200;
-  font-size: 15px;
-  text-align: justify;
-  padding-bottom: 15px;
 }
 .step-button,
 .step-inverse-button {
@@ -871,11 +866,6 @@ input {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
   }
-  .step-left,
-  .step-right {
-    width: 80%;
-  }
-  .step-inverse-button,
   .step-button {
     width: 150px;
     height: 40px;
@@ -891,7 +881,7 @@ input {
   background-size: cover;
 }
 .main-border-wedding-details {
-  border-top: 4px solid #ff7902;
+  border-top: 1px solid #2b3742;
 }
 .info-section {
   display: flex;
@@ -919,10 +909,10 @@ input {
   padding: 10px;
 }
 .info-section p {
-  padding: 0px 18px 0px 18px;
+  padding: 10px 18px 10px 18px;
   line-height: 30px;
   font-size: 15px;
-  text-align: justify;
+  text-align: left;
 }
 .info-item {
   flex-grow: 1;
@@ -1038,7 +1028,7 @@ input {
   background-size: cover;
 }
 .main-border-registry {
-  border-top: 4px solid #f5888d;
+  border-top: 1px solid #2b3742;
 }
 .registry {
   display: flex;
@@ -1139,5 +1129,5 @@ input {
   background-size: cover;
 }
 .main-border-rsvp {
-  border-top: 4px solid #f9933f;
+  border-top: 1px solid #2b3742;
 }

@@ -47,7 +47,7 @@ var weddingDetails = {
             mobileMenu,
             m("div.hero-wrapper.wedding-hero", [
                 m("div.hero-content", [
-                    m("h1", "Wedding Day Information")
+                    m("h2", "Wedding Day Information")
                 ])
             ]),
             m("main.main-border-wedding-details", [
@@ -55,14 +55,18 @@ var weddingDetails = {
                     m("div.info-section", [
                         m("div.info-item", [
                             m("div.details", [
-                                m("h1", "Address and Time"),
-                                m("p", "4121 Ute Highway, Lyons, CO 80540. Cermony starts at 4pm and reception to follow"),
-                                m("h1", "Curtiousy and Reminders"),
-                                m("p", "The whole event will be outdoors, please dress nice but remeber the weather can change quickly, refer to the Boulder Info page for weather information. We ask that you leave childern at home with a sitter and enjoy date night.  Out of town guests are welcome to bring your kids")
+                                m("h1", "Time and Address"),
+                                m("p", "Cermony starts at 4pm and reception to follow"),
+                                m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177556,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
+                                    m("p", "4121 Ute Highway, Lyons, CO 80540")
+                                ]),
+                                m("h1", "Reminders"),
+                                m("p", "Weather in Colorado can change quickly throughout the day, we recommend checking the hourly weather forecast prior to leaving for the evening. When in doubt, layer up!"),
+                                m("p", "With the exception of family, to give all our guests the opportunity to enjoy the evening without having to worry about little ones, we politely request no children under 8."),
+                                m("p", "Transportation to the venue is up to individual guests. If you are staying in Boulder we recommend renting a car for transportation to and from the venue, which is about 30 minutes north of Boulder.")
                             ]),
                         ]),
                         m("div.info-item", [
-                            console.log(ctrl.map),
                             m("div#map.map", {config: ctrl.map})
                         ]),
                     ]),

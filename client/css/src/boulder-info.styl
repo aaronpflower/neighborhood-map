@@ -5,9 +5,9 @@
 	background-size: cover
 
 .main-border-boulder-info
-	border-top: 4px solid lime
+	border-top: 1px solid darkNavy
 
-.step-section, .step, .step-inverse
+.step-section, .step
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -25,8 +25,26 @@
 	-ms-align-items: center
 	width: 100%
 
-.step, .step-inverse
+.step-content
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column wrap
+	-webkit-flex-flow: column wrap
+	-ms-flex-flow: column wrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
+	width: 80%
+	border-bottom: 1px solid darkNavy
 	padding: 50px 0px
+	
 .step h2
 	color: darkNavy
 	font-size: 25px
@@ -35,33 +53,13 @@
 	align-self: center
 	-webkit-align-self: center
 	-ms-align-self: center
-	padding: 15px 15px 0px 15px;
+	padding: 15px
 
 .step p
 	color: darkNavy
 	font-weight: 200
 	font-size: 15px
 	text-align: justify
-	
-.step-inverse
-	background-color: darkNavy
-
-.step-inverse h2
-	color: #fff
-	font-size: 25px
-	font-weight: 400
-	display: -webkit-flex
-	align-self: center
-	-webkit-align-self: center
-	-ms-align-self: center
-	padding: 15px
-
-.step-inverse p
-	color: #fff
-	font-weight: 200
-	font-size: 15px
-	text-align: justify
-	padding-bottom: 15px
 
 .step-button, .step-inverse-button
 	width: 180px
@@ -80,7 +78,7 @@
 	background-color: #fff
 	color: darkNavy
 	border: 1px solid darkNavy
-
+	
 .step-inverse-button
 	color: darkNavy
 	background-color: #fff
@@ -130,8 +128,6 @@
 		flex-flow: row wrap
 		-webkit-flex-flow: row wrap
 		-ms-flex-flow: row wrap
-	.step-left, .step-right
-		width: 80%
-	.step-inverse-button, .step-button
+	.step-button
 		width: 150px
 		height: 40px

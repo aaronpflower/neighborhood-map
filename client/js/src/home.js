@@ -95,9 +95,9 @@ var Home = {
             menu,
             mobileMenu,
             m("div.hero-wrapper.home-hero", [
-                m("div.hero-content", [
-                    m("p", "Aaron and Brittney")
-                ])
+                // m("div.hero-content", [
+                //     m("p", "Aaron and Brittney")
+                // ])
             ]),
             m("main.main-border-home", [
             	m("div.main-section", [
@@ -112,7 +112,7 @@ var Home = {
             			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Brittney"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
+                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI..."),
                                 m("button#trigger-open.button", {onclick: ctrl.modal}, "Read More")
                             ]),
             			]),
@@ -121,13 +121,13 @@ var Home = {
                         m("div.about-us-item", [
                             m("img", {src: "../../../client/img/aaron-home.jpg"}),
                             m("div.overlay", [
-                                m("h1", "What's up?"),
+                                m("h1", "I don't get it..."),
                             ]),
                         ]),
             			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Aaron"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland"),
+                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI..."),
                                 m("button#trigger-open.button", {onclick: ctrl.modal2}, "Read More")
                             ]),
             			]),
