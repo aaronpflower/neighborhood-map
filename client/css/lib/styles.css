@@ -18,7 +18,7 @@ main {
   width: 100%;
   position: relative;
   z-index: 90;
-  top: 400px;
+  top: 450px;
   background-color: #fafafa;
 }
 h1,
@@ -75,7 +75,7 @@ input {
 }
 @media only screen and (min-width: 800px) {
   main {
-    top: 600px;
+    top: 700px;
   }
   footer {
     max-width: 100%;
@@ -200,16 +200,12 @@ input {
   -webkit-align-items: center;
   -ms-align-items: center;
   width: 100%;
-  height: 400px;
+  height: 450px;
   background-color: #aaabad;
   color: #fff;
   padding-top: 66px;
   position: fixed;
   z-index: 10;
-}
-.hero-wrapper img {
-  width: 100%;
-  flex: 1 1 0;
 }
 .hero-content {
   display: flex;
@@ -360,7 +356,7 @@ input {
 }
 @media only screen and (min-width: 800px) {
   .hero-wrapper {
-    height: 600px;
+    height: 700px;
   }
   .hero-wrapper h1 {
     font-size: 40px;
@@ -780,6 +776,9 @@ input {
   border-bottom: 1px solid #2b3742;
   padding: 50px 0px;
 }
+.last {
+  border-bottom: none;
+}
 .step h2 {
   color: #2b3742;
   font-size: 25px;
@@ -795,6 +794,7 @@ input {
   font-weight: 200;
   font-size: 15px;
   text-align: justify;
+  padding: 5px;
 }
 .step-button,
 .step-inverse-button {
@@ -850,6 +850,8 @@ input {
 .weather-iframe {
   height: 245px;
   width: 100%;
+  max-width: 850px;
+  margin-top: 30px;
   flex-grow: 1;
   -webkit-flex-grow: 1;
   -ms-flex-grow: 1;
@@ -909,10 +911,10 @@ input {
   padding: 10px;
 }
 .info-section p {
-  padding: 10px 18px 10px 18px;
+  padding: 0px 18px 3px 18px;
   line-height: 30px;
   font-size: 15px;
-  text-align: left;
+  text-align: center;
 }
 .info-item {
   flex-grow: 1;
@@ -963,18 +965,18 @@ input {
   display: flex;
   display: -webkit-flex;
   display: -ms-flex;
-  flex-flow: row nowrap;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  justify-content: flex-start;
-  -webkit-justify-content: flex-start;
-  -ms-justify-content: flex-start;
+  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   align-content: center;
   -webkit-align-content: center;
   -ms-align-content: center;
-  align-items: baseline;
-  -webkit-align-items: baseline;
-  -ms-align-items: baseline;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   width: 100%;
 }
 .about-party h1 {
@@ -983,8 +985,8 @@ input {
 .about-party p {
   padding: 0px 15px 10px 15px;
   line-height: 25px;
-  text-align: left;
-  width: 50%;
+  text-align: center;
+  width: 66%;
 }
 .about-party p:nth-child(1) {
   font-weight: 600;

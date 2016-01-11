@@ -11,34 +11,28 @@ var Rsvp = {
             mobileMenu,
             m("div.hero-wrapper.rsvp-hero", [
                 m("div.hero-content", [
-                    m("p", "RSVP")
+                    m("h1", "How to RSVP")
                 ])
             ]),
             m("main.main-border-rsvp", [
                 m("div.main-section", [
                     m("div.step-section", [
                         m("div.step", [
-                            m("h2", "Paperless Post"),
-                            m("div.step-left", [
-                                m("p", "Recommended. Cheap on our end, quicker response.  Plus it's 2015 you are on your computer all the time.")
-                            ]),
-                            m("div.step-right", [
-                                m("a[href='#'] [target='blank']", [
-                                    m("button.button", "RSVP Here")
-                                ]),
-                            ]),
-                        ]),
-                        m("div.step-inverse", [
+                            m("div.step-content", [
+                                m("h2", "Paperless Post"),
+                                m("div.step-left", [
+                                    m("p", "If you received an invitation through Paperless Post, please RSVP using the prompts provided in the invitation.")
+                                ])
+                            ])
+                        ])      
+                    ]),
+                    m("div.step", [
+                        m("div.step-content.last", [
                             m("h2", "Snail Mail"),
                             m("div.step-left", [
-                                m("p", "If you insist please return the to the address ASAP"),
-                            ]),
-                            m("div.step-right", [
-                                m("a[href='https://www.youtube.com/watch?v=GaoLU6zKaws'] [target='blank']", [
-                                    m("button.button", "Click Here")
-                                ]),
-                            ]),
-                        ]),
+                                m("p", "If you received an invitation through the mail, please send the enclosed RSVP card using the pre-addressed envelope."),
+                            ])
+                        ])
                     ])
                 ]),  
             footer(),

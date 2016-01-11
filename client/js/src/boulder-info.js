@@ -134,7 +134,7 @@ var boulderInfo = {
                             ])
                         ]),
                         m("div.step", [
-                            m("div.step-content", [
+                            m("div.step-content.last", [
                                 m("h2", "Step 6: Weather and Climate"),
                                 m("div.step-left", [
                                     m("p", "Boulder and Lyons sit around 5,500ft above sea level.  For those traveling from the lowlands please remember to drink more water than you ever have in your life to prevent altitude sickness.  Each individual is affected by this differently."),
