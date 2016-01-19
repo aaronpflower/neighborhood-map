@@ -268,10 +268,9 @@ var Home = {
                             m('img.modal-x', {src: "../../../client/img/close-icon.svg"})
                         ]),
                         m("h1", "About Brittney"),
-                        m("p", "MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                        m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
-                        m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
-                        m("p", "After Seattle, Aaron felt called to move to Boulder, CO to help some of his good friends start a church. He spent three years in his personal hell as a Whole Foods employee, and by God’s grace was given an opportunity to try his hand at web development at a hip new startup in Boulder. If you want to find Aaron on any given night, if he’s not with his hottie fiancee, he can be found playing Madden with his friends Ryan and Ty. But if you’re looking for him past 9:30pm just wait until tomorrow. He’s gone to sleep because he’s so tired from being such a baller all day.") 
+                        m("p", "Brittney Nicole Richter was born March 10th 1988, in Mount Vernon, WA to Thom and Nancy Richter, my guess it was raining that day.  From an early age Brittney was given the nickname bub by her dad.  Which was the same nickname Aaron’s dad gave him, but unlike Aaron, Brittney’s dad was allow to use that name on Sunday’s."),
+                        m("p", "As a child she spent the rainy PNW winter days playing with her paper dolls, and making choreography to Christmas songs with her feet.  She can show you if you inquire.   Brittney also participated in shenanigans with the neighborhood kids but sometimes just watched them from her bedroom window since she was had an early bedtime."),
+                        m("p", "In high school Brittney fell in love with teaching young children, leading her to pursue higher education in early childhood education, specifically the Reggio Emilia approach.  First at Skagit Valley Community College, then onto Western Washington University, then finally to the last place on earth she thought she would find herself, Boulder, CO at the Boulder Journey School.  Her time here was only suppose to be a year but God had other plans.")
                     ]),
                 ]), 
             ]),
@@ -321,8 +320,8 @@ var Home = {
             			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Brittney"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI..."),
-                                m("button#trigger-open.button", {onclick: ctrl.modal}, "Read More")
+                                m("p", "Written by Aaron"),
+                                m("button#trigger-open.button", {onclick: ctrl.modal}, "Read Bio")
                             ]),
             			]),
             		]),
@@ -336,8 +335,8 @@ var Home = {
             			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Aaron"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI..."),
-                                m("button#trigger-open.button", {onclick: ctrl.modal2}, "Read More")
+                                m("p", "Written by Brittney"),
+                                m("button#trigger-open.button", {onclick: ctrl.modal2}, "Read Bio")
                             ]),
             			]),
             		]),
@@ -610,7 +609,7 @@ var weddingDetails = {
                     'and it is easy to get to. '+
                     'Take hwy 36 north all the way to hwy 60, turn left,'+
                     'and drive for a mile and it is on the right</p>' +
-                    '<p>Zoom in and use street view to help seen turn</p>' +
+                    '<p>Zoom in and use street view to help see turns</p>' +
                     '</div>'+
                     '</div>';
                 var infowindow = new google.maps.InfoWindow({
@@ -669,27 +668,27 @@ var weddingDetails = {
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
-                                        m("p", "Boo, or Booski")
+                                        m("p", "Manders or Amanda Panda")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What, or who, are you a “closet” fan of?"),
-                                        m("p", "Once upon a time")
+                                        m("p", "J. Biebs...Is it too late now to say sorry?")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What is your favorite cereal?"),
-                                        m("p", "Reeses puffs")
+                                        m("p", "This is a sore subject #glutenintolerance ")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "If you could be any animal which one would you prefer to be and why?"),
-                                        m("p", "Otter, they are fun and fluffy and adorable, and they spend their lives in the water")
+                                        m("p", "A red panda, they are adorable, mischievous, and live in the forest.")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "How did you meet and become friends with Brittney?"),
-                                        m("p", "Same program, and roomies and besties from junior year on!")
+                                        m("p", "We met our Junior year of college on the first day we started our education major. I remember thinking, this lady is way too cool and put together to be friends with me...come to find out she was just as dorky and ridiculous as I was! We've been besties ever since!")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What did Brittney first tell you about Aaron?"),
-                                        m("p", "That she liked this guy, he was totally her type, a shy, soft spoken, sweet and nerdy (in the best way) ginger guy.")
+                                        m("p", "She met a guy...a cute, nerdy, awkward guy who stared at her during MC and immediately facebook friended her afterwards...and she was equal parts excited and terribly nauseous about it.")
                                     ])
                                 ])
                             ])

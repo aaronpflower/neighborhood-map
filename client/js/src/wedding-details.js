@@ -23,7 +23,7 @@ var weddingDetails = {
                     'and it is easy to get to. '+
                     'Take hwy 36 north all the way to hwy 60, turn left,'+
                     'and drive for a mile and it is on the right</p>' +
-                    '<p>Zoom in and use street view to help seen turn</p>' +
+                    '<p>Zoom in and use street view to help see turns</p>' +
                     '</div>'+
                     '</div>';
                 var infowindow = new google.maps.InfoWindow({
@@ -82,27 +82,27 @@ var weddingDetails = {
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
-                                        m("p", "Boo, or Booski")
+                                        m("p", "Manders or Amanda Panda")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What, or who, are you a “closet” fan of?"),
-                                        m("p", "Once upon a time")
+                                        m("p", "J. Biebs...Is it too late now to say sorry?")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What is your favorite cereal?"),
-                                        m("p", "Reeses puffs")
+                                        m("p", "This is a sore subject #glutenintolerance ")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "If you could be any animal which one would you prefer to be and why?"),
-                                        m("p", "Otter, they are fun and fluffy and adorable, and they spend their lives in the water")
+                                        m("p", "A red panda, they are adorable, mischievous, and live in the forest.")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "How did you meet and become friends with Brittney?"),
-                                        m("p", "Same program, and roomies and besties from junior year on!")
+                                        m("p", "We met our Junior year of college on the first day we started our education major. I remember thinking, this lady is way too cool and put together to be friends with me...come to find out she was just as dorky and ridiculous as I was! We've been besties ever since!")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What did Brittney first tell you about Aaron?"),
-                                        m("p", "That she liked this guy, he was totally her type, a shy, soft spoken, sweet and nerdy (in the best way) ginger guy.")
+                                        m("p", "She met a guy...a cute, nerdy, awkward guy who stared at her during MC and immediately facebook friended her afterwards...and she was equal parts excited and terribly nauseous about it.")
                                     ])
                                 ])
                             ])

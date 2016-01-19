@@ -874,8 +874,14 @@ input {
   }
 }
 .map {
-  height: 441px;
-  width: 100%;
+  display: none;
+}
+@media only screen and (min-width: 800px) {
+  .map {
+    display: block;
+    height: 450px;
+    width: 100%;
+  }
 }
 .wedding-hero {
   background-image: url("../../../client/img/wedding.jpg");
@@ -960,6 +966,8 @@ input {
   -ms-align-items: center;
   padding: 25px 15px 25px 15px;
   width: 100%;
+  overflow-y: scroll;
+  max-height: 625px;
 }
 .about-party-item {
   display: flex;

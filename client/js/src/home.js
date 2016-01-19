@@ -59,10 +59,9 @@ var Home = {
                             m('img.modal-x', {src: "../../../client/img/close-icon.svg"})
                         ]),
                         m("h1", "About Brittney"),
-                        m("p", "MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
-                        m("p", "The other 22% of Aaron’s spare time was spent sledding, roller blading (because Mighty Ducks), playing sports, and watching Sportscenter and the Weather Channel. As an adolescent, Aaron took up running. He was good at it, and ran a lot. A lot. Alot. Running brought Aaron to the mountain town of Gunnison, CO where he ran through college, and got a degree in Sports Science. It was also in Gunnison that the Lord’s pursuit of Aaron culminated in him becoming a Christian."),
-                        m("p", "The Lord pushed Aaron to pursue church leadership, which brought him to an internship in Seattle, WA for a year. It was here that Aaron and Brittney cosmically attended the same Sounders FC vs. Manchester United game."), 
-                        m("p", "After Seattle, Aaron felt called to move to Boulder, CO to help some of his good friends start a church. He spent three years in his personal hell as a Whole Foods employee, and by God’s grace was given an opportunity to try his hand at web development at a hip new startup in Boulder. If you want to find Aaron on any given night, if he’s not with his hottie fiancee, he can be found playing Madden with his friends Ryan and Ty. But if you’re looking for him past 9:30pm just wait until tomorrow. He’s gone to sleep because he’s so tired from being such a baller all day.") 
+                        m("p", "Brittney Nicole Richter was born March 10th 1988, in Mount Vernon, WA to Thom and Nancy Richter, my guess it was raining that day.  From an early age Brittney was given the nickname bub by her dad.  Which was the same nickname Aaron’s dad gave him, but unlike Aaron, Brittney’s dad was allow to use that name on Sunday’s."),
+                        m("p", "As a child she spent the rainy PNW winter days playing with her paper dolls, and making choreography to Christmas songs with her feet.  She can show you if you inquire.   Brittney also participated in shenanigans with the neighborhood kids but sometimes just watched them from her bedroom window since she was had an early bedtime."),
+                        m("p", "In high school Brittney fell in love with teaching young children, leading her to pursue higher education in early childhood education, specifically the Reggio Emilia approach.  First at Skagit Valley Community College, then onto Western Washington University, then finally to the last place on earth she thought she would find herself, Boulder, CO at the Boulder Journey School.  Her time here was only suppose to be a year but God had other plans.")
                     ]),
                 ]), 
             ]),
@@ -112,8 +111,8 @@ var Home = {
             			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Brittney"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI..."),
-                                m("button#trigger-open.button", {onclick: ctrl.modal}, "Read More")
+                                m("p", "Written by Aaron"),
+                                m("button#trigger-open.button", {onclick: ctrl.modal}, "Read Bio")
                             ]),
             			]),
             		]),
@@ -127,8 +126,8 @@ var Home = {
             			m("div.about-us-item", [
                             m("div.about-us-text", [
                                 m("h1", "About Aaron"),
-                                m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland, MI..."),
-                                m("button#trigger-open.button", {onclick: ctrl.modal2}, "Read More")
+                                m("p", "Written by Brittney"),
+                                m("button#trigger-open.button", {onclick: ctrl.modal2}, "Read Bio")
                             ]),
             			]),
             		]),
