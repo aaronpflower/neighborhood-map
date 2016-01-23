@@ -23,7 +23,7 @@ var Registry = {
                         m("div.registry-item-content", [
                             m("div.registry-text", [
                                 m("h1", "Honey Fund"),
-                                m("p", "Help us enjoy our first week of marriage in style."),
+                                m("p", "Help us enjoy our first week of marriage in style, in Boston, MA."),
                                 m("a[href='http://www.honeyfund.com/Registry?id=478608&rid=876521&t=1'] [target='blank']", [
                                     m("button.step-inverse-button", "Go to it") 
                                 ])

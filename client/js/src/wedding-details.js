@@ -255,14 +255,14 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/chase.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Chase, groomsman. Hazaah!"),
+                                    m("h1", "Chase, groomsman. Wouldn't hurt a fly."),
                                 ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
-                                        m("p", "Chase")
+                                        m("p", "Chavis")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What, or who, are you a “closet” fan of?"),

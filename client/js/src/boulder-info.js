@@ -55,11 +55,14 @@ var boulderInfo = {
                                     m("p", "The wedding will take place in Lyons which is about 20 miles north of Boulder. We recommend coordinating with other guests if possible and sharing AirBnb’s or hotel rooms. Also the sister property of the Farmette, the Riverbend has Tiny Homes to rent."),
                                 ]),
                                 m("div.step-right", [
-                                    m("a[href='https://www.airbnb.com/s/Boulder--CO'] [target='blank']", [
+                                    m("a[href='https://www.vrbo.com/vacation-rentals/usa/colorado/front-range/boulder?k_clickid=4efa8b00-43a4-4cc1-9cc5-fadff61d3aa1&gclid=Cj0KEQiA5oy1BRDQh6Wd572hsfkBEiQAfdTPCvuvChUinW0Dq0gUNWT4SLpwzzIB8XGkEi2rUickV7YaAqQD8P8HAQ'] [target='blank']", [
                                         m("button.step-button", "Boulder AirBnB")
                                     ]),
+                                    m("a[href='https://www.airbnb.com/s/Boulder--CO'] [target='blank']", [
+                                        m("button.step-button", "Boulder VRBO")
+                                    ]),
                                     m("a[href='https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=boulder%20colorado%20hotes'] [target='blank']", [
-                                        m("button.step-button", "Boulder Hotles")
+                                        m("button.step-button", "Boulder Hotels")
                                     ]),
                                     m("a[href='http://weecasa.com/'] [target='blank']", [
                                         m("button.step-button", "River Bend Tiny Homes"),
