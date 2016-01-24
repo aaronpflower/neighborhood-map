@@ -99,7 +99,7 @@ var boulderInfo = {
                             m("div.step-content", [
                                 m("h2", "Step 5: Where to play"),
                                 m("div.step-left", [
-                                   m("p", "Trails and Open Space Scenic Hikes near Boulder:"),
+                                   m("p", "Trails and Open Space Scenic Hikes near Boulder"),
                                 ]),
                                 m("div.step-right", [
                                     m("a[href='#'] [target='blank']", [
@@ -113,7 +113,7 @@ var boulderInfo = {
                                     ]),
                                 ]),
                                 m("div.step-left", [
-                                   m("p", "Rocky Mountain National Park."),
+                                   m("p", "Rocky Mountain National Park"),
                                 ]),
                                 m("div.step-right", [
                                     m("a[href='http://www.rockymountainhikingtrails.com/bear-lake-nature-trail.htm'] [target='blank']", [

@@ -75,7 +75,7 @@ input {
 }
 @media only screen and (min-width: 800px) {
   main {
-    top: 700px;
+    top: 600px;
   }
   footer {
     max-width: 100%;
@@ -356,7 +356,7 @@ input {
 }
 @media only screen and (min-width: 800px) {
   .hero-wrapper {
-    height: 700px;
+    height: 600px;
   }
   .hero-wrapper h1 {
     font-size: 40px;
@@ -910,16 +910,15 @@ input {
 }
 .info-section h1 {
   padding: 10px;
-  font-size: 25px;
+  font-size: 18px;
 }
 .info-section h2 {
-  font-size: 20px;
+  font-size: 16px;
   padding: 10px;
 }
 .info-section p {
-  padding: 0px 18px 3px 18px;
-  line-height: 30px;
-  font-size: 15px;
+  padding: 0px 18px 10px 18px;
+  font-size: 12px;
   text-align: center;
 }
 .info-item {
@@ -948,6 +947,29 @@ input {
   -ms-align-content: center;
   padding: 25px;
 }
+.text-section {
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  align-content: center;
+  -webkit-align-content: center;
+  -ms-align-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  width: 100%;
+  border-top: 1px solid #2b3742;
+}
+.text-section h1 {
+  font-size: 40px;
+  padding: 20px;
+}
 .about-party {
   display: flex;
   display: -webkit-flex;
@@ -964,50 +986,35 @@ input {
   align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
-  padding: 25px 15px 25px 15px;
+  padding: 15px 10px 15px 10px;
   width: 100%;
-  overflow-y: scroll;
-  max-height: 625px;
 }
 .about-party-item {
-  display: flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  flex-flow: column nowrap;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  align-content: center;
-  -webkit-align-content: center;
-  -ms-align-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
   width: 100%;
 }
 .about-party h1 {
-  padding: 0px 15px 10px 15px;
+  padding: 0px 15px 30px 15px;
+  font-size: 40px;
+  letter-spacing: 2px;
 }
 .about-party p {
-  padding: 0px 15px 10px 15px;
-  line-height: 25px;
-  text-align: center;
-  width: 66%;
+  padding: 0px 15px 5px 15px;
+  text-align: left;
+  width: 100%;
+  font-size: 17px;
 }
 .about-party p:nth-child(1) {
   font-weight: 600;
 }
 @media only screen and (min-width: 800px) {
   .info-section h1 {
-    font-size: 25px;
+    font-size: 18px;
   }
   .info-section h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .info-section p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .info-section {
     flex-flow: row nowrap;
@@ -1030,6 +1037,16 @@ input {
     align-items: stretch;
     -webkit-align-items: stretch;
     -ms-align-items: stretch;
+  }
+  #even #two:nth-child(1) {
+    order: 2;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+  }
+  #even #one:nth-child(2) {
+    order: 1;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
   }
 }
 .registry-hero {

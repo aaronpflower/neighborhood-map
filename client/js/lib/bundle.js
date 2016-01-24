@@ -100,7 +100,7 @@ var boulderInfo = {
                             m("div.step-content", [
                                 m("h2", "Step 5: Where to play"),
                                 m("div.step-left", [
-                                   m("p", "Trails and Open Space Scenic Hikes near Boulder:"),
+                                   m("p", "Trails and Open Space Scenic Hikes near Boulder"),
                                 ]),
                                 m("div.step-right", [
                                     m("a[href='#'] [target='blank']", [
@@ -114,7 +114,7 @@ var boulderInfo = {
                                     ]),
                                 ]),
                                 m("div.step-left", [
-                                   m("p", "Rocky Mountain National Park."),
+                                   m("p", "Rocky Mountain National Park"),
                                 ]),
                                 m("div.step-right", [
                                     m("a[href='http://www.rockymountainhikingtrails.com/bear-lake-nature-trail.htm'] [target='blank']", [
@@ -659,16 +659,22 @@ var weddingDetails = {
                             m("div#map.map", {config: ctrl.map})
                         ]),
                     ]),
+                    m("div.text-section", [
+                        m("h1", "The Wedding Party")
+                    ]),
                     m("div.second-section", [
                         m("div.about-us", [
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/amanda.jpg"}),
-                                m("div.overlay", [
-                                    m("h1", "Teaches, name, Amanda and Maid of Honor.")
-                                ]),
+                                // m("div.overlay", [
+                                //     m("h1", "Teaches.")
+                                // ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
+                                    m("div.about-party-item", [
+                                        m("h1", "Amanda Statham")
+                                    ]),
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
                                         m("p", "Manders or Amanda Panda")
@@ -687,47 +693,50 @@ var weddingDetails = {
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "How did you meet and become friends with Brittney?"),
-                                        m("p", "We met our Junior year of college on the first day we started our education major. I remember thinking, this lady is way too cool and put together to be friends with me...come to find out she was just as dorky and ridiculous as I was! We've been besties ever since!")
+                                        m("p", "We met on our first day of our education classes at Western. I thought she was way too cool to be friends with me, but turns out she’s a dork too and we've been besties ever since!")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What did Brittney first tell you about Aaron?"),
-                                        m("p", "She met a guy...a cute, nerdy, awkward guy who stared at her during MC and immediately facebook friended her afterwards...and she was equal parts excited and terribly nauseous about it.")
+                                        m("p", "She met a cute, nerdy, awkward guy and she was equal parts excited and nauseous about it.")
                                     ])
                                 ])
                             ])
                         ]),
-                        m("div#aaron.about-us", [
-                            m("div.about-us-item", [
+                        m("div#even.about-us", [
+                            m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/ryan.jpg"}),
-                                m("div.overlay", [
-                                    m("h1", "Straight outta Monte Vista, Ryan and Best Man."),
-                                ]),
+                                // m("div.overlay", [
+                                //     m("h1", "Straight outta Monte Vista."),
+                                // ]),
                             ]),
-                            m("div.about-us-item", [
+                            m("div#one.about-us-item", [
                                 m("div.about-party", [
+                                    m("div.about-party-item", [
+                                        m("h1", "Ryan Wright")
+                                    ]),
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
                                         m("p", "Ry-NO!")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What, or who, are you a “closet” fan of?"),
-                                        m("p", "Aaron Flower")
+                                        m("p", "Country Music")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What is your favorite cereal?"),
-                                        m("p", "Special K")
+                                        m("p", "Raisin Bran Crunch")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "If you could be any animal which one would you prefer to be and why?"),
-                                        m("p", "Cat because I love cats")
+                                        m("p", "Mountain Lion. Its a cat AND a lion")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "How did you meet and become friends with Aaron?"),
-                                        m("p", "Roomate for the last 1000 years.")
+                                        m("p", "I was looking for a roommate, Aaron said he wanted to live in Crested Butte. I told him that was dumb and he should live with me. End of story.")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What did Aaron first tell you about Brittney?"),
-                                        m("p", "Gonna marry her.")
+                                        m("p", "Soo...she likes Jay-Z.")
                                     ])
                                 ])
                             ])
@@ -735,12 +744,15 @@ var weddingDetails = {
                         m("div.about-us", [
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/bailey.jpg"}),
-                                m("div.overlay", [
-                                    m("h1", "Another teacher, Bailey, and bridesmaid.")
-                                ]),
+                                // m("div.overlay", [
+                                //     m("h1", "Another teacher, Bailey, and bridesmaid.")
+                                // ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
+                                    m("div.about-party-item", [
+                                        m("h1", "Bailey Jones")
+                                    ]),
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
                                         m("p", "Boo, or Booski")
@@ -768,15 +780,18 @@ var weddingDetails = {
                                 ])
                             ])
                         ]),
-                        m("div#aaron.about-us", [
-                            m("div.about-us-item", [
+                        m("div#even.about-us", [
+                            m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/ty.jpg"}),
-                                m("div.overlay", [
-                                    m("h1", "Ty, Groomsman. Mucho take it easy."),
-                                ]),
+                                // m("div.overlay", [
+                                //     m("h1", "Ty, Groomsman. Mucho take it easy."),
+                                // ]),
                             ]),
-                            m("div.about-us-item", [
+                            m("div#one.about-us-item", [
                                 m("div.about-party", [
+                                    m("div.about-party-item", [
+                                        m("h1", "Ty Allen")
+                                    ]),
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
                                         m("p", "Ty Daddy Dollars")
@@ -795,11 +810,11 @@ var weddingDetails = {
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "How did you meet and become friends with Aaron?"),
-                                        m("p", "Met Aaron through Ryan right when I moved to Boulder in Aug. 2013. Been close since.")
+                                        m("p", "Met Aaron through Ryan Wright, when I moved to Boulder in Aug. 2013. Been close since.")
                                     ]),
                                     m("div.about-party-item", [
                                         m("p", "What did Aaron first tell you about Brittney?"),
-                                        m("p", "Aaron first told me about Brittany by saying (with 3% enthusiasm, standard Aaron inflection...) 'So...I met a girl.'")
+                                        m("p", "Aaron first told me about Brittney by saying (with 3% enthusiasm, standard Aaron inflection...) 'So...I met a girl.'")
                                     ])
                                 ])
                             ])
@@ -807,12 +822,15 @@ var weddingDetails = {
                         m("div.about-us", [
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/aracely.jpg"}),
-                                m("div.overlay", [
-                                    m("h1", "Bridesmaid, Aracely. Weeeee!"),
-                                ]),
+                                // m("div.overlay", [
+                                //     m("h1", "Bridesmaid, Aracely. Weeeee!"),
+                                // ]),
                             ]),
                             m("div.about-us-item", [
                                  m("div.about-party", [
+                                    m("div.about-party-item", [
+                                        m("h1", "Aracely See")
+                                    ]),
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
                                         m("p", "Cely, Chely")
@@ -840,15 +858,18 @@ var weddingDetails = {
                                 ])
                             ])
                         ]),
-                        m("div#aaron.about-us", [
-                            m("div.about-us-item", [
+                        m("div#even.about-us", [
+                            m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/chase.jpg"}),
-                                m("div.overlay", [
-                                    m("h1", "Chase, groomsman. Wouldn't hurt a fly."),
-                                ]),
+                                // m("div.overlay", [
+                                //     m("h1", "Chase, groomsman. Wouldn't hurt a fly."),
+                                // ]),
                             ]),
-                            m("div.about-us-item", [
+                            m("div#one.about-us-item", [
                                 m("div.about-party", [
+                                    m("div.about-party-item", [
+                                        m("h1", "Chase Davis")
+                                    ]),
                                     m("div.about-party-item", [
                                         m("p", "What was your childhood nickname?"),
                                         m("p", "Chavis")
