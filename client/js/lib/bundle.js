@@ -315,9 +315,9 @@ var Home = {
             		m("div.about-us", [
                         m("div.about-us-item", [
                             m("img", {src: "../../../client/img/brittney-home.jpg"}),
-                            m("div.overlay", [
-                                m("h1", "Hi"),
-                            ]),
+                            // m("div.overlay", [
+                            //     m("h1", "Hi"),
+                            // ]),
                         ]),
             			m("div.about-us-item", [
                             m("div.about-us-text", [
@@ -330,9 +330,9 @@ var Home = {
             		m("div#aaron.about-us", [
                         m("div.about-us-item", [
                             m("img", {src: "../../../client/img/aaron-home.jpg"}),
-                            m("div.overlay", [
-                                m("h1", "I don't get it..."),
-                            ]),
+                            // m("div.overlay", [
+                            //     m("h1", "I don't get it..."),
+                            // ]),
                         ]),
             			m("div.about-us-item", [
                             m("div.about-us-text", [
