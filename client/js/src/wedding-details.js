@@ -55,15 +55,15 @@ var weddingDetails = {
                     m("div.info-section", [
                         m("div.info-item", [
                             m("div.details", [
-                                m("h1", "Time and Address"),
-                                m("p", "Cermony starts at 4pm and reception to follow"),
-                                m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177556,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
-                                    m("p", "4121 Ute Highway, Lyons, CO 80540")
-                                ]),
+                                m("h1", "Ceremony"),
+                                m("p.border-none.padding-small", "June 19th, 2016, 4pm"),
+                                m("p.border-none.padding-small2", "Dinner, drinks, and dancing to follow"),
+                                m("h1", "Address"),
+                                m("p.border-none", "4121 Ute Highway, Lyons, CO 80540"),
                                 m("h1", "Reminders"),
                                 m("p", "Weather in Colorado can change quickly throughout the day, we recommend checking the hourly weather forecast prior to leaving for the evening. When in doubt, layer up!"),
                                 m("p", "With the exception of family, to give all our guests the opportunity to enjoy the evening without having to worry about little ones, we politely request no children under 8."),
-                                m("p", "Transportation to the venue is up to individual guests. If you are staying in Boulder we recommend renting a car for transportation to and from the venue, which is about 30 minutes north of Boulder.")
+                                m("p.border-none", "Transportation to the venue is up to individual guests. If you are staying in Boulder we recommend renting a car for transportation to and from the venue, which is about a 30 minute drive outside of Boulder.")
                             ]),
                         ]),
                         m("div.info-item", [
