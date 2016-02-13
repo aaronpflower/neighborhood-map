@@ -20,9 +20,9 @@ var boulderInfo = {
                 m("div.hero-item", [
                     m("img", {src: "../../../client/img/boulder.jpg"})
                 ]),
-                // m("div.hero-content", [
-                //     m("h1", "6 Step Plan to Boulder")
-                // ])
+                m("div.hero-content", [
+                    m("h1", "6 Step Plan to Boulder")
+                ])
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
@@ -174,7 +174,7 @@ module.exports = boulderInfo;
 
 
 
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":14}],2:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":13}],2:[function(require,module,exports){
 var m = require("mithril");
 
 var footer = function() {
@@ -192,7 +192,7 @@ module.exports = footer;
 
 
 
-},{"mithril":14}],3:[function(require,module,exports){
+},{"mithril":13}],3:[function(require,module,exports){
 var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
@@ -351,7 +351,7 @@ var Home = {
 };
 
 module.exports = Home;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/timer.js":12,"mithril":14}],4:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/timer.js":11,"mithril":13}],4:[function(require,module,exports){
 var $ = require('jquery'),
 	m = require('mithril');
 
@@ -362,7 +362,15 @@ $(window).scroll(function () {
         'opacity': ((height - scrollTop) / height)
     });
 });
-},{"jquery":13,"mithril":14}],5:[function(require,module,exports){
+
+// function initMap() {
+// 	var mapDiv = document.getElementById('map');
+// 	var map = new google.maps.Map(mapDiv, {
+// 		center: {lat: 44.540, lng: -78.546},
+// 		zoom: 8
+// 	});
+// }
+},{"jquery":12,"mithril":13}],5:[function(require,module,exports){
 var m = require("mithril");
 
 var menu = {
@@ -389,7 +397,7 @@ function persistent(context) {
 }
 
 module.exports = menu;
-},{"mithril":14}],6:[function(require,module,exports){
+},{"mithril":13}],6:[function(require,module,exports){
 var m = require('mithril'),
 	Layout = require('./layout.js'),
 	Home = require('./home.js'),
@@ -409,7 +417,7 @@ m.route(document.body, "/", {
     "/registry": Registry,
     "/boulder-info": BoulderInfo,
 })
-},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./layout.js":4,"./menu.js":5,"./registry":8,"./rsvp":9,"./wedding-details.js":10,"mithril":14}],7:[function(require,module,exports){
+},{"./boulder-info.js":1,"./footer.js":2,"./home.js":3,"./layout.js":4,"./menu.js":5,"./registry":8,"./rsvp":9,"./wedding-details.js":10,"mithril":13}],7:[function(require,module,exports){
 var m = require('mithril');
 
 var mobileMenu = {
@@ -462,7 +470,7 @@ function persistent(context) {
 }
 
 module.exports = mobileMenu;
-},{"mithril":14}],8:[function(require,module,exports){
+},{"mithril":13}],8:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -540,7 +548,7 @@ var Registry = {
 }
 
 module.exports = Registry;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":14}],9:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":13}],9:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
@@ -594,54 +602,46 @@ var Rsvp = {
 }
 
 module.exports = Rsvp;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":14}],10:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":13}],10:[function(require,module,exports){
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
-    boulderMap = require("./widgets/map.js"),
 	footer = require('./footer.js');
 
 var weddingDetails = {
     controller: function() {
-        this.heroHeight = function() {
-            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px'
-        },
-        this.mapLyons = function() {
-            var lyons = {lat: 40.2170362, lng: -105.2601925};
+        var lyons = {lat: 40.2170362, lng: -105.2601925};
 
-            return {
-                map: function initMap() {
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        center: lyons,
-                        zoom: 10
-                    });
-                    var contentString = '<div id="content">'+
-                        '<div id="siteNotice">'+
-                        '</div>'+
-                        '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
-                        '<div id="bodyContent">'+
-                        '<p>It is located about 17 miles north of Boulder, ' +
-                        'and it is easy to get to. '+
-                        'Take hwy 36 north all the way to hwy 60, turn left,'+
-                        'and drive for a mile and it is on the right</p>' +
-                        '<p>Zoom in and use street view to help see turns</p>' +
-                        '</div>'+
-                        '</div>';
-                    var infowindow = new google.maps.InfoWindow({
-                        content: contentString
-                    });
-                    var marker = new google.maps.Marker({
-                        position: lyons,
-                        map: map,
-                        title: 'Hello World!'
-                    });
-                    marker.addListener('click', function() {
-                        infowindow.open(map, marker);
-                    });
-                    clearInterval(initMap);
-                }
+        return {
+            map: function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: lyons,
+                    zoom: 10
+                });
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p>It is located about 17 miles north of Boulder, ' +
+                    'and it is easy to get to. '+
+                    'Take hwy 36 north all the way to hwy 60, turn left,'+
+                    'and drive for a mile and it is on the right</p>' +
+                    '<p>Zoom in and use street view to help see turns</p>' +
+                    '</div>'+
+                    '</div>';
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+                var marker = new google.maps.Marker({
+                    position: lyons,
+                    map: map,
+                    title: 'Hello World!'
+                });
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+                clearInterval(initMap);
             }
         }
     },
@@ -649,7 +649,11 @@ var weddingDetails = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+            m("div.hero-wrapper", {config: function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-wedding-details').style.top = heroWrapper + 'px'
+        }}, [
                 m("div.hero-item", [
                     m("img", {src: "../../../client/img/wedding.jpg"})
                 ]),
@@ -674,7 +678,7 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            m("div#map.map", {config: ctrl.mapLyons})
+                            m("div#map.map", {config: ctrl.map})
                         ]),
                     ]),
                     m("div.text-section", [
@@ -924,41 +928,7 @@ var weddingDetails = {
 }
 
 module.exports = weddingDetails;
-},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"./widgets/map.js":11,"mithril":14}],11:[function(require,module,exports){
-// var m = require('mithril');
-
-// var boulderMap = {
-// 	controller: function() {
-// 		// var initMap = m.prop([]);
-// 		// var doSomething = function () {
-// 		// 	var map = new google.maps.Map(document.getElementById('map'), {
-// 		// 		center: {lat: 40.0274, lng: -105.2519},
-// 		// 		zoom: 8
-// 		// 		});
-// 		// 	};
-// 		// return m.request({
-// 		// 	dataType: "jsonp",
-//   //   		callbackKey: "jsoncallback",			
-//   //   		url: "http://maps.googleapis.com/maps/api/js?key=AIzaSyCpRRMEy9sBC95vWunMUBju38m-2XwwEco&callback=initMap"
-// 		// }).then(initMap).then(doSomething)
-// 		// m.render();
-// 		// return {
-// 		// 	this.initMap = function() {
-// 		// 	var map = new google.maps.Map(document.getElementById('map'), {
-// 		// 		center: {lat: 40.0274, lng: -105.2519},
-// 		// 		zoom: 8
-// 		// 		});
-// 		// 	};
-// 		}
-// 	},
-// 	view: function(ctrl) {
-// 		console.log(ctrl);
-// 		return m("div#map.map");	
-// 	},
-// }
-
-// module.exports = boulderMap;
-},{}],12:[function(require,module,exports){
+},{"./footer.js":2,"./menu.js":5,"./mobile-menu.js":7,"mithril":13}],11:[function(require,module,exports){
 var m = require('mithril');
 
 var countDownTimer = {
@@ -1008,7 +978,7 @@ var countDownTimer = {
 }
 
 module.exports = countDownTimer;
-},{"mithril":14}],13:[function(require,module,exports){
+},{"mithril":13}],12:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v2.1.4
  * http://jquery.com/
@@ -10220,7 +10190,7 @@ return jQuery;
 
 }));
 
-},{}],14:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 var m = (function app(window, undefined) {
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;

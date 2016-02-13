@@ -19,9 +19,9 @@ var boulderInfo = {
                 m("div.hero-item", [
                     m("img", {src: "../../../client/img/boulder.jpg"})
                 ]),
-                // m("div.hero-content", [
-                //     m("h1", "6 Step Plan to Boulder")
-                // ])
+                m("div.hero-content", [
+                    m("h1", "6 Step Plan to Boulder")
+                ])
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [

@@ -1,50 +1,42 @@
 var m = require('mithril'),
 	menu = require('./menu.js'),
     mobileMenu = require("./mobile-menu.js"),
-    boulderMap = require("./widgets/map.js"),
 	footer = require('./footer.js');
 
 var weddingDetails = {
     controller: function() {
-        this.heroHeight = function() {
-            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px'
-        },
-        this.mapLyons = function() {
-            var lyons = {lat: 40.2170362, lng: -105.2601925};
+        var lyons = {lat: 40.2170362, lng: -105.2601925};
 
-            return {
-                map: function initMap() {
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        center: lyons,
-                        zoom: 10
-                    });
-                    var contentString = '<div id="content">'+
-                        '<div id="siteNotice">'+
-                        '</div>'+
-                        '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
-                        '<div id="bodyContent">'+
-                        '<p>It is located about 17 miles north of Boulder, ' +
-                        'and it is easy to get to. '+
-                        'Take hwy 36 north all the way to hwy 60, turn left,'+
-                        'and drive for a mile and it is on the right</p>' +
-                        '<p>Zoom in and use street view to help see turns</p>' +
-                        '</div>'+
-                        '</div>';
-                    var infowindow = new google.maps.InfoWindow({
-                        content: contentString
-                    });
-                    var marker = new google.maps.Marker({
-                        position: lyons,
-                        map: map,
-                        title: 'Hello World!'
-                    });
-                    marker.addListener('click', function() {
-                        infowindow.open(map, marker);
-                    });
-                    clearInterval(initMap);
-                }
+        return {
+            map: function initMap() {
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    center: lyons,
+                    zoom: 10
+                });
+                var contentString = '<div id="content">'+
+                    '<div id="siteNotice">'+
+                    '</div>'+
+                    '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
+                    '<div id="bodyContent">'+
+                    '<p>It is located about 17 miles north of Boulder, ' +
+                    'and it is easy to get to. '+
+                    'Take hwy 36 north all the way to hwy 60, turn left,'+
+                    'and drive for a mile and it is on the right</p>' +
+                    '<p>Zoom in and use street view to help see turns</p>' +
+                    '</div>'+
+                    '</div>';
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+                var marker = new google.maps.Marker({
+                    position: lyons,
+                    map: map,
+                    title: 'Hello World!'
+                });
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+                clearInterval(initMap);
             }
         }
     },
@@ -52,7 +44,11 @@ var weddingDetails = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+            m("div.hero-wrapper", {config: function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-wedding-details').style.top = heroWrapper + 'px'
+        }}, [
                 m("div.hero-item", [
                     m("img", {src: "../../../client/img/wedding.jpg"})
                 ]),
@@ -77,7 +73,7 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            m("div#map.map", {config: ctrl.mapLyons})
+                            m("div#map.map", {config: ctrl.map})
                         ]),
                     ]),
                     m("div.text-section", [
