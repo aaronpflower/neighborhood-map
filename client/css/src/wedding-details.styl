@@ -23,22 +23,29 @@
 	align-items: center
 	-webkit-align-items: center
 	-ms-align-items: center
+	padding-bottom 50px
 
 .info-section h1
-	padding: 10px 0px 0px 0px
-	font-size: 18px
+	padding: 15px 0px 15px 0px
+	font-size: 25px
+	text-align left
+	line-height 35px
+	font-family Helvetica Neue, Bold, sans-serif
 
 .info-section p
-	padding-top 15px
-	padding-bottom 15px
-	font-size: 12px
-	text-align: center
-	border-bottom: 1px solid darkNavy
+	margin-left 5px
+	padding 10px 0px 10px 10px
+	font-size: 15px
+	line-height 25px
+	text-align: left
+	border-left: 1px solid darkNavy
+.info-section:nth-child(1)
+		padding-top 0px
+.padding-none
+	padding-top: 0px !important
 
-// .info-section:nth-child(1)
-// 	border-bottom none
-.border-none
-	border-bottom: none !important
+.padding-bottom-none
+	padding-bottom: 0px !important
 	
 .padding-small
 	padding-bottom 5px !important
@@ -57,7 +64,7 @@
 	-webkit-flex-basis: 400px
 	-ms-flex-basis: 400px
 
-.details
+.left
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
@@ -70,6 +77,51 @@
 	align-content: center
 	-webkit-align-content: center
 	-ms-align-content: center
+	align-items: flex-start
+	-webkit-align-items: flex-start
+	-ms-align-items: flex-start
+	padding 25px
+.farm-img
+	width 100%
+	margin-top 50px
+	align-self flex-start
+	img
+		max-width none
+		width 100%
+.right
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: flex-start
+	-webkit-align-items: flex-start
+	-ms-align-items: flex-start
+	padding 25px
+	
+.right-top
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: flex-start
+	-webkit-align-items: flex-start
+	-ms-align-items: flex-start
 	padding 25px
 	
 .text-section
@@ -85,15 +137,18 @@
 	align-content: center
 	-webkit-align-content: center
 	-ms-align-content: center
-	align-items: center
-	-webkit-align-items: center
-	-ms-align-items: center
+	align-items: flex-start
+	-webkit-align-items: flex-start
+	-ms-align-items: flex-start
 	width 100%
-	border-top 1px solid darkNavy
-
+	padding 35px
+	
 .text-section h1
-	font-size 40px
-	padding 20px
+	padding: 15px 0px 15px 0px
+	font-size: 25px
+	text-align left
+	line-height 35px
+	font-family Helvetica Neue, Bold, sans-serif
 
 .about-party
 	display: flex
@@ -119,34 +174,49 @@
 	
 .about-party h1
 	padding: 0px 15px 30px 15px
-	font-size 40px
-	letter-spacing 2px
+	font-size 25px
+	letter-spacing 1px
 	
 .about-party p
 	padding: 0px 15px 5px 15px
 	text-align: left
 	width 100%
-	font-size 17px
+	font-size 15px
+	font-family Helvetica Neue, Thin, sans-serif
 	
 .about-party p:nth-child(1)
-		font-weight 600
+	font-weight 600
+.about-party p:nth-child(2)
+	margin-left 5px
 
 @media only screen and (min-width: 800px)
+	.farm-img
+		margin-top 0px
+		position absolute
+		width 45%
+		top 100px
+		right 25px
+	.text-section h1
+		font-size 30px
+		padding 20px
 	.info-section h1
-		font-size: 18px
+		font-size: 25px
 
 	.info-section h2
 		font-size: 16px
 		
 	.info-section p
 		font-size: 14px
+		width 30%
+		padding-left 20px
 		
 	.info-section
 		flex-flow: row nowrap
 		-webkit-flex-flow: row nowrap
 		-ms-flex-flow: row nowrap
-		
-	.details
+	.info-item-2
+		display none
+	.left
 		display: flex
 		display: -webkit-flex
 		display: -ms-flex
@@ -162,6 +232,44 @@
 		align-items: stretch
 		-webkit-align-items: stretch
 		-ms-align-items: stretch
+	
+	.right
+		display: flex
+		display: -webkit-flex
+		display: -ms-flex
+		flex-flow: row nowrap
+		-webkit-flex-flow: row nowrap
+		-ms-flex-flow: row nowrap
+		justify-content: space-around
+		-webkit-justify-content: space-around
+		-ms-justify-content: space-around
+		align-content: center
+		-webkit-align-content: center
+		-ms-align-content: center
+		align-items: baseline
+		-webkit-align-items: baseline
+		-ms-align-items: baseline
+	.right-top
+		display: flex
+		display: -webkit-flex
+		display: -ms-flex
+		flex-flow: column nowrap
+		-webkit-flex-flow: column nowrap
+		-ms-flex-flow: column nowrap
+		justify-content: center
+		-webkit-justify-content: center
+		-ms-justify-content: center
+		align-content: center
+		-webkit-align-content: center
+		-ms-align-content: center
+		align-items: flex-start
+		-webkit-align-items: flex-start
+		-ms-align-items: flex-start
+		padding 25px
+		margin-bottom 70px
+		
+	.right-top p
+		width 45%
 	#even #two:nth-child(1)
 		order: 2
 		-webkit-order: 2
@@ -170,3 +278,7 @@
 		order: 1
 		-webkit-order: 1
 		-ms-flex-order: 1
+	.about-party h1
+		padding: 0px 15px 30px 15px
+		font-size 35px
+		letter-spacing 2px

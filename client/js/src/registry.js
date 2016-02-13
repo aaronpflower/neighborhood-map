@@ -7,8 +7,13 @@ var Registry = {
     controller: function() {
         this.heroHeight = function() {
             var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-registry').style.top = heroWrapper + 'px'
+            var width = document.documentElement.clientWidth;
+            if(width > 800) {
+                document.querySelector('.main-border-registry').style.top = heroWrapper - 50 + 'px';
+            }
+            else {
+                document.querySelector('.main-border-registry').style.top = heroWrapper + 'px';
+            }
         }
     },
     view: function(ctrl) {

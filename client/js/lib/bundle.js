@@ -8,8 +8,13 @@ var boulderInfo = {
     controller: function() {
         this.heroHeight = function() {
             var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px'
+            var width = document.documentElement.clientWidth;
+            if(width > 800) {
+                document.querySelector('.main-border-boulder-info').style.top = heroWrapper - 50 + 'px';
+            }
+            else {
+                document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px';
+            }
         }
     },
     view: function(ctrl) {
@@ -245,8 +250,13 @@ var Home = {
         }
         this.heroHeight = function() {
             var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-home').style.top = heroWrapper + 'px'
+            var width = document.documentElement.clientWidth;
+            if(width > 800) {
+                document.querySelector('.main-border-home').style.top = heroWrapper - 50 + 'px';
+            }
+            else {
+                document.querySelector('.main-border-home').style.top = heroWrapper + 'px';
+            }
         }
     },
     view: function(ctrl) {
@@ -362,14 +372,6 @@ $(window).scroll(function () {
         'opacity': ((height - scrollTop) / height)
     });
 });
-
-// function initMap() {
-// 	var mapDiv = document.getElementById('map');
-// 	var map = new google.maps.Map(mapDiv, {
-// 		center: {lat: 44.540, lng: -78.546},
-// 		zoom: 8
-// 	});
-// }
 },{"jquery":12,"mithril":13}],5:[function(require,module,exports){
 var m = require("mithril");
 
@@ -480,8 +482,13 @@ var Registry = {
     controller: function() {
         this.heroHeight = function() {
             var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-registry').style.top = heroWrapper + 'px'
+            var width = document.documentElement.clientWidth;
+            if(width > 800) {
+                document.querySelector('.main-border-registry').style.top = heroWrapper - 50 + 'px';
+            }
+            else {
+                document.querySelector('.main-border-registry').style.top = heroWrapper + 'px';
+            }
         }
     },
     view: function(ctrl) {
@@ -558,8 +565,13 @@ var Rsvp = {
     controller: function() {
         this.heroHeight = function() {
             var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-rsvp').style.top = heroWrapper + 'px'
+            var width = document.documentElement.clientWidth;
+            if(width > 800) {
+                document.querySelector('.main-border-rsvp').style.top = heroWrapper - 50 + 'px';
+            }
+            else {
+                document.querySelector('.main-border-rsvp').style.top = heroWrapper + 'px';
+            }
         }
     },
     view: function(ctrl) {
@@ -610,38 +622,14 @@ var m = require('mithril'),
 
 var weddingDetails = {
     controller: function() {
-        var lyons = {lat: 40.2170362, lng: -105.2601925};
-
-        return {
-            map: function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: lyons,
-                    zoom: 10
-                });
-                var contentString = '<div id="content">'+
-                    '<div id="siteNotice">'+
-                    '</div>'+
-                    '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
-                    '<div id="bodyContent">'+
-                    '<p>It is located about 17 miles north of Boulder, ' +
-                    'and it is easy to get to. '+
-                    'Take hwy 36 north all the way to hwy 60, turn left,'+
-                    'and drive for a mile and it is on the right</p>' +
-                    '<p>Zoom in and use street view to help see turns</p>' +
-                    '</div>'+
-                    '</div>';
-                var infowindow = new google.maps.InfoWindow({
-                    content: contentString
-                });
-                var marker = new google.maps.Marker({
-                    position: lyons,
-                    map: map,
-                    title: 'Hello World!'
-                });
-                marker.addListener('click', function() {
-                    infowindow.open(map, marker);
-                });
-                clearInterval(initMap);
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            var width = document.documentElement.clientWidth;
+            if(width > 800) {
+                document.querySelector('.main-border-wedding-details').style.top = heroWrapper - 50 + 'px';
+            }
+            else {
+                document.querySelector('.main-border-wedding-details').style.top = heroWrapper + 'px';
             }
         }
     },
@@ -649,11 +637,7 @@ var weddingDetails = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper", {config: function() {
-            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            console.log(heroWrapper);
-            document.querySelector('.main-border-wedding-details').style.top = heroWrapper + 'px'
-        }}, [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
                 m("div.hero-item", [
                     m("img", {src: "../../../client/img/wedding.jpg"})
                 ]),
@@ -665,20 +649,28 @@ var weddingDetails = {
                 m("div.main-section", [
                     m("div.info-section", [
                         m("div.info-item", [
-                            m("div.details", [
-                                m("h1", "Ceremony"),
-                                m("p.border-none.padding-small", "June 19th, 2016, 4pm"),
-                                m("p.border-none.padding-small2", "Dinner, drinks, and dancing to follow"),
-                                m("h1", "Address"),
-                                m("p.border-none", "4121 Ute Highway, Lyons, CO 80540"),
-                                m("h1", "Reminders"),
-                                m("p", "Weather in Colorado can change quickly throughout the day, we recommend checking the hourly weather forecast prior to leaving for the evening. When in doubt, layer up!"),
-                                m("p", "With the exception of family, to give all our guests the opportunity to enjoy the evening without having to worry about little ones, we politely request no children under 8."),
-                                m("p.border-none", "Transportation to the venue is up to individual guests. If you are staying in Boulder we recommend renting a car for transportation to and from the venue, which is about a 30 minute drive outside of Boulder.")
+                            m("div.left", [
+                                m("h1", "Ceremony location, time, and address"),
                             ]),
-                        ]),
-                        m("div.info-item", [
-                            m("div#map.map", {config: ctrl.map})
+                            m("div.right-top", [
+                                m("p.padding-none.padding-small", "We will be getting married at the beautiful Lyons Farmette, located at 4121 Ute Highway, Lyons, CO 80540. The ceremony will be held June 19th, 2016, at 4pm, with dinner, drinks, and dancing to follow.", [
+                                    m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177515,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
+                                        m("button.step-button", "View Map"),
+                                    ]),
+                                ]),
+                            ]),
+                            m('div.farm-img', [
+                                m("img", {src: "../../../client/img/farmette.jpg"})
+                            ]),
+                            
+                            m('div.left', [
+                                m("h1", "Some Reminders")
+                            ]),
+                            m("div.right", [
+                                m("p.padding-none", "1. Weather in Colorado can change quickly throughout the day, we recommend checking the hourly weather forecast prior to leaving for the evening. When in doubt, layer up!"),
+                                m("p", "2. With the exception of family, to give all our guests the opportunity to enjoy the evening without having to worry about little ones, we politely request no children under 8."),
+                                m("p.padding-bottom-none", "3. Transportation to the venue is up to individual guests. If you are staying in Boulder we recommend renting a car for transportation to and from the venue, which is about a 30 minute drive outside of Boulder.")
+                            ]),
                         ]),
                     ]),
                     m("div.text-section", [
@@ -688,9 +680,9 @@ var weddingDetails = {
                         m("div.about-us", [
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/amanda.jpg"}),
-                                // m("div.overlay", [
-                                //     m("h1", "Teaches.")
-                                // ]),
+                                m("div.overlay", [
+                                    m("h1", "Teaches.")
+                                ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
@@ -727,9 +719,9 @@ var weddingDetails = {
                         m("div#even.about-us", [
                             m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/ryan.jpg"}),
-                                // m("div.overlay", [
-                                //     m("h1", "Straight outta Monte Vista."),
-                                // ]),
+                                m("div.overlay", [
+                                    m("h1", "Straight outta Monte Vista."),
+                                ]),
                             ]),
                             m("div#one.about-us-item", [
                                 m("div.about-party", [
@@ -766,9 +758,9 @@ var weddingDetails = {
                         m("div.about-us", [
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/bailey.jpg"}),
-                                // m("div.overlay", [
-                                //     m("h1", "Another teacher, Bailey, and bridesmaid.")
-                                // ]),
+                                m("div.overlay", [
+                                    m("h1", "Another teacher, Bailey, and bridesmaid.")
+                                ]),
                             ]),
                             m("div.about-us-item", [
                                 m("div.about-party", [
@@ -805,9 +797,9 @@ var weddingDetails = {
                         m("div#even.about-us", [
                             m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/ty.jpg"}),
-                                // m("div.overlay", [
-                                //     m("h1", "Ty, Groomsman. Mucho take it easy."),
-                                // ]),
+                                m("div.overlay", [
+                                    m("h1", "Ty, Groomsman. Mucho take it easy."),
+                                ]),
                             ]),
                             m("div#one.about-us-item", [
                                 m("div.about-party", [
@@ -844,9 +836,9 @@ var weddingDetails = {
                         m("div.about-us", [
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/aracely.jpg"}),
-                                // m("div.overlay", [
-                                //     m("h1", "Bridesmaid, Aracely. Weeeee!"),
-                                // ]),
+                                m("div.overlay", [
+                                    m("h1", "Bridesmaid, Aracely. Weeeee!"),
+                                ]),
                             ]),
                             m("div.about-us-item", [
                                  m("div.about-party", [
@@ -883,9 +875,9 @@ var weddingDetails = {
                         m("div#even.about-us", [
                             m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/chase.jpg"}),
-                                // m("div.overlay", [
-                                //     m("h1", "Chase, groomsman. Wouldn't hurt a fly."),
-                                // ]),
+                                m("div.overlay", [
+                                    m("h1", "Chase, groomsman. Wouldn't hurt a fly."),
+                                ]),
                             ]),
                             m("div#one.about-us-item", [
                                 m("div.about-party", [
