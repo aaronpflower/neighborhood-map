@@ -4,12 +4,21 @@ var m = require('mithril'),
 	footer = require('./footer.js');
 
 var Rsvp = {
-    controller: function() {},
-    view: function() {
+    controller: function() {
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-rsvp').style.top = heroWrapper + 'px'
+        }
+    },
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper.rsvp-hero", [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/rsvp-hero.jpg"})
+                ]),
                 m("div.hero-content", [
                     m("h1", "How to RSVP")
                 ])

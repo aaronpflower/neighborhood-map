@@ -4,12 +4,21 @@ var m = require('mithril'),
 	footer = require('./footer.js');
 
 var Registry = {
-    controller: function() {},
-    view: function() {
+    controller: function() {
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-registry').style.top = heroWrapper + 'px'
+        }
+    },
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper.registry-hero", [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/boston.jpg"})
+                ]),
                 m("div.hero-content", [
                     m("h1", "Registry Information")
                 ])

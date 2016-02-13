@@ -126,34 +126,77 @@ lemon = #FEE404
 	-webkit-align-items: center
 	-ms-align-items: center
 	width: 100%
-	height: 450px
 	background-color: gray
 	color: #fff
 	padding-top: 66px
 	position: fixed
 	z-index: 10
-
-.hero-content
+	
+.hero-item
 	display: flex
 	display: -webkit-flex
 	display: -ms-flex
-	flex-flow: column wrap
-	-webkit-flex-flow: column wrap
-	-ms-flex-flow: column wrap
-	justify-content: center
-	-webkit-justify-content: center
-	-ms-justify-content: center
-	align-content: center
-	-webkit-align-content: center
-	-ms-align-content: center
-	align-items: center
-	-webkit-align-items: center
-	-ms-align-items: center
-	width: 100%
-	color: #fff
-	position: absolute
-	top: 50%
-	z-index: 10
+	flex-grow: 1
+	-webkit-flex-grow: 1
+	-ms-flex-grow: 1
+	flex-shrink: 1
+	-webkit-flex-shrink: 1
+	-ms-flex-shrink: 1
+	flex-basis: auto
+	-webkit-flex-basis: auto
+	-ms-flex-basis: auto
+	position: relative
+	background-color: #fff
+	
+.hero-wrapper img
+	height 100%
+	width 100%
+	
+// .hero-wrapper
+// 	display: flex
+// 	display: -webkit-flex
+// 	display: -ms-flex
+// 	flex-flow: column wrap
+// 	-webkit-flex-flow: column wrap
+// 	-ms-flex-flow: column wrap
+// 	justify-content: flex-start
+// 	-webkit-justify-content: flex-start
+// 	-ms-justify-content: flex-start
+// 	align-content: center
+// 	-webkit-align-content: center
+// 	-ms-align-content: center
+// 	align-items: center
+// 	-webkit-align-items: center
+// 	-ms-align-items: center
+// 	width: 100%
+// 	height: 450px
+// 	background-color: gray
+// 	color: #fff
+// 	padding-top: 66px
+// 	position: fixed
+// 	z-index: 10
+
+// .hero-content
+// 	display: flex
+// 	display: -webkit-flex
+// 	display: -ms-flex
+// 	flex-flow: column wrap
+// 	-webkit-flex-flow: column wrap
+// 	-ms-flex-flow: column wrap
+// 	justify-content: center
+// 	-webkit-justify-content: center
+// 	-ms-justify-content: center
+// 	align-content: center
+// 	-webkit-align-content: center
+// 	-ms-align-content: center
+// 	align-items: center
+// 	-webkit-align-items: center
+// 	-ms-align-items: center
+// 	width: 100%
+// 	color: #fff
+// 	position: absolute
+// 	top: 50%
+// 	z-index: 10
 
 .hero-content h1
 	padding: 3px
@@ -195,6 +238,7 @@ lemon = #FEE404
 	-webkit-perspective: 1000
 	background-color: #fafafa
 	z-index: 10
+	position relative
 
 .timer-container, .timer-wrapper
 	display: flex
@@ -281,7 +325,7 @@ lemon = #FEE404
 
 @media only screen and (min-width: 800px)
 	.hero-wrapper
-		height: 600px
+		// height: 600px
 		max-width 1600px
 	.hero-wrapper h1
 		font-size: 40px

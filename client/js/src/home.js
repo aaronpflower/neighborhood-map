@@ -47,7 +47,12 @@ var Home = {
                 b = document.getElementById('modal-content3').className = "bio-overlay-opened";
                 triggerOpen.addEventListener("click", b);
             }
-        } 
+        }
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-home').style.top = heroWrapper + 'px'
+        }
     },
     view: function(ctrl) {
         return m("div", [
@@ -92,7 +97,10 @@ var Home = {
             ]),
             menu,
             mobileMenu,
-            m("div.hero-wrapper.home-hero", [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/home-hero.jpg"})
+                ]),
                 // m("div.hero-content", [
                 //     m("p", "Aaron and Brittney")
                 // ])

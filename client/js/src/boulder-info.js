@@ -4,14 +4,24 @@ var m = require("mithril"),
 	footer = require("./footer.js");
 
 var boulderInfo = {
-    view: function() {
+    controller: function() {
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px'
+        }
+    },
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper.boulder-hero", [
-                m("div.hero-content", [
-                    m("h1", "6 Step Plan to Boulder")
-                ])
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/boulder.jpg"})
+                ]),
+                // m("div.hero-content", [
+                //     m("h1", "6 Step Plan to Boulder")
+                // ])
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
@@ -159,6 +169,6 @@ var boulderInfo = {
 module.exports = boulderInfo;
 
 
- 
+
 
 

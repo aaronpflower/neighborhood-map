@@ -5,14 +5,24 @@ var m = require("mithril"),
 	footer = require("./footer.js");
 
 var boulderInfo = {
-    view: function() {
+    controller: function() {
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px'
+        }
+    },
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper.boulder-hero", [
-                m("div.hero-content", [
-                    m("h1", "6 Step Plan to Boulder")
-                ])
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/boulder.jpg"})
+                ]),
+                // m("div.hero-content", [
+                //     m("h1", "6 Step Plan to Boulder")
+                // ])
             ]),
             m("main.main-border-boulder-info", [
                 m("div.main-section", [
@@ -160,7 +170,7 @@ var boulderInfo = {
 module.exports = boulderInfo;
 
 
- 
+
 
 
 
@@ -169,33 +179,6 @@ var m = require("mithril");
 
 var footer = function() {
 	return m("footer", [
-		// m("div", {class: "footer-col-1"}, [
-		// 	m("div", {class: "col-1-left"}, [
-		// 		m("p", "Hallelujah! For the Lord our God the Almighty reigns. Let us rejoice and exult and give him the glory, for the marriage of the Lamb has come, and his Bride has made herself ready; it was granted her to clothe herself with fine linen, bright and pure for the fine linen is the righteous deeds of the saints. Revelation 19:6-8"),
-		// 	]),
-		// 	// m("div", {class: "col-1-right"}, [
-		// 	// 	m("a[href='/rsvp']", {config: m.route}, [
-		// 	// 		m("button", {class: "footer-button"}, "RSVP")
-		// 	// 	]),
-		// 	// ])
-		// ]),
-		// m("div", {class: "footer-col-2"}, [
-		// 	m("div", {class: "col-2-item"}, [
-		// 		m("a[href='/wedding-day']", {config: m.route}, [
-		// 			m("button", {class: "footer-button"}, "Wedding")
-		// 		])
-		// 	]),
-		// 	m("div", {class: "col-2-item"}, [
-		// 		m("a[href='/boulder-info']", {config: m.route}, [
-		// 			m("button", {class: "footer-button"}, "Boulder")
-		// 		])
-		// 	]),
-		// 	m("div", {class: "col-2-item"}, [
-		// 		m("a[href='/registry']", {config: m.route}, [
-		// 			m("button", {class: "footer-button"}, "Registry")
-		// 		])
-		// 	])
-		// ]),
 		m("div", {class: "footer-col-3"}, [
 			m("div", {class: "col-3-item"}, [
 				m("p", "Site Designed & Developed by Aaron Flower.  Copy written by Brittney Flower.")
@@ -259,7 +242,12 @@ var Home = {
                 b = document.getElementById('modal-content3').className = "bio-overlay-opened";
                 triggerOpen.addEventListener("click", b);
             }
-        } 
+        }
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-home').style.top = heroWrapper + 'px'
+        }
     },
     view: function(ctrl) {
         return m("div", [
@@ -304,7 +292,10 @@ var Home = {
             ]),
             menu,
             mobileMenu,
-            m("div.hero-wrapper.home-hero", [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/home-hero.jpg"})
+                ]),
                 // m("div.hero-content", [
                 //     m("p", "Aaron and Brittney")
                 // ])
@@ -478,12 +469,21 @@ var m = require('mithril'),
 	footer = require('./footer.js');
 
 var Registry = {
-    controller: function() {},
-    view: function() {
+    controller: function() {
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-registry').style.top = heroWrapper + 'px'
+        }
+    },
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper.registry-hero", [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/boston.jpg"})
+                ]),
                 m("div.hero-content", [
                     m("h1", "Registry Information")
                 ])
@@ -547,12 +547,21 @@ var m = require('mithril'),
 	footer = require('./footer.js');
 
 var Rsvp = {
-    controller: function() {},
-    view: function() {
+    controller: function() {
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-rsvp').style.top = heroWrapper + 'px'
+        }
+    },
+    view: function(ctrl) {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper.rsvp-hero", [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/rsvp-hero.jpg"})
+                ]),
                 m("div.hero-content", [
                     m("h1", "How to RSVP")
                 ])
@@ -594,38 +603,45 @@ var m = require('mithril'),
 
 var weddingDetails = {
     controller: function() {
-        var lyons = {lat: 40.2170362, lng: -105.2601925};
+        this.heroHeight = function() {
+            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
+            console.log(heroWrapper);
+            document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px'
+        },
+        this.mapLyons = function() {
+            var lyons = {lat: 40.2170362, lng: -105.2601925};
 
-        return {
-            map: function initMap() {
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: lyons,
-                    zoom: 10
-                });
-                var contentString = '<div id="content">'+
-                    '<div id="siteNotice">'+
-                    '</div>'+
-                    '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
-                    '<div id="bodyContent">'+
-                    '<p>It is located about 17 miles north of Boulder, ' +
-                    'and it is easy to get to. '+
-                    'Take hwy 36 north all the way to hwy 60, turn left,'+
-                    'and drive for a mile and it is on the right</p>' +
-                    '<p>Zoom in and use street view to help see turns</p>' +
-                    '</div>'+
-                    '</div>';
-                var infowindow = new google.maps.InfoWindow({
-                    content: contentString
-                });
-                var marker = new google.maps.Marker({
-                    position: lyons,
-                    map: map,
-                    title: 'Hello World!'
-                });
-                marker.addListener('click', function() {
-                    infowindow.open(map, marker);
-                });
-                clearInterval(initMap);
+            return {
+                map: function initMap() {
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: lyons,
+                        zoom: 10
+                    });
+                    var contentString = '<div id="content">'+
+                        '<div id="siteNotice">'+
+                        '</div>'+
+                        '<h1 id="firstHeading" class="firstHeading">Lyons Farmette</h1>'+
+                        '<div id="bodyContent">'+
+                        '<p>It is located about 17 miles north of Boulder, ' +
+                        'and it is easy to get to. '+
+                        'Take hwy 36 north all the way to hwy 60, turn left,'+
+                        'and drive for a mile and it is on the right</p>' +
+                        '<p>Zoom in and use street view to help see turns</p>' +
+                        '</div>'+
+                        '</div>';
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+                    var marker = new google.maps.Marker({
+                        position: lyons,
+                        map: map,
+                        title: 'Hello World!'
+                    });
+                    marker.addListener('click', function() {
+                        infowindow.open(map, marker);
+                    });
+                    clearInterval(initMap);
+                }
             }
         }
     },
@@ -633,7 +649,10 @@ var weddingDetails = {
         return m("div", [
             menu,
             mobileMenu,
-            m("div.hero-wrapper.wedding-hero", [
+            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+                m("div.hero-item", [
+                    m("img", {src: "../../../client/img/wedding.jpg"})
+                ]),
                 m("div.hero-content", [
                     m("h2", "Wedding Day Information")
                 ])
@@ -655,7 +674,7 @@ var weddingDetails = {
                             ]),
                         ]),
                         m("div.info-item", [
-                            m("div#map.map", {config: ctrl.map})
+                            m("div#map.map", {config: ctrl.mapLyons})
                         ]),
                     ]),
                     m("div.text-section", [
