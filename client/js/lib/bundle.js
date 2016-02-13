@@ -663,7 +663,7 @@ var weddingDetails = {
                             ]),
                             
                             m('div.left', [
-                                m("h1", "Some Reminders")
+                                m("h1", "A few Reminders")
                             ]),
                             m("div.right", [
                                 m("p.padding-none", "1. Weather in Colorado can change quickly throughout the day, we recommend checking the hourly weather forecast prior to leaving for the evening. When in doubt, layer up!"),
@@ -680,7 +680,7 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/amanda.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Teaches.")
+                                    m("h1", "Which one is the maid of honor?")
                                 ]),
                             ]),
                             m("div.about-us-item", [
@@ -758,7 +758,7 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/bailey.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Another teacher, Bailey, and bridesmaid.")
+                                    m("h1", "I'm the one on the left.")
                                 ]),
                             ]),
                             m("div.about-us-item", [
@@ -797,7 +797,7 @@ var weddingDetails = {
                             m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/ty.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Ty, Groomsman. Mucho take it easy."),
+                                    m("h1", "Mucho take it easy."),
                                 ]),
                             ]),
                             m("div#one.about-us-item", [
@@ -836,7 +836,7 @@ var weddingDetails = {
                             m("div.about-us-item", [
                                 m("img", {src: "../../../client/img/aracely.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Bridesmaid, Aracely. Weeeee!"),
+                                    m("h1", "Weeeee!"),
                                 ]),
                             ]),
                             m("div.about-us-item", [
@@ -875,7 +875,7 @@ var weddingDetails = {
                             m("div#two.about-us-item", [
                                 m("img", {src: "../../../client/img/chase.jpg"}),
                                 m("div.overlay", [
-                                    m("h1", "Chase, groomsman. Wouldn't hurt a fly."),
+                                    m("h1", "Wouldn't hurt a fly."),
                                 ]),
                             ]),
                             m("div#one.about-us-item", [
