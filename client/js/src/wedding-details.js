@@ -36,10 +36,9 @@ var weddingDetails = {
                                 m("h1", "Ceremony location, time, and address"),
                             ]),
                             m("div.right-top", [
-                                m("p.padding-none.padding-small", "We will be getting married at the beautiful Lyons Farmette, located at 4121 Ute Highway, Lyons, CO 80540. The ceremony will be held June 19th, 2016, at 4pm, with dinner, drinks, and dancing to follow.", [
-                                    m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177515,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
-                                        m("button.step-button", "View Map"),
-                                    ]),
+                                m("p.padding-none.padding-small", "We will be getting married at the beautiful Lyons Farmette, located at 4121 Ute Highway, Lyons, CO 80540. The ceremony will be held June 19th, 2016, at 4pm, with dinner, drinks, and dancing to follow."),
+                                m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177515,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
+                                    m("button.step-button", "View Map"),
                                 ]),
                             ]),
                             m('div.farm-img', [
