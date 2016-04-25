@@ -13,7 +13,7 @@ var server = app.listen(port, function() {
 	console.log('Wedding Site is running on localhost', host, x);
 });
 
-app.set('views', __dirname + '/views');
+app.set('views', '../../views');
 app.set('view engine', 'pug');
 app.use('/client', express.static(__dirname + '/../../client/'))
 app.use('/client', express.static(__dirname + '/../../client/img'))
