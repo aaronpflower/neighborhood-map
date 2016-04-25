@@ -413,7 +413,7 @@ module.exports = Home;
 },{"./footer.js":2,"./layout.js":4,"./menu.js":5,"./mobile-menu.js":7,"./widgets/timer.js":11,"mithril":13}],4:[function(require,module,exports){
 var $ = require('jquery'),
 	m = require('mithril');
-
+	
 $(window).scroll(function () {
     var scrollTop = $(window).scrollTop();
     var height = $(window).height();
@@ -523,12 +523,10 @@ var mobileMenu = {
 			if(opened){
 				close = document.getElementById("slide-out").className = "menu-closed";
 				menuToggle.addEventListener("click", close);
-				enableScroll()
 			}
 			else {
 				open = document.getElementById("slide-out").className = "menu-opened";
 				menuToggle.addEventListener("click", open);
-				disableScroll();
 			}
 		}
 	},

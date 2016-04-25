@@ -49,12 +49,10 @@ var mobileMenu = {
 			if(opened){
 				close = document.getElementById("slide-out").className = "menu-closed";
 				menuToggle.addEventListener("click", close);
-				enableScroll()
 			}
 			else {
 				open = document.getElementById("slide-out").className = "menu-opened";
 				menuToggle.addEventListener("click", open);
-				disableScroll();
 			}
 		}
 	},
