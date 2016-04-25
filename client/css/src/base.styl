@@ -13,12 +13,14 @@ lemon = #FEE404
     width: 100%
     height: 100%
     top: 0
+    bottom: 0
+    right: 0
     left: 0
-    background-color: rgba(0, 0, 0, 0.6)
+    background-color: rgba(0, 0, 0, 0.7)
     opacity: 0
-    transition: all 0.5s ease-out
-    -webkit-transition: all 0.5s ease-out
-    -moz-transition: all 0.5s ease-out
+    transition: all 0.5s ease-in-out
+    -webkit-transition: all 0.5s ease-in-out
+    -moz-transition: all 0.5s ease-in-out
 
 .overlay:hover
 	opacity: 1
@@ -47,23 +49,40 @@ lemon = #FEE404
 	position: fixed
 	left: 0px
 	top: 0px
+	bottom: 0px
+	right: 0px
 	text-align: center
 	background-color: rgba(0 0 0 0.7)
-	transition: all 0.3s ease
-	-webkit-transition: all 0.3s ease
-	-moz-transition: all 0.3s ease
+	transition: opacity 0.5s ease-in-out
+	-webkit-transition: opacity 0.5s ease-in-out
+	-moz-transition: opacity 0.5s ease-in-out
 	-webkit-transform: translate3d(0,0,0)
 
 .bio-overlay-closed
-	visibility: hidden
+	opacity 0
 	width: 0
 	height: 0
 
 .bio-overlay-opened
-	visibility: visible
+	opacity 1
 	z-index: 1000
 	width: 100%
 	height: 100%
+	display: flex
+	display: -webkit-flex
+	display: -ms-flex
+	flex-flow: column nowrap
+	-webkit-flex-flow: column nowrap
+	-ms-flex-flow: column nowrap
+	justify-content: center
+	-webkit-justify-content: center
+	-ms-justify-content: center
+	align-content: center
+	-webkit-align-content: center
+	-ms-align-content: center
+	align-items: center
+	-webkit-align-items: center
+	-ms-align-items: center
 
 .modal
 	display: flex
@@ -81,8 +100,8 @@ lemon = #FEE404
 	align-items: center
 	-webkit-align-items: center
 	-ms-align-items: center
-	height: 100%
-	width: 100%
+	height: 90%
+	width: 90%
 
 .modal-text
 	display: block
@@ -151,30 +170,6 @@ lemon = #FEE404
 .hero-wrapper img
 	height 100%
 	width 100%
-	
-// .hero-wrapper
-// 	display: flex
-// 	display: -webkit-flex
-// 	display: -ms-flex
-// 	flex-flow: column wrap
-// 	-webkit-flex-flow: column wrap
-// 	-ms-flex-flow: column wrap
-// 	justify-content: flex-start
-// 	-webkit-justify-content: flex-start
-// 	-ms-justify-content: flex-start
-// 	align-content: center
-// 	-webkit-align-content: center
-// 	-ms-align-content: center
-// 	align-items: center
-// 	-webkit-align-items: center
-// 	-ms-align-items: center
-// 	width: 100%
-// 	height: 450px
-// 	background-color: gray
-// 	color: #fff
-// 	padding-top: 66px
-// 	position: fixed
-// 	z-index: 10
 
 .hero-content
 	display: flex
@@ -337,6 +332,7 @@ lemon = #FEE404
 		max-width: 100%
 	.modal
 		width: 90%
+		max-width: 700px
 		margin: auto
 	.button
 		width: 150px

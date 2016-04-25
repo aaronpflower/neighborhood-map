@@ -2,10 +2,52 @@ var m = require("mithril"),
 	menu = require("./menu.js"),
     mobileMenu = require("./mobile-menu.js"),
 	footer = require("./footer.js"),
-	countDownTimer = require('./widgets/timer.js');
+	countDownTimer = require('./widgets/timer.js'),
+    Layout = require('./layout.js');
 
 var Home = {
     controller: function() {
+        var keys = {
+            37: 1,
+            38: 1,
+            39: 1,
+            40: 1
+        }; 
+        function preventDefault(e) {
+          e = e || window.event;
+          if (e.preventDefault)
+              e.preventDefault();
+          e.returnValue = false;  
+        }
+
+        function preventDefaultForScrollKeys(e) {
+          if (keys[e.keyCode]) {
+            preventDefaultScroll(e);
+          }
+          return false;
+        }
+
+        function disableScroll() {
+            if (window.addEventListener) {
+                window.addEventListener('DOMMouseScroll', preventDefault, false);
+            }
+            window.onwheel = preventDefault;
+            window.onmousewheel = document.onmousewheel = preventDefault;
+            window.ontouchmove = preventDefault;
+            document.onkeydown = preventDefaultForScrollKeys;
+            return;
+        }
+
+        function enableScroll() {
+            if (window.removeEventListener) {
+                window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            }
+            window.onmousewheel = document.onmousewheel = null;
+            window.onwheel = null;
+            window.ontouchmove = null;
+            document.onkeydown = null;
+            return;
+        }
         this.modal = function() {
             var modalOpened = document.getElementById('modal-content').classList.contains("bio-overlay-opened"),
                 triggerOpen = document.getElementById('trigger-open'),
@@ -14,12 +56,15 @@ var Home = {
             if(modalOpened){
                 a = document.getElementById('modal-content').className = "bio-overlay-closed";
                 triggerClose.addEventListener("click", a);
+                enableScroll();
             }
             else {
                 b = document.getElementById('modal-content').className = "bio-overlay-opened";
                 triggerOpen.addEventListener("click", b);
+                disableScroll();
             }
         }
+
         this.modal2 = function() {
             var modalOpened = document.getElementById('modal-content2').classList.contains("bio-overlay-opened"),
                 triggerOpen = document.getElementById('trigger-open'),
@@ -28,10 +73,12 @@ var Home = {
             if(modalOpened){
                 a = document.getElementById('modal-content2').className = "bio-overlay-closed";
                 triggerClose.addEventListener("click", a);
+                enableScroll();
             }
             else {
                 b = document.getElementById('modal-content2').className = "bio-overlay-opened";
                 triggerOpen.addEventListener("click", b);
+                disableScroll();
             }
         }
         this.modal3 = function() {
@@ -42,10 +89,12 @@ var Home = {
             if(modalOpened){
                 a = document.getElementById('modal-content3').className = "bio-overlay-closed";
                 triggerClose.addEventListener("click", a);
+                enableScroll();
             }
             else {
                 b = document.getElementById('modal-content3').className = "bio-overlay-opened";
                 triggerOpen.addEventListener("click", b);
+                disableScroll();
             }
         }
         this.heroHeight = function() {

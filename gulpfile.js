@@ -8,12 +8,12 @@ var gulp = require('gulp'),
 	source = require('vinyl-source-stream'),
 	minifyCss = require('gulp-minify-css');
 
-// Configure the gulp task
-gulp.task('jshint', function() {
-	return gulp.src('client/js/**/*.js')
-	.pipe(jshint())
-	.pipe(jshint.reporter('jshint-stylish'));
-});
+// // Configure the gulp task
+// gulp.task('jshint', function() {
+// 	return gulp.src('client/js/**/*.js')
+// 	.pipe(jshint())
+// 	.pipe(jshint.reporter('jshint-stylish'));
+// });
 
 gulp.task('watch', function() {
 	gulp.watch('client/js/**/*.js', ['jshint']);
