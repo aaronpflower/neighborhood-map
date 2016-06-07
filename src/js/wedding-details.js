@@ -16,42 +16,35 @@ var weddingDetails = {
             m("main.main-border-wedding-details", [
                 m("div.main-section", [
                     m("div.info-section", [
-                        m("div.info-item", [
-                            m("div.left", [
-                                m("h1", "Ceremony location, time, and address"),
+                        m("div.info-item-1", [
+                            m("h1", "Ceremony location, time, and address"),
+                            m("p", "We will be getting married at the beautiful Lyons Farmette, located at 4121 Ute Highway, Lyons, CO 80540. The ceremony will be held June 19th, 2016, at 4pm, with dinner, drinks, and dancing to follow."),
+                            m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177515,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
+                                m("button.step-button", "Open in Google Maps"),
                             ]),
-                            m("div.right-top", [
-                                m("p.padding-none.padding-small", "We will be getting married at the beautiful Lyons Farmette, located at 4121 Ute Highway, Lyons, CO 80540. The ceremony will be held June 19th, 2016, at 4pm, with dinner, drinks, and dancing to follow."),
-                                m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177515,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
-                                    m("button.step-button", "Open in Google Maps"),
-                                ]),
-                            ]),
-                            m('div.farm-img', [
-                                m("img", {src: "/img/farmette.jpg"})
-                            ]),
-                            
-                            m('div.left', [
-                                m("h1", "A few Reminders")
-                            ]),
-                            m("div.right", [
-                                m("p.padding-none", "1. Weather in Colorado can change quickly throughout the day, we recommend checking the hourly weather forecast prior to leaving for the evening. When in doubt, layer up!"),
-                                m("p", "2. With the exception of family, to give all our guests the opportunity to enjoy the evening without having to worry about little ones, we politely request no children under 8."),
-                                m("p.padding-bottom-none", "3. Transportation to the venue is up to individual guests. If you are staying in Boulder we recommend renting a car for transportation to and from the venue, which is about a 30 minute drive outside of Boulder.")
-                            ]),
+                        ]),
+                        m('div.farm-img', [
+                            m("img", {src: "/img/farmette.jpg"})
+                        ]),
+                        m('div.info-item-2', [
+                            m("h1", "A few Reminders"),
+                            m("p.padding-none", "1. Weather in Colorado can change quickly throughout the day, we recommend checking the hourly weather forecast prior to leaving for the evening. When in doubt, layer up!"),
+                            m("p", "2. With the exception of family, to give all our guests the opportunity to enjoy the evening without having to worry about little ones, we politely request no children under 8."),
+                            m("p.padding-bottom-none", "3. Transportation to the venue is up to individual guests. If you are staying in Boulder we recommend renting a car for transportation to and from the venue, which is about a 30 minute drive outside of Boulder.")
                         ]),
                     ]),
                     m("div.text-section", [
                         m("h1", "The Wedding Party")
                     ]),
                     m("div.second-section", [
-                        m("div.about-us", [
-                            m("div.about-us-item", [
+                        m("div.about-party-section", [
+                            m("div.about-item", [
                                 m("img", {src: "/img/amanda.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Which one is the maid of honor?")
                                 ]),
                             ]),
-                            m("div.about-us-item", [
+                            m("div.about-item", [
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("h1", "Amanda Statham")
@@ -83,14 +76,14 @@ var weddingDetails = {
                                 ])
                             ])
                         ]),
-                        m("div#even.about-us", [
-                            m("div#two.about-us-item", [
+                        m("div#even.about-party-section", [
+                            m("div#two.about-item", [
                                 m("img", {src: "/img/ryan.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Straight outta Monte Vista."),
                                 ]),
                             ]),
-                            m("div#one.about-us-item", [
+                            m("div#one.about-item", [
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("h1", "Ryan Wright")
@@ -122,14 +115,14 @@ var weddingDetails = {
                                 ])
                             ])
                         ]),
-                        m("div.about-us", [
-                            m("div.about-us-item", [
+                        m("div.about-party-section", [
+                            m("div.about-item", [
                                 m("img", {src: "/img/bailey.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "I'm the one on the left.")
                                 ]),
                             ]),
-                            m("div.about-us-item", [
+                            m("div.about-item", [
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("h1", "Bailey Jones")
@@ -161,14 +154,14 @@ var weddingDetails = {
                                 ])
                             ])
                         ]),
-                        m("div#even.about-us", [
-                            m("div#two.about-us-item", [
+                        m("div#even.about-party-section", [
+                            m("div#two.about-item", [
                                 m("img", {src: "/img/ty.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Mucho take it easy."),
                                 ]),
                             ]),
-                            m("div#one.about-us-item", [
+                            m("div#one.about-item", [
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("h1", "Ty Allen")
@@ -200,14 +193,14 @@ var weddingDetails = {
                                 ])
                             ])
                         ]),
-                        m("div.about-us", [
-                            m("div.about-us-item", [
+                        m("div.about-party-section", [
+                            m("div.about-item", [
                                 m("img", {src: "/img/aracely.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Weeeee!"),
                                 ]),
                             ]),
-                            m("div.about-us-item", [
+                            m("div.about-item", [
                                  m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("h1", "Aracely See")
@@ -239,14 +232,14 @@ var weddingDetails = {
                                 ])
                             ])
                         ]),
-                        m("div#even.about-us", [
-                            m("div#two.about-us-item", [
+                        m("div#even.about-party-section", [
+                            m("div#two.about-item", [
                                 m("img", {src: "/img/chase.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Wouldn't hurt a fly."),
                                 ]),
                             ]),
-                            m("div#one.about-us-item", [
+                            m("div#one.about-item", [
                                 m("div.about-party", [
                                     m("div.about-party-item", [
                                         m("h1", "Chase Davis")
