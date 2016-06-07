@@ -16,4 +16,3 @@ var server = app.listen(port, function() {
 app.set('view engine', 'pug');
 app.set('views', './src/pug');
 app.use(express.static('dist'))
-// app.use('/src', express.static(__dirname + './src/img'))
