@@ -3,31 +3,17 @@
 
 .mobile-menu
 	display: flex
-	display: -webkit-flex
-	display: -ms-flex
 	
 .mobile-header
 	display: flex
-	display: -webkit-flex
-	display: -ms-flex
 	flex-flow: row nowrap
-	-webkit-flex-flow: row nowrap
-	-ms-flex-flow: row nowrap
 	justify-content: space-around
-	-webkit-justify-content: space-around
-	-ms-justify-content: space-around
 	align-content: center
-	-webkit-align-content: center
-	-ms-align-content: center
 	align-items: stretch
-	-webkit-align-items: stretch
-	-ms-align-items: stretch
 	background-color: white
 	width: 100%
 	position: fixed
 	z-index: 100
-	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
-	-moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
 	box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
 
 .mobile-header-item
@@ -47,36 +33,25 @@
 
 .menu-closed, .menu-opened
 	display: flex
-	display: -webkit-flex
-	display: -ms-flex
 	flex-flow: column nowrap
-	-webkit-flex-flow: column nowrap
-	-ms-flex-flow: column nowrap
 	justify-content: space-around
-	-webkit-justify-content: space-around
-	-ms-justify-content: space-around
 	align-content: center
-	-webkit-align-content: center
-	-ms-align-content: center
 	align-items: center
-	-webkit-align-items: center
-	-ms-align-items: center
 	overflow: hidden
+	width 100%
 	height: 66%
 	position: fixed
 	top: 67px
 	opacity: 0.98
 	background-color: darkNavy
-	transition: 0.6s ease
+	transition: transform 0.6s ease-out
 	z-index: 200
 
 .menu-closed
-	width: 0%
+	transform: translateX(-100%)
 	
 .menu-opened
-	width: 100%
-	-webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
-	-moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
+	transform: translateX(0%)
 	box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49)
 	
 .slide-out-item
@@ -85,14 +60,8 @@
 	font-weight: 300
 	font-size: 22px
 	flex-grow: 1
-	-webkit-flex-grow: 1
-	-ms-flex-flow: 1
 	flex-shrink: 0
-	-webkit-flex-shrink: 0
-	-ms-flex-shrink: 0
 	flex-basis: 0
-	-webkit-flex-basis: 0
-	-ms-flex-basis: 0
 
 @media only screen and (min-width: 800px)
 	.desktop-nav-container
