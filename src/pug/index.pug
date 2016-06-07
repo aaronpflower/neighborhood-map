@@ -7,5 +7,12 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		meta(charset="utf-8")
 		
-	body
-		script(async src="/js/mithril-routes.js")
+	body.fade-in-content
+		div.desktop-nav-container#menu
+		div.mobile-menu-container#mobileMenu
+		div#site-content
+		footer
+			div.footer-col-3
+				div.col-3-item
+					p Site Designed & Developed by Aaron Flower.  Copy written by Brittney Flower.
+		script(async src="/js/app.js")

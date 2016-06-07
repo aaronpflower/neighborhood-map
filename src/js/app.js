@@ -5,12 +5,16 @@ var m = require('mithril'),
 	Rsvp = require('./rsvp'),
 	Registry = require('./registry'),
 	BoulderInfo = require('./boulder-info.js'),
-	menu = require('./menu.js'),
-	footer = require('./footer.js');
+	menu = require('./menu.js'),	
+	menu = require("./menu.js"),
+    mobileMenu = require("./mobile-menu.js");
+
+m.mount(document.getElementById('menu'), m.component(menu))
+m.mount(document.getElementById('mobileMenu'), m.component(mobileMenu))
 
 m.route.mode = "hash"
 
-m.route(document.body, "/", {
+m.route(document.getElementById("site-content"), "/", {
     "/": Home,
     "/wedding-details": WeddingDetails,
     "/rsvp": Rsvp,

@@ -15,7 +15,7 @@ var nodemon = require('gulp-nodemon')
 var ENV = process.env.ENV || 'development'
 
 gulp.task('js', function(){
-	return gulp.src('src/js/mithril-routes.js', { read: false })
+	return gulp.src('src/js/app.js', { read: false })
 		.pipe(plumber())
 		.pipe(browserify())
 		// .pipe(babel({presets: ['es2015']}))
@@ -23,7 +23,7 @@ gulp.task('js', function(){
 })
 
 gulp.task('css', function(){
-	return gulp.src('src/styl/**/*.styl')
+	return gulp.src('src/styl/*.styl')
 		.pipe(plumber())
 		.pipe(order([
 			'variables.styl',
@@ -52,7 +52,7 @@ gulp.task('pug', function(){
 })
 
 gulp.task('build', function(){
-	gulp.src('src/js/mithril-routes.js', { read: false })
+	gulp.src('src/js/app.js', { read: false })
 		.pipe(plumber())
 		// .pipe(babel({presets: ['es2015']}))
 		.pipe(browserify())
@@ -94,12 +94,12 @@ gulp.task('nodemon', function() {
 })
 
 gulp.task('watch', function(){
-	gulp.watch('src/stylus/*.styl', ['css'])
+	gulp.watch('src/styl/*.styl', ['css'])
 	gulp.watch('src/js/**/*.js', ['js'])
 	gulp.watch('src/pug/*.pug', ['pug'])
 })
 
-gulp.task('default', ['watch', 'build', 'nodemon'])
+gulp.task('default', ['build', 'watch'])
 
 
 

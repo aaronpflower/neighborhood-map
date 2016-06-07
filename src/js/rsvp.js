@@ -1,26 +1,11 @@
-var m = require('mithril'),
-	menu = require('./menu.js'),
-    mobileMenu = require("./mobile-menu.js"),
-	footer = require('./footer.js');
+var m = require('mithril');
 
 var Rsvp = {
     controller: function() {
-        this.heroHeight = function() {
-            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            var width = document.documentElement.clientWidth;
-            if(width > 800) {
-                document.querySelector('.main-border-rsvp').style.top = heroWrapper - 50 + 'px';
-            }
-            else {
-                document.querySelector('.main-border-rsvp').style.top = heroWrapper + 'px';
-            }
-        }
     },
     view: function(ctrl) {
         return m("div", [
-            menu,
-            mobileMenu,
-            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+            m("div.hero-wrapper", [
                 m("div.hero-item", [
                     m("img", {src: "/img/rsvp-hero.jpg"})
                 ]),
@@ -48,8 +33,7 @@ var Rsvp = {
                             ])
                         ])
                     ])
-                ]),  
-            footer(),
+                ])
             ])
         ])
     }

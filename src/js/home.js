@@ -1,7 +1,4 @@
 var m = require("mithril"),
-	menu = require("./menu.js"),
-    mobileMenu = require("./mobile-menu.js"),
-	footer = require("./footer.js"),
 	countDownTimer = require('./widgets/timer.js'),
     Layout = require('./layout.js');
 
@@ -97,16 +94,6 @@ var Home = {
                 disableScroll();
             }
         }
-        this.heroHeight = function() {
-            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            var width = document.documentElement.clientWidth;
-            if(width > 800) {
-                document.querySelector('.main-border-home').style.top = heroWrapper - 50 + 'px';
-            }
-            else {
-                document.querySelector('.main-border-home').style.top = heroWrapper + 'px';
-            }
-        }
     },
     view: function(ctrl) {
         return m("div", [
@@ -149,15 +136,10 @@ var Home = {
                     ]),
                 ]),    
             ]),
-            menu,
-            mobileMenu,
-            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+            m("div.hero-wrapper", [
                 m("div.hero-item", [
                     m("img", {src: "/img/home-hero.jpg"})
                 ]),
-                // m("div.hero-content", [
-                //     m("p", "Aaron and Brittney")
-                // ])
             ]),
             m("main.main-border-home", [
             	m("div.main-section", [
@@ -200,10 +182,9 @@ var Home = {
                             m("h1", "How we met, well it's a pretty simple story"),
                             m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program"), 
                             m("button#trigger-open.button", {onclick: ctrl.modal3}, "Read More")
-                        ]),
-                    ]),
-            	]),
-            footer(),
+                        ])
+                    ])
+            	])
             ])
         ])
     }

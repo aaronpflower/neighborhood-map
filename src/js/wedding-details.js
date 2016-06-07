@@ -1,26 +1,11 @@
-var m = require('mithril'),
-	menu = require('./menu.js'),
-    mobileMenu = require("./mobile-menu.js"),
-	footer = require('./footer.js');
+var m = require('mithril');
 
 var weddingDetails = {
     controller: function() {
-        this.heroHeight = function() {
-            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            var width = document.documentElement.clientWidth;
-            if(width > 800) {
-                document.querySelector('.main-border-wedding-details').style.top = heroWrapper - 50 + 'px';
-            }
-            else {
-                document.querySelector('.main-border-wedding-details').style.top = heroWrapper + 'px';
-            }
-        }
     },
     view: function(ctrl) {
         return m("div", [
-            menu,
-            mobileMenu,
-            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+            m("div.hero-wrapper", [
                 m("div.hero-item", [
                     m("img", {src: "/img/wedding.jpg"})
                 ]),
@@ -38,7 +23,7 @@ var weddingDetails = {
                             m("div.right-top", [
                                 m("p.padding-none.padding-small", "We will be getting married at the beautiful Lyons Farmette, located at 4121 Ute Highway, Lyons, CO 80540. The ceremony will be held June 19th, 2016, at 4pm, with dinner, drinks, and dancing to follow."),
                                 m("a[href='https://www.google.com/maps/place/4121+Ute+Hwy,+Lyons,+CO+80540/@40.2177515,-105.2615236,17z/data=!3m1!4b1!4m2!3m1!1s0x876be30416a4ddb5:0xa4f1d5616318562a'] [target='blank']", [
-                                    m("button.step-button", "View Map"),
+                                    m("button.step-button", "Open in Google Maps"),
                                 ]),
                             ]),
                             m('div.farm-img', [
@@ -293,8 +278,7 @@ var weddingDetails = {
                                 ])
                             ])
                         ])
-                    ]),
-                footer(),
+                    ])
                 ])
             ])
         ])

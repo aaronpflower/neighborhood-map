@@ -1,26 +1,11 @@
-var m = require("mithril"),
-	menu = require("./menu.js"),
-    mobileMenu = require("./mobile-menu.js"),
-	footer = require("./footer.js");
+var m = require("mithril");
 
 var boulderInfo = {
     controller: function() {
-        this.heroHeight = function() {
-            var heroWrapper = document.querySelector('.hero-wrapper').offsetHeight;
-            var width = document.documentElement.clientWidth;
-            if(width > 800) {
-                document.querySelector('.main-border-boulder-info').style.top = heroWrapper - 50 + 'px';
-            }
-            else {
-                document.querySelector('.main-border-boulder-info').style.top = heroWrapper + 'px';
-            }
-        }
     },
     view: function(ctrl) {
         return m("div", [
-            menu,
-            mobileMenu,
-            m("div.hero-wrapper", {config: ctrl.heroHeight}, [
+            m("div.hero-wrapper", [
                 m("div.hero-item", [
                     m("img", {src: "/img/boulder.jpg"})
                 ]),
@@ -160,11 +145,10 @@ var boulderInfo = {
                                 ]),
                                 m("div.step-right", [
                                     m("iframe.weather-iframe", {src: "https://forecast.io/embed/#lat=40.0274&lon=-105.2519&name=Boulder, CO&color=#00aaff&font=Helvetica&units=us"})
-                                ]),
+                                ])
                             ])
-                        ]),
-                    ]),
-                footer(),
+                        ])
+                    ])
                 ])
             ])
         ])
