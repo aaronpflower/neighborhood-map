@@ -1,52 +1,116 @@
-// grab our gulp packages
+var gulp = require('gulp')
+var plumber = require('gulp-plumber')
+var browserify = require('gulp-browserify')
+var stylus = require('gulp-stylus')
+var cssmin = require('gulp-cssmin')
+var rename = require('gulp-rename')
+var jsmin = require('gulp-jsmin')
+var autoprefixer = require('gulp-autoprefixer')
+var pug = require('gulp-pug')
+var concat = require('gulp-concat')
+var order = require('gulp-order')
+var babel = require('gulp-babel')
+var nodemon = require('gulp-nodemon')
 
-var gulp = require('gulp'),
-	gutil = require('gulp-util'),
-	stylus = require('gulp-stylus'),
-	nodemon = require('gulp-nodemon'),
-	browserify = require('browserify'),
-	source = require('vinyl-source-stream'),
-	minifyCss = require('gulp-minify-css');
+var ENV = process.env.ENV || 'development'
 
-// Configure the gulp task
-gulp.task('jshint', function() {
-	return gulp.src('client/js/**/*.js')
-	.pipe(jshint())
-	.pipe(jshint.reporter('jshint-stylish'));
-});
+gulp.task('js', function(){
+	return gulp.src('src/js/mithril-routes.js', { read: false })
+		.pipe(plumber())
+		.pipe(browserify())
+		// .pipe(babel({presets: ['es2015']}))
+		.pipe(gulp.dest('dist/js'))
+})
 
-gulp.task('watch', function() {
-	gulp.watch('client/js/**/*.js', ['jshint']);
-});
+gulp.task('css', function(){
+	return gulp.src('src/styl/**/*.styl')
+		.pipe(plumber())
+		.pipe(order([
+			'variables.styl',
+			'base.styl',
+			'boulder-info',
+			'elements.styl',
+			'footer.styl',
+			'home.styl',
+			'map.styl',
+			'menu.styl',
+			'registry.styl',
+			'rsvp.styl',
+			'wedding-details.styl'
+		]))
+		.pipe(concat('styles.styl'))
+		.pipe(stylus({errors: true, 'include css': true}))
+		.pipe(autoprefixer())
+		.pipe(gulp.dest('dist/css'))
+})
 
-// compile stylus to css
-gulp.task('css', function() {
-	return gulp.src('client/css/src/styles.styl')
-	.pipe(stylus())
-	.pipe(gulp.dest('client/css/lib'));
-});
+gulp.task('pug', function(){
+	return gulp.src('src/pug/*.pug')
+		.pipe(plumber())
+		.pipe(pug())
+		.pipe(gulp.dest('dist'))
+})
 
-//browserfiy
-gulp.task('browserfiy', function() {
-	return browserify('client/js/src/mithril-routes.js').bundle()
-	.pipe(source('bundle.js'))
-	.pipe(gulp.dest('client/js/lib'));
-});
+gulp.task('build', function(){
+	gulp.src('src/js/mithril-routes.js', { read: false })
+		.pipe(plumber())
+		// .pipe(babel({presets: ['es2015']}))
+		.pipe(browserify())
+		.pipe(jsmin())
+		.pipe(gulp.dest('dist/js'))
 
-// Nodemon to start server
-gulp.task('default', function() {
-	nodemon({ script: 'server/src/app.js'
-			, ext: 'html js'
-			, ignore: ['ingnored.js']
-			, tasks: ['jshint'] })
+	gulp.src('src/pug/*.pug')
+		.pipe(plumber())
+		.pipe(pug())
+		.pipe(gulp.dest('dist'))
+ 
+	return gulp.src('src/styl/*.styl')
+		.pipe(plumber())
+		.pipe(order([
+			'variables.styl',
+			'base.styl',
+			'boulder-info',
+			'elements.styl',
+			'footer.styl',
+			'home.styl',
+			'map.styl',
+			'menu.styl',
+			'registry.styl',
+			'rsvp.styl',
+			'wedding-details.styl'
+		]))
+		.pipe(concat('styles.styl'))
+		.pipe(stylus({errors: true, 'include css': true}))
+		.pipe(autoprefixer())
+		.pipe(cssmin())
+		.pipe(gulp.dest('dist/css'))
+})
+
+gulp.task('nodemon', function() {
+	nodemon({ script: 'app.js'})
 		.on('restart', function(){
 			console.log('restarted!')
 		})
 })
 
-//Mini CSS
-gulp.task('build', function() {
-  return gulp.src('client/css/lib/styles.css')
-    .pipe(minifyCss({compatibility: 'ie8'}))
-    .pipe(gulp.dest('client/css/dist'));
-});
+gulp.task('watch', function(){
+	gulp.watch('src/stylus/*.styl', ['css'])
+	gulp.watch('src/js/**/*.js', ['js'])
+	gulp.watch('src/pug/*.pug', ['pug'])
+})
+
+gulp.task('default', ['watch', 'build', 'nodemon'])
+
+
+
+
+
+
+
+
+
+
+
+
+
+

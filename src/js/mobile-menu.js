@@ -64,7 +64,7 @@ var mobileMenu = {
 				]),
 				m("a[href='#'", [
 					m("div#menu-toggle.mobile-header-item", {onclick: ctrl.click}, [
-						m("img", {src: "../../../client/img/menu.svg"})
+						m("img", {src: "/img/menu.svg"})
 					]),
 				]),
 			]),

@@ -22,7 +22,7 @@ var weddingDetails = {
             mobileMenu,
             m("div.hero-wrapper", {config: ctrl.heroHeight}, [
                 m("div.hero-item", [
-                    m("img", {src: "../../../client/img/wedding.jpg"})
+                    m("img", {src: "/img/wedding.jpg"})
                 ]),
                 m("div.hero-content", [
                     m("h2", "Wedding Day Information")
@@ -42,7 +42,7 @@ var weddingDetails = {
                                 ]),
                             ]),
                             m('div.farm-img', [
-                                m("img", {src: "../../../client/img/farmette.jpg"})
+                                m("img", {src: "/img/farmette.jpg"})
                             ]),
                             
                             m('div.left', [
@@ -61,7 +61,7 @@ var weddingDetails = {
                     m("div.second-section", [
                         m("div.about-us", [
                             m("div.about-us-item", [
-                                m("img", {src: "../../../client/img/amanda.jpg"}),
+                                m("img", {src: "/img/amanda.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Which one is the maid of honor?")
                                 ]),
@@ -100,7 +100,7 @@ var weddingDetails = {
                         ]),
                         m("div#even.about-us", [
                             m("div#two.about-us-item", [
-                                m("img", {src: "../../../client/img/ryan.jpg"}),
+                                m("img", {src: "/img/ryan.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Straight outta Monte Vista."),
                                 ]),
@@ -139,7 +139,7 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div.about-us-item", [
-                                m("img", {src: "../../../client/img/bailey.jpg"}),
+                                m("img", {src: "/img/bailey.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "I'm the one on the left.")
                                 ]),
@@ -178,7 +178,7 @@ var weddingDetails = {
                         ]),
                         m("div#even.about-us", [
                             m("div#two.about-us-item", [
-                                m("img", {src: "../../../client/img/ty.jpg"}),
+                                m("img", {src: "/img/ty.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Mucho take it easy."),
                                 ]),
@@ -217,7 +217,7 @@ var weddingDetails = {
                         ]),
                         m("div.about-us", [
                             m("div.about-us-item", [
-                                m("img", {src: "../../../client/img/aracely.jpg"}),
+                                m("img", {src: "/img/aracely.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Weeeee!"),
                                 ]),
@@ -256,7 +256,7 @@ var weddingDetails = {
                         ]),
                         m("div#even.about-us", [
                             m("div#two.about-us-item", [
-                                m("img", {src: "../../../client/img/chase.jpg"}),
+                                m("img", {src: "/img/chase.jpg"}),
                                 m("div.overlay", [
                                     m("h1", "Wouldn't hurt a fly."),
                                 ]),

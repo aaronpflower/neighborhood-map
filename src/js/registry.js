@@ -22,7 +22,7 @@ var Registry = {
             mobileMenu,
             m("div.hero-wrapper", {config: ctrl.heroHeight}, [
                 m("div.hero-item", [
-                    m("img", {src: "../../../client/img/boston.jpg"})
+                    m("img", {src: "/img/boston.jpg"})
                 ]),
                 m("div.hero-content", [
                     m("h1", "Registry Information")
@@ -32,7 +32,7 @@ var Registry = {
                 m("div.main-section", [
                     m("div.registry", [
                         m("div.registry-item-image", [
-                            m("img", {src: "../../../client/img/honeyfund_logo.svg"})
+                            m("img", {src: "/img/honeyfund_logo.svg"})
                         ]),
                         m("div.registry-item-content", [
                             m("div.registry-text", [
@@ -46,7 +46,7 @@ var Registry = {
                     ]),
                     m("div#crateBarrel.registry", [
                         m("div.registry-item-image", [
-                            m("img", {src: "../../../client/img/CrateandBarrelLogo.svg"})
+                            m("img", {src: "/img/CrateandBarrelLogo.svg"})
                         ]),
                         m("div.registry-item-content", [
                             m("div.registry-text", [
@@ -60,7 +60,7 @@ var Registry = {
                     ]),
                     m("div.registry", [
                         m("div.registry-item-image", [
-                            m("img", {src: "../../../client/img/target-logo.svg"})
+                            m("img", {src: "/img/target-logo.svg"})
                         ]),
                         m("div.registry-item-content", [
                             m("div.about-us-text", [

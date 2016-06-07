@@ -22,7 +22,7 @@ var boulderInfo = {
             mobileMenu,
             m("div.hero-wrapper", {config: ctrl.heroHeight}, [
                 m("div.hero-item", [
-                    m("img", {src: "../../../client/img/boulder.jpg"})
+                    m("img", {src: "/img/boulder.jpg"})
                 ]),
                 m("div.hero-content", [
                     m("h1", "6 Step Plan to Boulder")

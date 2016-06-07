@@ -115,7 +115,7 @@ var Home = {
                 m("div.modal", [
                     m("div.modal-text", [
                         m("div#trigger-close", {onclick: ctrl.modal}, [
-                            m('img.modal-x', {src: "../../../client/img/close-icon.svg"})
+                            m('img.modal-x', {src: "/img/close-icon.svg"})
                         ]),
                         m("h1", "About Brittney"),
                         m("p", "Brittney Nicole Richter was  born March 10th, 1988 in Sedro Woolley, WA to her loving parents, Thom and Nancy Richter. My guess it was raining that day. As a child she spent the rainy PNW days playing with her paper dolls, expansive doll collection, and off-colored pets (rats, mice, and a pig). Brittney also participated in shenanigans with the neighborhood kids, but sometimes just watched them from her bedroom window since she had an earlier bedtime."),
@@ -127,7 +127,7 @@ var Home = {
                 m("div.modal", [
                     m("div.modal-text", [
                         m("div#trigger-lose", {onclick: ctrl.modal2}, [
-                            m('img.modal-x', {src: "../../../client/img/close-icon.svg"})
+                            m('img.modal-x', {src: "/img/close-icon.svg"})
                         ]),
                         m("h1", "About Aaron"),
                         m("p", "Aaron Paul Flower was born on beautiful spring day in the bustling metropolis of Holland MI to loving parents Paul and Lori Flower. Babyhood was Aaron’s jam, and he enjoyed his frequent naps and early bedtimes. Aaron’s childhood and adolescence was marked by a natural athleticism, an admiration for snow, and an affinity for curmudgeonly behavior. It is said in Flower family lore that Aaron spent 78% of his spare time with his arms crossed in protest, which aided in the coining of his nickname “Grumpy Bunny.”"),
@@ -141,7 +141,7 @@ var Home = {
                 m("div.modal", [
                     m("div.modal-text", [
                         m("div#trigger-close", {onclick: ctrl.modal3}, [
-                            m('img.modal-x', {src: "../../../client/img/close-icon.svg"})
+                            m('img.modal-x', {src: "/img/close-icon.svg"})
                         ]),
                         m("h1", "About Us"),
                         m("p", "Brittney had recently moved to Boulder for a year-long intensive graduate program and Aaron had just quit his job at Whole Foods and started a new job at a local tech startup. While both of them were in a state of transition, God saw it fit to allow their worlds collide. Brittney who generally dislikes the act of meeting new people, had forced herself to go to a Missional Community (MC) gathering from her new church, The Well. On this particular night that she was going, Aaron’s MC was combining with that MC. That night, Aaron shirked on the other side of the house as this cute girl he had never met introduced herself to everyone. As they were sitting down to start a Bible Study, the two exchanged niceties, shook hands, and sat down. For the next hour Aaron proceeded to stare at Brittney, while Brittney wondered “Is he staring at me? Crap. Now he thinks I’m staring at him.”"),
@@ -153,7 +153,7 @@ var Home = {
             mobileMenu,
             m("div.hero-wrapper", {config: ctrl.heroHeight}, [
                 m("div.hero-item", [
-                    m("img", {src: "../../../client/img/home-hero.jpg"})
+                    m("img", {src: "/img/home-hero.jpg"})
                 ]),
                 // m("div.hero-content", [
                 //     m("p", "Aaron and Brittney")
@@ -164,7 +164,7 @@ var Home = {
                     countDownTimer,
             		m("div.about-us", [
                         m("div.about-us-item", [
-                            m("img", {src: "../../../client/img/brittney-home.jpg"}),
+                            m("img", {src: "/img/brittney-home.jpg"}),
                             // m("div.overlay", [
                             //     m("h1", "Hi"),
                             // ]),
@@ -179,7 +179,7 @@ var Home = {
             		]),
             		m("div#aaron.about-us", [
                         m("div.about-us-item", [
-                            m("img", {src: "../../../client/img/aaron-home.jpg"}),
+                            m("img", {src: "/img/aaron-home.jpg"}),
                             // m("div.overlay", [
                             //     m("h1", "I don't get it..."),
                             // ]),
@@ -194,7 +194,7 @@ var Home = {
             		]),
            			m("div.how-we-met", [
                         m("div.how-we-met-img", [
-                            m("img", {src: "../../../client/img/ba-home.jpg"})
+                            m("img", {src: "/img/ba-home.jpg"})
                         ]),
                         m("div.about-us-text", [
                             m("h1", "How we met, well it's a pretty simple story"),

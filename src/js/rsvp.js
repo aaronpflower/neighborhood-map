@@ -22,7 +22,7 @@ var Rsvp = {
             mobileMenu,
             m("div.hero-wrapper", {config: ctrl.heroHeight}, [
                 m("div.hero-item", [
-                    m("img", {src: "../../../client/img/rsvp-hero.jpg"})
+                    m("img", {src: "/img/rsvp-hero.jpg"})
                 ]),
                 m("div.hero-content", [
                     m("h1", "How to RSVP")
