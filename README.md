@@ -1,1 +1,1 @@
-Udacity js-patterns course final project
+A custom wedding website I made: https://aaronandbrittney.herokuapp.com/#/
